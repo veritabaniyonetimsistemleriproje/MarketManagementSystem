@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5578c4f89c9d4c49b4880eb0e69bb877" Name="Diagram1">
+        <EntityTypeShape EntityType="MarketManagementSystemModel.Irsaliye" Width="1.5" PointX="10" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.Musteri" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.Satici" Width="1.5" PointX="10.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.Sati" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.Sepet" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.sysdiagram" Width="1.5" PointX="7.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.Tedarikci" Width="1.5" PointX="7.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.TedarikciBorcOdeme" Width="1.5" PointX="13" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.Urun" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.MusteriBorcOdeme" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.SatisPesin" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.SatisVeresiye" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarketManagementSystemModel.SepetUrun" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_Irsaliye_Tedarikci" ManuallyRouted="false" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_Irsaliye_Urun" ManuallyRouted="false" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_MusteriBorcOdeme_Musteri" ManuallyRouted="false" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_SatisVeresiye_Musteri" ManuallyRouted="false" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_TedarikciBorcOdeme_Satici" ManuallyRouted="false" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_SatisPesin_Satis" ManuallyRouted="false" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_SatisVeresiye_Satis" ManuallyRouted="false" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_Sepet_Satis" ManuallyRouted="false" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_SatisVeresiye_Sepet" ManuallyRouted="false" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_SepetUrun_Sepet" ManuallyRouted="false" />
+        <AssociationConnector Association="MarketManagementSystemModel.FK_TedarikciBorcOdeme_Tedarikci" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
