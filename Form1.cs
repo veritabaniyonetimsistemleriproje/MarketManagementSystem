@@ -25,7 +25,7 @@ namespace MarketManagementSystem
         private void button1_Click(object sender, EventArgs e)
         {
             MarketManagementSystemEntities db = new MarketManagementSystemEntities();
-            dataGridView1.DataSource = db.Saticis.ToList();
+            dataGridView1.DataSource = db.Uruns.ToList();
         }
     }
 }
