@@ -171,6 +171,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Satis.resx">
+      <DependentUpon>Satis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Urunler.resx">
       <DependentUpon>Urunler.cs</DependentUpon>
     </EmbeddedResource>
