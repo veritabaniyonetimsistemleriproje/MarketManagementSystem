@@ -28,80 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.kullaniciAd = new System.Windows.Forms.Label();
-            this.parola = new System.Windows.Forms.Label();
-            this.kullaniciAdTB = new System.Windows.Forms.TextBox();
-            this.parolaTB = new System.Windows.Forms.TextBox();
-            this.girisBtn = new System.Windows.Forms.Button();
-            this.cikisBtn = new System.Windows.Forms.Button();
+            this.KullaniciAd = new System.Windows.Forms.Label();
+            this.Parola = new System.Windows.Forms.Label();
+            this.KullaniciAdTB = new System.Windows.Forms.TextBox();
+            this.ParolaTB = new System.Windows.Forms.TextBox();
+            this.GirisBtn = new System.Windows.Forms.Button();
+            this.CikisBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // kullaniciAd
+            // KullaniciAd
             // 
-            this.kullaniciAd.AutoSize = true;
-            this.kullaniciAd.Location = new System.Drawing.Point(35, 55);
-            this.kullaniciAd.Name = "kullaniciAd";
-            this.kullaniciAd.Size = new System.Drawing.Size(97, 20);
-            this.kullaniciAd.TabIndex = 0;
-            this.kullaniciAd.Text = "Kullanıcı Adı:";
+            this.KullaniciAd.AutoSize = true;
+            this.KullaniciAd.Location = new System.Drawing.Point(35, 55);
+            this.KullaniciAd.Name = "KullaniciAd";
+            this.KullaniciAd.Size = new System.Drawing.Size(97, 20);
+            this.KullaniciAd.TabIndex = 0;
+            this.KullaniciAd.Text = "Kullanıcı Adı:";
             // 
-            // parola
+            // Parola
             // 
-            this.parola.AutoSize = true;
-            this.parola.Location = new System.Drawing.Point(74, 98);
-            this.parola.Name = "parola";
-            this.parola.Size = new System.Drawing.Size(58, 20);
-            this.parola.TabIndex = 1;
-            this.parola.Text = "Parola:";
+            this.Parola.AutoSize = true;
+            this.Parola.Location = new System.Drawing.Point(74, 98);
+            this.Parola.Name = "Parola";
+            this.Parola.Size = new System.Drawing.Size(58, 20);
+            this.Parola.TabIndex = 1;
+            this.Parola.Text = "Parola:";
             // 
-            // kullaniciAdTB
+            // KullaniciAdTB
             // 
-            this.kullaniciAdTB.Location = new System.Drawing.Point(160, 55);
-            this.kullaniciAdTB.Name = "kullaniciAdTB";
-            this.kullaniciAdTB.Size = new System.Drawing.Size(181, 26);
-            this.kullaniciAdTB.TabIndex = 2;
+            this.KullaniciAdTB.Location = new System.Drawing.Point(160, 55);
+            this.KullaniciAdTB.Name = "KullaniciAdTB";
+            this.KullaniciAdTB.Size = new System.Drawing.Size(181, 26);
+            this.KullaniciAdTB.TabIndex = 2;
             // 
-            // parolaTB
+            // ParolaTB
             // 
-            this.parolaTB.Location = new System.Drawing.Point(160, 98);
-            this.parolaTB.Name = "parolaTB";
-            this.parolaTB.PasswordChar = '*';
-            this.parolaTB.Size = new System.Drawing.Size(181, 26);
-            this.parolaTB.TabIndex = 3;
+            this.ParolaTB.Location = new System.Drawing.Point(160, 98);
+            this.ParolaTB.Name = "ParolaTB";
+            this.ParolaTB.PasswordChar = '*';
+            this.ParolaTB.Size = new System.Drawing.Size(181, 26);
+            this.ParolaTB.TabIndex = 3;
             // 
-            // girisBtn
+            // GirisBtn
             // 
-            this.girisBtn.BackColor = System.Drawing.Color.LawnGreen;
-            this.girisBtn.Location = new System.Drawing.Point(39, 162);
-            this.girisBtn.Name = "girisBtn";
-            this.girisBtn.Size = new System.Drawing.Size(147, 40);
-            this.girisBtn.TabIndex = 4;
-            this.girisBtn.Text = "Giriş Yap";
-            this.girisBtn.UseVisualStyleBackColor = false;
-            this.girisBtn.Click += new System.EventHandler(this.girisBtn_Click);
+            this.GirisBtn.BackColor = System.Drawing.Color.LawnGreen;
+            this.GirisBtn.Location = new System.Drawing.Point(39, 162);
+            this.GirisBtn.Name = "GirisBtn";
+            this.GirisBtn.Size = new System.Drawing.Size(147, 40);
+            this.GirisBtn.TabIndex = 4;
+            this.GirisBtn.Text = "Giriş Yap";
+            this.GirisBtn.UseVisualStyleBackColor = false;
+            this.GirisBtn.Click += new System.EventHandler(this.girisBtn_Click);
             // 
-            // cikisBtn
+            // CikisBtn
             // 
-            this.cikisBtn.BackColor = System.Drawing.Color.Red;
-            this.cikisBtn.Location = new System.Drawing.Point(212, 162);
-            this.cikisBtn.Name = "cikisBtn";
-            this.cikisBtn.Size = new System.Drawing.Size(129, 40);
-            this.cikisBtn.TabIndex = 5;
-            this.cikisBtn.Text = "Çıkış yap";
-            this.cikisBtn.UseVisualStyleBackColor = false;
-            this.cikisBtn.Click += new System.EventHandler(this.cikisBtn_Click);
+            this.CikisBtn.BackColor = System.Drawing.Color.Red;
+            this.CikisBtn.Location = new System.Drawing.Point(212, 162);
+            this.CikisBtn.Name = "CikisBtn";
+            this.CikisBtn.Size = new System.Drawing.Size(129, 40);
+            this.CikisBtn.TabIndex = 5;
+            this.CikisBtn.Text = "Çıkış yap";
+            this.CikisBtn.UseVisualStyleBackColor = false;
+            this.CikisBtn.Click += new System.EventHandler(this.cikisBtn_Click);
             // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 258);
-            this.Controls.Add(this.cikisBtn);
-            this.Controls.Add(this.girisBtn);
-            this.Controls.Add(this.parolaTB);
-            this.Controls.Add(this.kullaniciAdTB);
-            this.Controls.Add(this.parola);
-            this.Controls.Add(this.kullaniciAd);
+            this.Controls.Add(this.CikisBtn);
+            this.Controls.Add(this.GirisBtn);
+            this.Controls.Add(this.ParolaTB);
+            this.Controls.Add(this.KullaniciAdTB);
+            this.Controls.Add(this.Parola);
+            this.Controls.Add(this.KullaniciAd);
             this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş";
@@ -112,12 +112,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label kullaniciAd;
-        private System.Windows.Forms.Label parola;
-        private System.Windows.Forms.TextBox kullaniciAdTB;
-        private System.Windows.Forms.TextBox parolaTB;
-        private System.Windows.Forms.Button girisBtn;
-        private System.Windows.Forms.Button cikisBtn;
+        private System.Windows.Forms.Label KullaniciAd;
+        private System.Windows.Forms.Label Parola;
+        private System.Windows.Forms.TextBox KullaniciAdTB;
+        private System.Windows.Forms.TextBox ParolaTB;
+        private System.Windows.Forms.Button GirisBtn;
+        private System.Windows.Forms.Button CikisBtn;
     }
 }
 

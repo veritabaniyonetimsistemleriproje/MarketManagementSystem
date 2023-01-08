@@ -18,11 +18,11 @@ namespace MarketManagementSystem
         }
         MarketManagementSystemEntities db = new MarketManagementSystemEntities();
 
-        private void girisBtn_Click(object sender, EventArgs e)
+        private void GirisBtn_Click(object sender, EventArgs e)
         {
 
-            if (db.Saticis.Where(r => r.kullaniciAdi == kullaniciAdTB.Text
-                && r.parola == parolaTB.Text).Count() > 0)
+            if (db.Saticis.Where(r => r.kullaniciAdi == KullaniciAdTB.Text
+                && r.parola == ParolaTB.Text).Count() > 0)
             {
                 MessageBox.Show("Giriş Başarılı.");
                 Menu anamenu = new Menu();
@@ -33,15 +33,12 @@ namespace MarketManagementSystem
             {
                 MessageBox.Show("Giriş Başarısız.");
             }
-
-
-
-
         }
 
-        private void cikisBtn_Click(object sender, EventArgs e)
+        private void CikisBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
     }
 }
