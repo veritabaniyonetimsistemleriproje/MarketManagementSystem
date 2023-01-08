@@ -55,6 +55,7 @@
             this.DGVSepet.RowHeadersWidth = 62;
             this.DGVSepet.Size = new System.Drawing.Size(349, 395);
             this.DGVSepet.TabIndex = 0;
+            this.DGVSepet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVSepet_CellContentClick);
             // 
             // label1
             // 
@@ -69,7 +70,7 @@
             // 
             this.RBtnVeresiye.AutoSize = true;
             this.RBtnVeresiye.Location = new System.Drawing.Point(384, 86);
-            this.RBtnVeresiye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RBtnVeresiye.Margin = new System.Windows.Forms.Padding(2);
             this.RBtnVeresiye.Name = "RBtnVeresiye";
             this.RBtnVeresiye.Size = new System.Drawing.Size(65, 17);
             this.RBtnVeresiye.TabIndex = 4;
@@ -82,7 +83,7 @@
             // 
             this.RBtnPesin.AutoSize = true;
             this.RBtnPesin.Location = new System.Drawing.Point(478, 86);
-            this.RBtnPesin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RBtnPesin.Margin = new System.Windows.Forms.Padding(2);
             this.RBtnPesin.Name = "RBtnPesin";
             this.RBtnPesin.Size = new System.Drawing.Size(51, 17);
             this.RBtnPesin.TabIndex = 5;
@@ -103,7 +104,7 @@
             // TBToplamTutar
             // 
             this.TBToplamTutar.Location = new System.Drawing.Point(675, 58);
-            this.TBToplamTutar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBToplamTutar.Margin = new System.Windows.Forms.Padding(2);
             this.TBToplamTutar.Name = "TBToplamTutar";
             this.TBToplamTutar.Size = new System.Drawing.Size(105, 20);
             this.TBToplamTutar.TabIndex = 7;
@@ -122,7 +123,7 @@
             // 
             this.DGVMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVMusteriler.Location = new System.Drawing.Point(12, 36);
-            this.DGVMusteriler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGVMusteriler.Margin = new System.Windows.Forms.Padding(2);
             this.DGVMusteriler.Name = "DGVMusteriler";
             this.DGVMusteriler.RowHeadersWidth = 62;
             this.DGVMusteriler.RowTemplate.Height = 28;
@@ -133,7 +134,7 @@
             // TBMusteriID
             // 
             this.TBMusteriID.Location = new System.Drawing.Point(94, 9);
-            this.TBMusteriID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBMusteriID.Margin = new System.Windows.Forms.Padding(2);
             this.TBMusteriID.Name = "TBMusteriID";
             this.TBMusteriID.Size = new System.Drawing.Size(105, 20);
             this.TBMusteriID.TabIndex = 10;
@@ -145,7 +146,7 @@
             this.panel1.Controls.Add(this.DGVMusteriler);
             this.panel1.Controls.Add(this.TBMusteriID);
             this.panel1.Location = new System.Drawing.Point(384, 125);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(409, 313);
             this.panel1.TabIndex = 11;
@@ -173,7 +174,7 @@
             // TBBarkodNo
             // 
             this.TBBarkodNo.Location = new System.Drawing.Point(447, 41);
-            this.TBBarkodNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBBarkodNo.Margin = new System.Windows.Forms.Padding(2);
             this.TBBarkodNo.Name = "TBBarkodNo";
             this.TBBarkodNo.Size = new System.Drawing.Size(55, 20);
             this.TBBarkodNo.TabIndex = 13;
@@ -186,6 +187,7 @@
             this.BtnOnay.TabIndex = 14;
             this.BtnOnay.Text = "Onayla";
             this.BtnOnay.UseVisualStyleBackColor = true;
+            this.BtnOnay.Click += new System.EventHandler(this.BtnOnay_Click);
             // 
             // Satis
             // 

@@ -27,6 +27,9 @@ namespace MarketManagementSystem
             DGVMusteriler.Columns[1].HeaderText = "Ad";
             DGVMusteriler.Columns[2].HeaderText = "Soyad";
             DGVMusteriler.Columns[3].HeaderText = "Borç";
+
+            //DGVSepet.DataSource = db.Uruns.ToList();
+            
         }
 
         private void DGVMusteriler_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -42,6 +45,29 @@ namespace MarketManagementSystem
         private void RBtnPesin_CheckedChanged(object sender, EventArgs e)
         {
             panel1.Visible = false;
+        }
+
+        private void BtnOnay_Click(object sender, EventArgs e)
+        {
+
+            /*int number = Convert.ToInt32(TBBarkodNo.Text);
+            var urun = db.Uruns.Where(r => r.urunKod == number).FirstOrDefault();
+            if (urun != null)
+            {
+                DGVSepet.DataSource = db.Uruns.Where(
+                    x => x.urunAd.StartsWith(TBBarkodNo.Text)).ToList();
+            }
+            */
+            DGVSepet.DataSource = db.Uruns.Where(
+                    x => x.urunAd.StartsWith(TBBarkodNo.Text)).ToList();
+
+
+
+        }
+
+        private void DGVSepet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

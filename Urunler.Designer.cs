@@ -57,6 +57,7 @@
             this.DGVUrunler.RowTemplate.Height = 24;
             this.DGVUrunler.Size = new System.Drawing.Size(459, 418);
             this.DGVUrunler.TabIndex = 1;
+            this.DGVUrunler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUrunler_CellContentClick);
             // 
             // TBUrunAra
             // 
