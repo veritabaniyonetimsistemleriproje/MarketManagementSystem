@@ -78,7 +78,7 @@
             this.GirisBtn.TabIndex = 4;
             this.GirisBtn.Text = "Giriş Yap";
             this.GirisBtn.UseVisualStyleBackColor = false;
-            this.GirisBtn.Click += new System.EventHandler(this.girisBtn_Click);
+            this.GirisBtn.Click += new System.EventHandler(this.GirisBtn_Click);
             // 
             // CikisBtn
             // 
@@ -89,7 +89,7 @@
             this.CikisBtn.TabIndex = 5;
             this.CikisBtn.Text = "Çıkış yap";
             this.CikisBtn.UseVisualStyleBackColor = false;
-            this.CikisBtn.Click += new System.EventHandler(this.cikisBtn_Click);
+            this.CikisBtn.Click += new System.EventHandler(this.CikisBtn_Click);
             // 
             // Giris
             // 
