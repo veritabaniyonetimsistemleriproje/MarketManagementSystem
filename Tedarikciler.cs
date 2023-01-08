@@ -16,5 +16,26 @@ namespace MarketManagementSystem
         {
             InitializeComponent();
         }
+        MarketManagementSystemEntities db = new MarketManagementSystemEntities();
+
+        private void BtnTedarikciBorcOdeme_Click(object sender, EventArgs e)
+        {
+            label5.Visible = true; TBTedarikciOdemeMiktar.Visible = true; BtnTedarikciOnayla.Visible = true;
+        }
+   
+        private void TBTedarikciArama_TextChanged(object sender, EventArgs e)
+        {
+            DGVTedarikciler.DataSource = db.Tedarikcis.Where(
+                x => x.tedarikciAd.StartsWith(TBTedarikciArama.Text)).ToList();
+        }
+
+        private void Tedarikciler_Load_1(object sender, EventArgs e)
+        {
+            DGVTedarikciler.DataSource = db.Tedarikcis.ToList();
+            DGVTedarikciler.Columns[3].Visible = false; DGVTedarikciler.Columns[4].Visible = false;
+            DGVTedarikciler.Columns[0].HeaderText = "Tedarikci No";
+            DGVTedarikciler.Columns[1].HeaderText = "Tedarikci Ad";
+            DGVTedarikciler.Columns[2].HeaderText = "Tedarikçi Borç";
+        }
     }
 }
