@@ -33,5 +33,10 @@ namespace MarketManagementSystem
             DGVUrunler.DataSource = db.Uruns.Where(
                     x => x.urunAd.StartsWith(TBUrunAra.Text)).ToList();
         }
+
+        private void BtnUrunEkle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
