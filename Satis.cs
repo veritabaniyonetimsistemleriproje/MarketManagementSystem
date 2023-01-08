@@ -16,5 +16,32 @@ namespace MarketManagementSystem
         {
             InitializeComponent();
         }
+
+        MarketManagementSystemEntities db = new MarketManagementSystemEntities();
+        private void Satis_Load(object sender, EventArgs e)
+        {
+            DGVMusteriler.DataSource = db.Musteris.ToList();
+            panel1.Visible = false;
+            DGVMusteriler.Columns[4].Visible = false; DGVMusteriler.Columns[5].Visible = false;
+            DGVMusteriler.Columns[0].HeaderText = "Müşteri No";
+            DGVMusteriler.Columns[1].HeaderText = "Ad";
+            DGVMusteriler.Columns[2].HeaderText = "Soyad";
+            DGVMusteriler.Columns[3].HeaderText = "Borç";
+        }
+
+        private void DGVMusteriler_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TBMusteriID.Text = DGVMusteriler.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void RBtnVeresiye_CheckedChanged(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+        }
+
+        private void RBtnPesin_CheckedChanged(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
     }
 }

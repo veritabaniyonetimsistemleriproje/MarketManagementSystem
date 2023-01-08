@@ -16,35 +16,22 @@ namespace MarketManagementSystem
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        MarketManagementSystemEntities db = new MarketManagementSystemEntities();
         private void Urunler_Load(object sender, EventArgs e)
         {
-
+            DGVUrunler.DataSource = db.Uruns.ToList();
+            DGVUrunler.Columns[5].Visible = false;
+            DGVUrunler.Columns[0].HeaderText = "Urun Kod";
+            DGVUrunler.Columns[1].HeaderText = "Urun Barkod";
+            DGVUrunler.Columns[2].HeaderText = "Ad";
+            DGVUrunler.Columns[3].HeaderText = "Fiyat";
+            DGVUrunler.Columns[4].HeaderText = "Stok";
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void TBUrunAra_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            DGVUrunler.DataSource = db.Uruns.Where(
+                    x => x.urunAd.StartsWith(TBUrunAra.Text)).ToList();
         }
     }
 }
