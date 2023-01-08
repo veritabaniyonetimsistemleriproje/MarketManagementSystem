@@ -104,7 +104,7 @@
             this.PanelButon.Location = new System.Drawing.Point(0, 0);
             this.PanelButon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelButon.Name = "PanelButon";
-            this.PanelButon.Size = new System.Drawing.Size(1239, 134);
+            this.PanelButon.Size = new System.Drawing.Size(1444, 134);
             this.PanelButon.TabIndex = 6;
             // 
             // PanelForm
@@ -113,14 +113,14 @@
             this.PanelForm.Location = new System.Drawing.Point(0, 134);
             this.PanelForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelForm.Name = "PanelForm";
-            this.PanelForm.Size = new System.Drawing.Size(1239, 570);
+            this.PanelForm.Size = new System.Drawing.Size(1444, 725);
             this.PanelForm.TabIndex = 7;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1239, 704);
+            this.ClientSize = new System.Drawing.Size(1444, 859);
             this.Controls.Add(this.PanelForm);
             this.Controls.Add(this.PanelButon);
             this.IsMdiContainer = true;
