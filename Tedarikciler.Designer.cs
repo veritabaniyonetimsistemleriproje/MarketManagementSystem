@@ -43,6 +43,8 @@
             this.TBTedarikciOdemeMiktar = new System.Windows.Forms.TextBox();
             this.BtnTedarikciOnayla = new System.Windows.Forms.Button();
             this.BtnYeniTedarikci = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TBTedarikciBorc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVTedarikciler)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,21 +104,21 @@
             // 
             // TBTedarikciNo
             // 
-            this.TBTedarikciNo.Location = new System.Drawing.Point(689, 146);
+            this.TBTedarikciNo.Location = new System.Drawing.Point(717, 147);
             this.TBTedarikciNo.Name = "TBTedarikciNo";
             this.TBTedarikciNo.Size = new System.Drawing.Size(100, 22);
             this.TBTedarikciNo.TabIndex = 6;
             // 
             // TBTedarikciAd
             // 
-            this.TBTedarikciAd.Location = new System.Drawing.Point(689, 187);
+            this.TBTedarikciAd.Location = new System.Drawing.Point(717, 184);
             this.TBTedarikciAd.Name = "TBTedarikciAd";
             this.TBTedarikciAd.Size = new System.Drawing.Size(100, 22);
             this.TBTedarikciAd.TabIndex = 7;
             // 
             // BtnTedarikciGuncelle
             // 
-            this.BtnTedarikciGuncelle.Location = new System.Drawing.Point(588, 237);
+            this.BtnTedarikciGuncelle.Location = new System.Drawing.Point(588, 256);
             this.BtnTedarikciGuncelle.Name = "BtnTedarikciGuncelle";
             this.BtnTedarikciGuncelle.Size = new System.Drawing.Size(85, 23);
             this.BtnTedarikciGuncelle.TabIndex = 8;
@@ -125,7 +127,7 @@
             // 
             // BtnTedarikciSil
             // 
-            this.BtnTedarikciSil.Location = new System.Drawing.Point(701, 237);
+            this.BtnTedarikciSil.Location = new System.Drawing.Point(701, 256);
             this.BtnTedarikciSil.Name = "BtnTedarikciSil";
             this.BtnTedarikciSil.Size = new System.Drawing.Size(88, 23);
             this.BtnTedarikciSil.TabIndex = 9;
@@ -134,7 +136,7 @@
             // 
             // BtnTedarikciBorcOdeme
             // 
-            this.BtnTedarikciBorcOdeme.Location = new System.Drawing.Point(588, 283);
+            this.BtnTedarikciBorcOdeme.Location = new System.Drawing.Point(588, 313);
             this.BtnTedarikciBorcOdeme.Name = "BtnTedarikciBorcOdeme";
             this.BtnTedarikciBorcOdeme.Size = new System.Drawing.Size(201, 23);
             this.BtnTedarikciBorcOdeme.TabIndex = 10;
@@ -145,7 +147,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(588, 334);
+            this.label5.Location = new System.Drawing.Point(588, 352);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 16);
             this.label5.TabIndex = 11;
@@ -154,7 +156,7 @@
             // 
             // TBTedarikciOdemeMiktar
             // 
-            this.TBTedarikciOdemeMiktar.Location = new System.Drawing.Point(588, 367);
+            this.TBTedarikciOdemeMiktar.Location = new System.Drawing.Point(588, 382);
             this.TBTedarikciOdemeMiktar.Name = "TBTedarikciOdemeMiktar";
             this.TBTedarikciOdemeMiktar.Size = new System.Drawing.Size(201, 22);
             this.TBTedarikciOdemeMiktar.TabIndex = 12;
@@ -162,7 +164,7 @@
             // 
             // BtnTedarikciOnayla
             // 
-            this.BtnTedarikciOnayla.Location = new System.Drawing.Point(817, 367);
+            this.BtnTedarikciOnayla.Location = new System.Drawing.Point(810, 381);
             this.BtnTedarikciOnayla.Name = "BtnTedarikciOnayla";
             this.BtnTedarikciOnayla.Size = new System.Drawing.Size(75, 23);
             this.BtnTedarikciOnayla.TabIndex = 13;
@@ -179,11 +181,29 @@
             this.BtnYeniTedarikci.Text = "Tedarikçi Ekle";
             this.BtnYeniTedarikci.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(588, 220);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 16);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Tedarikçiye Borç:";
+            // 
+            // TBTedarikciBorc
+            // 
+            this.TBTedarikciBorc.Location = new System.Drawing.Point(717, 220);
+            this.TBTedarikciBorc.Name = "TBTedarikciBorc";
+            this.TBTedarikciBorc.Size = new System.Drawing.Size(100, 22);
+            this.TBTedarikciBorc.TabIndex = 16;
+            // 
             // Tedarikciler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 550);
+            this.Controls.Add(this.TBTedarikciBorc);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnYeniTedarikci);
             this.Controls.Add(this.BtnTedarikciOnayla);
             this.Controls.Add(this.TBTedarikciOdemeMiktar);
@@ -225,5 +245,7 @@
         private System.Windows.Forms.TextBox TBTedarikciOdemeMiktar;
         private System.Windows.Forms.Button BtnTedarikciOnayla;
         private System.Windows.Forms.Button BtnYeniTedarikci;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TBTedarikciBorc;
     }
 }
