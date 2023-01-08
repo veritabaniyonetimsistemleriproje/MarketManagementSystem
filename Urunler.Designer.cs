@@ -50,29 +50,27 @@
             // DGVUrunler
             // 
             this.DGVUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVUrunler.Location = new System.Drawing.Point(16, 18);
-            this.DGVUrunler.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.DGVUrunler.Location = new System.Drawing.Point(11, 12);
+            this.DGVUrunler.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGVUrunler.Name = "DGVUrunler";
             this.DGVUrunler.RowHeadersWidth = 51;
             this.DGVUrunler.RowTemplate.Height = 24;
-            this.DGVUrunler.Size = new System.Drawing.Size(688, 643);
+            this.DGVUrunler.Size = new System.Drawing.Size(459, 418);
             this.DGVUrunler.TabIndex = 1;
             // 
             // TBUrunAra
             // 
-            this.TBUrunAra.Location = new System.Drawing.Point(780, 43);
-            this.TBUrunAra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TBUrunAra.Location = new System.Drawing.Point(520, 28);
             this.TBUrunAra.Name = "TBUrunAra";
-            this.TBUrunAra.Size = new System.Drawing.Size(188, 26);
+            this.TBUrunAra.Size = new System.Drawing.Size(127, 20);
             this.TBUrunAra.TabIndex = 2;
             this.TBUrunAra.TextChanged += new System.EventHandler(this.TBUrunAra_TextChanged);
             // 
             // BtnStokEkle
             // 
-            this.BtnStokEkle.Location = new System.Drawing.Point(780, 572);
-            this.BtnStokEkle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnStokEkle.Location = new System.Drawing.Point(520, 372);
             this.BtnStokEkle.Name = "BtnStokEkle";
-            this.BtnStokEkle.Size = new System.Drawing.Size(219, 77);
+            this.BtnStokEkle.Size = new System.Drawing.Size(146, 50);
             this.BtnStokEkle.TabIndex = 3;
             this.BtnStokEkle.Text = "Stok Ekle";
             this.BtnStokEkle.UseVisualStyleBackColor = true;
@@ -80,130 +78,118 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(776, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(517, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ürün Ara";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(776, 159);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(517, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 20);
+            this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ürün Bilgileri";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(776, 212);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(517, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 20);
+            this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Ad:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(776, 292);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(517, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 20);
+            this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Barkod No:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(776, 252);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(517, 164);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 20);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Fiyat:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(776, 332);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(517, 216);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 20);
+            this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "Stok:";
             // 
             // TBUrunAd
             // 
-            this.TBUrunAd.Location = new System.Drawing.Point(892, 208);
-            this.TBUrunAd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TBUrunAd.Location = new System.Drawing.Point(595, 135);
             this.TBUrunAd.Name = "TBUrunAd";
-            this.TBUrunAd.Size = new System.Drawing.Size(104, 26);
+            this.TBUrunAd.Size = new System.Drawing.Size(71, 20);
             this.TBUrunAd.TabIndex = 10;
             // 
             // TBUrunFiyat
             // 
-            this.TBUrunFiyat.Location = new System.Drawing.Point(892, 248);
-            this.TBUrunFiyat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TBUrunFiyat.Location = new System.Drawing.Point(595, 161);
             this.TBUrunFiyat.Name = "TBUrunFiyat";
-            this.TBUrunFiyat.Size = new System.Drawing.Size(104, 26);
+            this.TBUrunFiyat.Size = new System.Drawing.Size(71, 20);
             this.TBUrunFiyat.TabIndex = 11;
             // 
             // TBUrunStok
             // 
-            this.TBUrunStok.Location = new System.Drawing.Point(892, 328);
-            this.TBUrunStok.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TBUrunStok.Location = new System.Drawing.Point(595, 213);
             this.TBUrunStok.Name = "TBUrunStok";
-            this.TBUrunStok.Size = new System.Drawing.Size(104, 26);
+            this.TBUrunStok.Size = new System.Drawing.Size(71, 20);
             this.TBUrunStok.TabIndex = 12;
             // 
             // TBUrunBarkod
             // 
-            this.TBUrunBarkod.Location = new System.Drawing.Point(892, 288);
-            this.TBUrunBarkod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TBUrunBarkod.Location = new System.Drawing.Point(595, 187);
             this.TBUrunBarkod.Name = "TBUrunBarkod";
-            this.TBUrunBarkod.Size = new System.Drawing.Size(104, 26);
+            this.TBUrunBarkod.Size = new System.Drawing.Size(71, 20);
             this.TBUrunBarkod.TabIndex = 13;
             // 
             // BtnUrunEkle
             // 
-            this.BtnUrunEkle.Location = new System.Drawing.Point(752, 386);
-            this.BtnUrunEkle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnUrunEkle.Location = new System.Drawing.Point(501, 251);
             this.BtnUrunEkle.Name = "BtnUrunEkle";
-            this.BtnUrunEkle.Size = new System.Drawing.Size(94, 35);
+            this.BtnUrunEkle.Size = new System.Drawing.Size(63, 23);
             this.BtnUrunEkle.TabIndex = 14;
             this.BtnUrunEkle.Text = "Ekle";
             this.BtnUrunEkle.UseVisualStyleBackColor = true;
+            this.BtnUrunEkle.Click += new System.EventHandler(this.BtnUrunEkle_Click);
             // 
             // BtnUrunSil
             // 
-            this.BtnUrunSil.Location = new System.Drawing.Point(958, 386);
-            this.BtnUrunSil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnUrunSil.Location = new System.Drawing.Point(639, 251);
             this.BtnUrunSil.Name = "BtnUrunSil";
-            this.BtnUrunSil.Size = new System.Drawing.Size(94, 35);
+            this.BtnUrunSil.Size = new System.Drawing.Size(63, 23);
             this.BtnUrunSil.TabIndex = 15;
             this.BtnUrunSil.Text = "Sil";
             this.BtnUrunSil.UseVisualStyleBackColor = true;
             // 
             // BtnUrunGuncelle
             // 
-            this.BtnUrunGuncelle.Location = new System.Drawing.Point(855, 386);
-            this.BtnUrunGuncelle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnUrunGuncelle.Location = new System.Drawing.Point(570, 251);
             this.BtnUrunGuncelle.Name = "BtnUrunGuncelle";
-            this.BtnUrunGuncelle.Size = new System.Drawing.Size(94, 35);
+            this.BtnUrunGuncelle.Size = new System.Drawing.Size(63, 23);
             this.BtnUrunGuncelle.TabIndex = 16;
             this.BtnUrunGuncelle.Text = "Güncelle";
             this.BtnUrunGuncelle.UseVisualStyleBackColor = true;
             // 
             // Urunler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 680);
+            this.ClientSize = new System.Drawing.Size(714, 442);
             this.Controls.Add(this.BtnUrunGuncelle);
             this.Controls.Add(this.BtnUrunSil);
             this.Controls.Add(this.BtnUrunEkle);
@@ -220,7 +206,6 @@
             this.Controls.Add(this.BtnStokEkle);
             this.Controls.Add(this.TBUrunAra);
             this.Controls.Add(this.DGVUrunler);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Urunler";
             this.Text = "Urunler";
             this.Load += new System.EventHandler(this.Urunler_Load);
