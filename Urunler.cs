@@ -38,5 +38,10 @@ namespace MarketManagementSystem
         {
 
         }
+
+        private void DGVUrunler_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
