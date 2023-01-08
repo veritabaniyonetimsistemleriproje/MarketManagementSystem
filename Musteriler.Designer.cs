@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGVMusteriler = new System.Windows.Forms.DataGridView();
             this.BtnYeniMusteri = new System.Windows.Forms.Button();
             this.TBMusteriArama = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,19 +45,19 @@
             this.TBOdemeMiktar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.BtnOnayla = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVMusteriler)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DGVMusteriler
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(592, 635);
-            this.dataGridView1.TabIndex = 0;
+            this.DGVMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVMusteriler.Location = new System.Drawing.Point(14, 15);
+            this.DGVMusteriler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DGVMusteriler.Name = "DGVMusteriler";
+            this.DGVMusteriler.RowHeadersWidth = 51;
+            this.DGVMusteriler.RowTemplate.Height = 24;
+            this.DGVMusteriler.Size = new System.Drawing.Size(592, 635);
+            this.DGVMusteriler.TabIndex = 0;
             // 
             // BtnYeniMusteri
             // 
@@ -76,6 +76,7 @@
             this.TBMusteriArama.Name = "TBMusteriArama";
             this.TBMusteriArama.Size = new System.Drawing.Size(198, 26);
             this.TBMusteriArama.TabIndex = 2;
+            this.TBMusteriArama.TextChanged += new System.EventHandler(this.TBMusteriArama_TextChanged);
             // 
             // label1
             // 
@@ -228,11 +229,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TBMusteriArama);
             this.Controls.Add(this.BtnYeniMusteri);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGVMusteriler);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Musteriler";
             this.Text = "Musteriler";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Musteriler_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGVMusteriler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,7 +242,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGVMusteriler;
         private System.Windows.Forms.Button BtnYeniMusteri;
         private System.Windows.Forms.TextBox TBMusteriArama;
         private System.Windows.Forms.Label label1;
