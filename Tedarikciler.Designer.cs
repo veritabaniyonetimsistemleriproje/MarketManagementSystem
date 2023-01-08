@@ -50,13 +50,17 @@
             // 
             // DGVTedarikciler
             // 
+            this.DGVTedarikciler.AllowUserToAddRows = false;
+            this.DGVTedarikciler.AllowUserToDeleteRows = false;
             this.DGVTedarikciler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVTedarikciler.Location = new System.Drawing.Point(13, 13);
             this.DGVTedarikciler.Name = "DGVTedarikciler";
+            this.DGVTedarikciler.ReadOnly = true;
             this.DGVTedarikciler.RowHeadersWidth = 51;
             this.DGVTedarikciler.RowTemplate.Height = 24;
             this.DGVTedarikciler.Size = new System.Drawing.Size(548, 528);
             this.DGVTedarikciler.TabIndex = 0;
+            this.DGVTedarikciler.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVTedarikciler_CellEnter);
             // 
             // TBTedarikciArama
             // 
@@ -124,15 +128,17 @@
             this.BtnTedarikciGuncelle.TabIndex = 8;
             this.BtnTedarikciGuncelle.Text = "Güncelle";
             this.BtnTedarikciGuncelle.UseVisualStyleBackColor = true;
+            this.BtnTedarikciGuncelle.Click += new System.EventHandler(this.BtnTedarikciGuncelle_Click);
             // 
             // BtnTedarikciSil
             // 
-            this.BtnTedarikciSil.Location = new System.Drawing.Point(701, 256);
+            this.BtnTedarikciSil.Location = new System.Drawing.Point(679, 256);
             this.BtnTedarikciSil.Name = "BtnTedarikciSil";
             this.BtnTedarikciSil.Size = new System.Drawing.Size(88, 23);
             this.BtnTedarikciSil.TabIndex = 9;
             this.BtnTedarikciSil.Text = "Sil";
             this.BtnTedarikciSil.UseVisualStyleBackColor = true;
+            this.BtnTedarikciSil.Click += new System.EventHandler(this.BtnTedarikciSil_Click);
             // 
             // BtnTedarikciBorcOdeme
             // 
@@ -174,12 +180,13 @@
             // 
             // BtnYeniTedarikci
             // 
-            this.BtnYeniTedarikci.Location = new System.Drawing.Point(588, 449);
+            this.BtnYeniTedarikci.Location = new System.Drawing.Point(773, 256);
             this.BtnYeniTedarikci.Name = "BtnYeniTedarikci";
-            this.BtnYeniTedarikci.Size = new System.Drawing.Size(201, 70);
+            this.BtnYeniTedarikci.Size = new System.Drawing.Size(112, 23);
             this.BtnYeniTedarikci.TabIndex = 14;
             this.BtnYeniTedarikci.Text = "Tedarikçi Ekle";
             this.BtnYeniTedarikci.UseVisualStyleBackColor = true;
+            this.BtnYeniTedarikci.Click += new System.EventHandler(this.BtnYeniTedarikci_Click);
             // 
             // label6
             // 

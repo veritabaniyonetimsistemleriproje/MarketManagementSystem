@@ -37,5 +37,51 @@ namespace MarketManagementSystem
             DGVTedarikciler.Columns[1].HeaderText = "Tedarikci Ad";
             DGVTedarikciler.Columns[2].HeaderText = "Tedarikçi Borç";
         }
+
+        private void DGVTedarikciler_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            TBTedarikciNo.Text = DGVTedarikciler.CurrentRow.Cells[0].Value.ToString();
+            TBTedarikciAd.Text = DGVTedarikciler.CurrentRow.Cells[1].Value.ToString();
+            TBTedarikciBorc.Text = DGVTedarikciler.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void BtnYeniTedarikci_Click(object sender, EventArgs e)
+        {
+            Tedarikci t = new Tedarikci();
+            t.tedarikciAd = TBTedarikciAd.Text;
+            t.tedarikciBorc = Convert.ToDouble(TBTedarikciBorc.Text);
+            db.Tedarikcis.Add(t);
+            db.SaveChanges();
+            MessageBox.Show("Tedarikçi başarı ile eklenmiştir");
+            DGVTedarikciler.DataSource = db.Tedarikcis.ToList();
+        }
+
+        private void BtnTedarikciSil_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = new DialogResult();
+            dialog = MessageBox.Show("Tedarikçi Silinsin Mi?", "Uyarı", MessageBoxButtons.YesNo);
+
+            if (dialog == DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(TBTedarikciNo.Text);
+                var x = db.Tedarikcis.Find(id);
+                db.Tedarikcis.Remove(x);
+                db.SaveChanges();
+                MessageBox.Show("Tedarikçi başarı ile silindi.");
+                DGVTedarikciler.DataSource = db.Tedarikcis.ToList();
+            }
+           
+        }
+
+        private void BtnTedarikciGuncelle_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(TBTedarikciNo.Text);
+            var x = db.Tedarikcis.Find(id);
+            x.tedarikciAd = TBTedarikciAd.Text;
+            x.tedarikciBorc = Convert.ToDouble(TBTedarikciBorc.Text);
+            db.SaveChanges();
+            DGVTedarikciler.DataSource = db.Tedarikcis.ToList();
+            MessageBox.Show("Tedarikçi bilgileri başarı ile güncellendi.");
+        }
     }
 }
