@@ -16,7 +16,7 @@ namespace MarketManagementSystem
         {
             InitializeComponent();
         }
-        MarketManagementSystemEntities db = new MarketManagementSystemEntities();
+        MarketManagementSystemEntities1 db = new MarketManagementSystemEntities1();
         private void Urunler_Load(object sender, EventArgs e)
         {
             DGVUrunler.DataSource = db.Uruns.ToList();

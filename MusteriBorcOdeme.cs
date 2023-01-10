@@ -14,6 +14,7 @@ namespace MarketManagementSystem
     
     public partial class MusteriBorcOdeme
     {
+        public int musteriBorcOdemeId { get; set; }
         public int musteriNo { get; set; }
         public Nullable<double> odenenMiktar { get; set; }
         public Nullable<System.DateTime> tarih { get; set; }

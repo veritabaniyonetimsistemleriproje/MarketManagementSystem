@@ -14,6 +14,7 @@ namespace MarketManagementSystem
     
     public partial class SatisPesin
     {
+        public int satisPesinId { get; set; }
         public int satisId { get; set; }
         public int sepetId { get; set; }
     

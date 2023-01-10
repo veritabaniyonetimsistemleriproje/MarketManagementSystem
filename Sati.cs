@@ -24,6 +24,7 @@ namespace MarketManagementSystem
     
         public int satisId { get; set; }
         public string tanim { get; set; }
+        public Nullable<int> satisPesinId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SatisPesin> SatisPesins { get; set; }

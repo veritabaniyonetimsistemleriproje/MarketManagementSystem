@@ -17,6 +17,7 @@ namespace MarketManagementSystem
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Musteri()
         {
+            this.MusteriBorcOdemes = new HashSet<MusteriBorcOdeme>();
             this.SatisVeresiyes = new HashSet<SatisVeresiye>();
         }
     
@@ -25,7 +26,8 @@ namespace MarketManagementSystem
         public string musteriSoyad { get; set; }
         public Nullable<double> borcMiktar { get; set; }
     
-        public virtual MusteriBorcOdeme MusteriBorcOdeme { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MusteriBorcOdeme> MusteriBorcOdemes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SatisVeresiye> SatisVeresiyes { get; set; }
     }

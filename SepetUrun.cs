@@ -14,6 +14,7 @@ namespace MarketManagementSystem
     
     public partial class SepetUrun
     {
+        public int sepetUrunId { get; set; }
         public int sepetId { get; set; }
         public Nullable<int> urunBarkod { get; set; }
         public Nullable<int> satisMiktar { get; set; }

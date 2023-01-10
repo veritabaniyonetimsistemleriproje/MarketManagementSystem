@@ -13,10 +13,10 @@ namespace MarketManagementSystem
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MarketManagementSystemEntities : DbContext
+    public partial class MarketManagementSystemEntities1 : DbContext
     {
-        public MarketManagementSystemEntities()
-            : base("name=MarketManagementSystemEntities")
+        public MarketManagementSystemEntities1()
+            : base("name=MarketManagementSystemEntities1")
         {
         }
     
@@ -27,16 +27,16 @@ namespace MarketManagementSystem
     
         public virtual DbSet<Irsaliye> Irsaliyes { get; set; }
         public virtual DbSet<Musteri> Musteris { get; set; }
+        public virtual DbSet<MusteriBorcOdeme> MusteriBorcOdemes { get; set; }
         public virtual DbSet<Satici> Saticis { get; set; }
         public virtual DbSet<Sati> Satis { get; set; }
+        public virtual DbSet<SatisPesin> SatisPesins { get; set; }
+        public virtual DbSet<SatisVeresiye> SatisVeresiyes { get; set; }
         public virtual DbSet<Sepet> Sepets { get; set; }
+        public virtual DbSet<SepetUrun> SepetUruns { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Tedarikci> Tedarikcis { get; set; }
         public virtual DbSet<TedarikciBorcOdeme> TedarikciBorcOdemes { get; set; }
         public virtual DbSet<Urun> Uruns { get; set; }
-        public virtual DbSet<MusteriBorcOdeme> MusteriBorcOdemes { get; set; }
-        public virtual DbSet<SatisPesin> SatisPesins { get; set; }
-        public virtual DbSet<SatisVeresiye> SatisVeresiyes { get; set; }
-        public virtual DbSet<SepetUrun> SepetUruns { get; set; }
     }
 }
