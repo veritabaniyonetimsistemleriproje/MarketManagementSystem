@@ -18,6 +18,7 @@ namespace MarketManagementSystem
         public Sepet()
         {
             this.SatisVeresiyes = new HashSet<SatisVeresiye>();
+            this.SepetUruns = new HashSet<SepetUrun>();
         }
     
         public int sepetId { get; set; }
@@ -28,6 +29,7 @@ namespace MarketManagementSystem
         public virtual Sati Sati { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SatisVeresiye> SatisVeresiyes { get; set; }
-        public virtual SepetUrun SepetUrun { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SepetUrun> SepetUruns { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace MarketManagementSystem
     public partial class Satis : Form
     {
         static DataTable dt  = new DataTable();
-        MarketManagementSystemEntities db = new MarketManagementSystemEntities();
+        MarketManagementSystemEntities1 db = new MarketManagementSystemEntities1();
 
 
 
@@ -68,6 +68,35 @@ namespace MarketManagementSystem
         {
             panel1.Visible = false;
         }   
+
+        public void sepettekiUrunlereEkle(int sptid)
+        {
+            SepetUrun sepettekiUrun = new SepetUrun();
+
+            for(int i = 0; i < DGVSepet.Rows.Count - 1; i++)
+            {
+                int barkodNo = Convert.ToInt32(DGVSepet.Rows[i].Cells[0].Value);
+                double anlikFiyat = Convert.ToDouble(DGVSepet.Rows[i].Cells[2].Value);
+                var query = (from s in db.SepetUruns
+                             where s.urunBarkod == barkodNo & s.sepetId == sptid
+                             select s);
+                var deneme = query.FirstOrDefault();
+                if(deneme != null)
+                {
+                    deneme.satisMiktar += 1;
+                    db.SaveChanges();
+                }
+                else if(deneme == null)
+                {
+                    sepettekiUrun.sepetId = sptid;
+                    sepettekiUrun.urunBarkod = barkodNo;
+                    sepettekiUrun.urunAnlikFiyat = anlikFiyat;
+                    sepettekiUrun.satisMiktar = 1;
+                    db.SepetUruns.Add(sepettekiUrun);
+                    db.SaveChanges();
+                }             
+            }
+        }
         private void BtnOnay_Click(object sender, EventArgs e)
         {
             int bNo = Convert.ToInt32(TBBarkodNo.Text);
@@ -113,32 +142,50 @@ namespace MarketManagementSystem
 
             Sepet spt = new Sepet();
             spt.toplamTutar = Convert.ToDouble(TBToplamTutar.Text);
-            spt.tarih = DateTime.Now;
-            spt.satisId = 2;
+            spt.tarih = DateTime.Now;            
             db.Sepets.Add(spt);
             db.SaveChanges();
-            MessageBox.Show("Satış başarıyla gerçekleşti.");
+            
 
             if(RBtnVeresiye.Checked)
             {
+                spt.satisId = 1;
+
                 int mNo = Convert.ToInt32(TBMusteriID.Text);
                 var x = db.Musteris.Find(mNo);
                 x.borcMiktar += Convert.ToDouble(TBToplamTutar.Text);
                 db.SaveChanges();
                 DGVMusteriler.Refresh();
 
+
+
                 int sptid = spt.sepetId;
                 SatisVeresiye vrsySatis = new SatisVeresiye();
                 vrsySatis.musteriNo = Convert.ToInt32(TBMusteriID.Text);
                 vrsySatis.sepetId = sptid;
-                vrsySatis.satisId = 2;
-                db.SatisVeresiyes.Add(vrsySatis); //Database Primary Key olmayanlara PK eklenip devam edilecek
-                db.SaveChanges(); 
-                //Sepetteki ürünlere ekleme yapılacak.
+                vrsySatis.satisId = 1;
+                db.SatisVeresiyes.Add(vrsySatis);
+                db.SaveChanges();
+                sepettekiUrunlereEkle(sptid);
+                MessageBox.Show("Veresiye satış başarıyla gerçekleşti.");
+
+            }
+            else if (RBtnPesin.Checked)
+            {
+                spt.satisId = 2;
+
+                int sptid = spt.sepetId;
+                SatisPesin psnSatis = new SatisPesin();
+                psnSatis.sepetId = sptid;
+                psnSatis.satisId = 2;
+                db.SatisPesins.Add(psnSatis);
+                db.SaveChanges();
+                sepettekiUrunlereEkle(sptid);
+                MessageBox.Show("Peşin satış başarıyla gerçekleşti.");
             }
             else
             {
-                //Pesin satıs icin girilecek
+                MessageBox.Show("Lütfen Ödeme Yöntemi Giriniz.");
             }
             
 

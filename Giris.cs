@@ -16,7 +16,7 @@ namespace MarketManagementSystem
         {
             InitializeComponent();
         }
-        MarketManagementSystemEntities db = new MarketManagementSystemEntities();
+        MarketManagementSystemEntities1 db = new MarketManagementSystemEntities1();
 
         private void GirisBtn_Click(object sender, EventArgs e)
         {

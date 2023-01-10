@@ -26,12 +26,11 @@
           <Property Name="musteriSoyad" Type="nvarchar" MaxLength="20" />
           <Property Name="borcMiktar" Type="float" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MarketManagementSystem.dbo.MusteriBorcOdeme' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="MusteriBorcOdeme">
           <Key>
-            <PropertyRef Name="musteriNo" />
+            <PropertyRef Name="musteriBorcOdemeId" />
           </Key>
+          <Property Name="musteriBorcOdemeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="musteriNo" Type="int" Nullable="false" />
           <Property Name="odenenMiktar" Type="float" />
           <Property Name="tarih" Type="datetime" />
@@ -50,25 +49,21 @@ warning 6002: The table/view 'MarketManagementSystem.dbo.MusteriBorcOdeme' does 
           </Key>
           <Property Name="satisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tanim" Type="nvarchar" MaxLength="15" />
+          <Property Name="satisPesinId" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MarketManagementSystem.dbo.SatisPesin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="SatisPesin">
           <Key>
-            <PropertyRef Name="satisId" />
-            <PropertyRef Name="sepetId" />
+            <PropertyRef Name="satisPesinId" />
           </Key>
+          <Property Name="satisPesinId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="satisId" Type="int" Nullable="false" />
           <Property Name="sepetId" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MarketManagementSystem.dbo.SatisVeresiye' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="SatisVeresiye">
           <Key>
-            <PropertyRef Name="satisId" />
-            <PropertyRef Name="musteriNo" />
-            <PropertyRef Name="sepetId" />
+            <PropertyRef Name="satisVeresiyeId" />
           </Key>
+          <Property Name="satisVeresiyeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="satisId" Type="int" Nullable="false" />
           <Property Name="musteriNo" Type="int" Nullable="false" />
           <Property Name="sepetId" Type="int" Nullable="false" />
@@ -82,12 +77,11 @@ warning 6002: The table/view 'MarketManagementSystem.dbo.SatisVeresiye' does not
           <Property Name="toplamTutar" Type="float" />
           <Property Name="tarih" Type="datetime" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MarketManagementSystem.dbo.SepetUrun' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="SepetUrun">
           <Key>
-            <PropertyRef Name="sepetId" />
+            <PropertyRef Name="sepetUrunId" />
           </Key>
+          <Property Name="sepetUrunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="sepetId" Type="int" Nullable="false" />
           <Property Name="urunBarkod" Type="int" />
           <Property Name="satisMiktar" Type="int" />
@@ -160,7 +154,7 @@ warning 6035: The relationship 'FK_Irsaliye_Urun1' has columns that are not part
         <Association Name="FK_Irsaliye_Urun1" />-->
         <Association Name="FK_MusteriBorcOdeme_Musteri">
           <End Role="Musteri" Type="Self.Musteri" Multiplicity="1" />
-          <End Role="MusteriBorcOdeme" Type="Self.MusteriBorcOdeme" Multiplicity="0..1" />
+          <End Role="MusteriBorcOdeme" Type="Self.MusteriBorcOdeme" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Musteri">
               <PropertyRef Name="musteriNo" />
@@ -232,7 +226,7 @@ warning 6035: The relationship 'FK_Irsaliye_Urun1' has columns that are not part
         </Association>
         <Association Name="FK_SepetUrun_Sepet">
           <End Role="Sepet" Type="Self.Sepet" Multiplicity="1" />
-          <End Role="SepetUrun" Type="Self.SepetUrun" Multiplicity="0..1" />
+          <End Role="SepetUrun" Type="Self.SepetUrun" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Sepet">
               <PropertyRef Name="sepetId" />
@@ -272,41 +266,17 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
         <EntityContainer Name="MarketManagementSystemModelStoreContainer">
           <EntitySet Name="Irsaliye" EntityType="Self.Irsaliye" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Musteri" EntityType="Self.Musteri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MusteriBorcOdeme" EntityType="Self.MusteriBorcOdeme" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Satici" EntityType="Self.Satici" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Satis" EntityType="Self.Satis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SatisPesin" EntityType="Self.SatisPesin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SatisVeresiye" EntityType="Self.SatisVeresiye" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sepet" EntityType="Self.Sepet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SepetUrun" EntityType="Self.SepetUrun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tedarikci" EntityType="Self.Tedarikci" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TedarikciBorcOdeme" EntityType="Self.TedarikciBorcOdeme" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="MusteriBorcOdeme" EntityType="Self.MusteriBorcOdeme" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [MusteriBorcOdeme].[musteriNo] AS [musteriNo], 
-    [MusteriBorcOdeme].[odenenMiktar] AS [odenenMiktar], 
-    [MusteriBorcOdeme].[tarih] AS [tarih]
-    FROM [dbo].[MusteriBorcOdeme] AS [MusteriBorcOdeme]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="SatisPesin" EntityType="Self.SatisPesin" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [SatisPesin].[satisId] AS [satisId], 
-    [SatisPesin].[sepetId] AS [sepetId]
-    FROM [dbo].[SatisPesin] AS [SatisPesin]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="SatisVeresiye" EntityType="Self.SatisVeresiye" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [SatisVeresiye].[satisId] AS [satisId], 
-    [SatisVeresiye].[musteriNo] AS [musteriNo], 
-    [SatisVeresiye].[sepetId] AS [sepetId]
-    FROM [dbo].[SatisVeresiye] AS [SatisVeresiye]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="SepetUrun" EntityType="Self.SepetUrun" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [SepetUrun].[sepetId] AS [sepetId], 
-    [SepetUrun].[urunBarkod] AS [urunBarkod], 
-    [SepetUrun].[satisMiktar] AS [satisMiktar], 
-    [SepetUrun].[urunAnlikFiyat] AS [urunAnlikFiyat]
-    FROM [dbo].[SepetUrun] AS [SepetUrun]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_Irsaliye_Tedarikci" Association="Self.FK_Irsaliye_Tedarikci">
             <End Role="Tedarikci" EntitySet="Tedarikci" />
             <End Role="Irsaliye" EntitySet="Irsaliye" />
@@ -379,8 +349,18 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
           <Property Name="musteriAd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="musteriSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="borcMiktar" Type="Double" />
-          <NavigationProperty Name="MusteriBorcOdeme" Relationship="Self.FK_MusteriBorcOdeme_Musteri" FromRole="Musteri" ToRole="MusteriBorcOdeme" />
+          <NavigationProperty Name="MusteriBorcOdemes" Relationship="Self.FK_MusteriBorcOdeme_Musteri" FromRole="Musteri" ToRole="MusteriBorcOdeme" />
           <NavigationProperty Name="SatisVeresiyes" Relationship="Self.FK_SatisVeresiye_Musteri" FromRole="Musteri" ToRole="SatisVeresiye" />
+        </EntityType>
+        <EntityType Name="MusteriBorcOdeme">
+          <Key>
+            <PropertyRef Name="musteriBorcOdemeId" />
+          </Key>
+          <Property Name="musteriBorcOdemeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="musteriNo" Type="Int32" Nullable="false" />
+          <Property Name="odenenMiktar" Type="Double" />
+          <Property Name="tarih" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Musteri" Relationship="Self.FK_MusteriBorcOdeme_Musteri" FromRole="MusteriBorcOdeme" ToRole="Musteri" />
         </EntityType>
         <EntityType Name="Satici">
           <Key>
@@ -397,9 +377,31 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
           </Key>
           <Property Name="satisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tanim" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="satisPesinId" Type="Int32" />
           <NavigationProperty Name="SatisPesins" Relationship="Self.FK_SatisPesin_Satis" FromRole="Satis" ToRole="SatisPesin" />
           <NavigationProperty Name="SatisVeresiyes" Relationship="Self.FK_SatisVeresiye_Satis" FromRole="Satis" ToRole="SatisVeresiye" />
           <NavigationProperty Name="Sepets" Relationship="Self.FK_Sepet_Satis" FromRole="Satis" ToRole="Sepet" />
+        </EntityType>
+        <EntityType Name="SatisPesin">
+          <Key>
+            <PropertyRef Name="satisPesinId" />
+          </Key>
+          <Property Name="satisPesinId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="satisId" Type="Int32" Nullable="false" />
+          <Property Name="sepetId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Sati" Relationship="Self.FK_SatisPesin_Satis" FromRole="SatisPesin" ToRole="Satis" />
+        </EntityType>
+        <EntityType Name="SatisVeresiye">
+          <Key>
+            <PropertyRef Name="satisVeresiyeId" />
+          </Key>
+          <Property Name="satisVeresiyeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="satisId" Type="Int32" Nullable="false" />
+          <Property Name="musteriNo" Type="Int32" Nullable="false" />
+          <Property Name="sepetId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Musteri" Relationship="Self.FK_SatisVeresiye_Musteri" FromRole="SatisVeresiye" ToRole="Musteri" />
+          <NavigationProperty Name="Sati" Relationship="Self.FK_SatisVeresiye_Satis" FromRole="SatisVeresiye" ToRole="Satis" />
+          <NavigationProperty Name="Sepet" Relationship="Self.FK_SatisVeresiye_Sepet" FromRole="SatisVeresiye" ToRole="Sepet" />
         </EntityType>
         <EntityType Name="Sepet">
           <Key>
@@ -411,7 +413,18 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
           <Property Name="tarih" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Sati" Relationship="Self.FK_Sepet_Satis" FromRole="Sepet" ToRole="Satis" />
           <NavigationProperty Name="SatisVeresiyes" Relationship="Self.FK_SatisVeresiye_Sepet" FromRole="Sepet" ToRole="SatisVeresiye" />
-          <NavigationProperty Name="SepetUrun" Relationship="Self.FK_SepetUrun_Sepet" FromRole="Sepet" ToRole="SepetUrun" />
+          <NavigationProperty Name="SepetUruns" Relationship="Self.FK_SepetUrun_Sepet" FromRole="Sepet" ToRole="SepetUrun" />
+        </EntityType>
+        <EntityType Name="SepetUrun">
+          <Key>
+            <PropertyRef Name="sepetUrunId" />
+          </Key>
+          <Property Name="sepetUrunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sepetId" Type="Int32" Nullable="false" />
+          <Property Name="urunBarkod" Type="Int32" />
+          <Property Name="satisMiktar" Type="Int32" />
+          <Property Name="urunAnlikFiyat" Type="Double" />
+          <NavigationProperty Name="Sepet" Relationship="Self.FK_SepetUrun_Sepet" FromRole="SepetUrun" ToRole="Sepet" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -456,47 +469,6 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
           <Property Name="urunStok" Type="Int32" />
           <NavigationProperty Name="Irsaliyes" Relationship="Self.FK_Irsaliye_Urun" FromRole="Urun" ToRole="Irsaliye" />
         </EntityType>
-        <EntityType Name="MusteriBorcOdeme">
-          <Key>
-            <PropertyRef Name="musteriNo" />
-          </Key>
-          <Property Name="musteriNo" Type="Int32" Nullable="false" />
-          <Property Name="odenenMiktar" Type="Double" />
-          <Property Name="tarih" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Musteri" Relationship="Self.FK_MusteriBorcOdeme_Musteri" FromRole="MusteriBorcOdeme" ToRole="Musteri" />
-        </EntityType>
-        <EntityType Name="SatisPesin">
-          <Key>
-            <PropertyRef Name="satisId" />
-            <PropertyRef Name="sepetId" />
-          </Key>
-          <Property Name="satisId" Type="Int32" Nullable="false" />
-          <Property Name="sepetId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Sati" Relationship="Self.FK_SatisPesin_Satis" FromRole="SatisPesin" ToRole="Satis" />
-        </EntityType>
-        <EntityType Name="SatisVeresiye">
-          <Key>
-            <PropertyRef Name="satisId" />
-            <PropertyRef Name="musteriNo" />
-            <PropertyRef Name="sepetId" />
-          </Key>
-          <Property Name="satisId" Type="Int32" Nullable="false" />
-          <Property Name="musteriNo" Type="Int32" Nullable="false" />
-          <Property Name="sepetId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Musteri" Relationship="Self.FK_SatisVeresiye_Musteri" FromRole="SatisVeresiye" ToRole="Musteri" />
-          <NavigationProperty Name="Sati" Relationship="Self.FK_SatisVeresiye_Satis" FromRole="SatisVeresiye" ToRole="Satis" />
-          <NavigationProperty Name="Sepet" Relationship="Self.FK_SatisVeresiye_Sepet" FromRole="SatisVeresiye" ToRole="Sepet" />
-        </EntityType>
-        <EntityType Name="SepetUrun">
-          <Key>
-            <PropertyRef Name="sepetId" />
-          </Key>
-          <Property Name="sepetId" Type="Int32" Nullable="false" />
-          <Property Name="urunBarkod" Type="Int32" />
-          <Property Name="satisMiktar" Type="Int32" />
-          <Property Name="urunAnlikFiyat" Type="Double" />
-          <NavigationProperty Name="Sepet" Relationship="Self.FK_SepetUrun_Sepet" FromRole="SepetUrun" ToRole="Sepet" />
-        </EntityType>
         <Association Name="FK_Irsaliye_Tedarikci">
           <End Role="Tedarikci" Type="Self.Tedarikci" Multiplicity="1" />
           <End Role="Irsaliye" Type="Self.Irsaliye" Multiplicity="*" />
@@ -523,7 +495,7 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
         </Association>
         <Association Name="FK_MusteriBorcOdeme_Musteri">
           <End Role="Musteri" Type="Self.Musteri" Multiplicity="1" />
-          <End Role="MusteriBorcOdeme" Type="Self.MusteriBorcOdeme" Multiplicity="0..1" />
+          <End Role="MusteriBorcOdeme" Type="Self.MusteriBorcOdeme" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Musteri">
               <PropertyRef Name="musteriNo" />
@@ -607,7 +579,7 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
         </Association>
         <Association Name="FK_SepetUrun_Sepet">
           <End Role="Sepet" Type="Self.Sepet" Multiplicity="1" />
-          <End Role="SepetUrun" Type="Self.SepetUrun" Multiplicity="0..1" />
+          <End Role="SepetUrun" Type="Self.SepetUrun" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Sepet">
               <PropertyRef Name="sepetId" />
@@ -629,20 +601,20 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MarketManagementSystemEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MarketManagementSystemEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Irsaliyes" EntityType="Self.Irsaliye" />
           <EntitySet Name="Musteris" EntityType="Self.Musteri" />
+          <EntitySet Name="MusteriBorcOdemes" EntityType="Self.MusteriBorcOdeme" />
           <EntitySet Name="Saticis" EntityType="Self.Satici" />
           <EntitySet Name="Satis" EntityType="Self.Sati" />
+          <EntitySet Name="SatisPesins" EntityType="Self.SatisPesin" />
+          <EntitySet Name="SatisVeresiyes" EntityType="Self.SatisVeresiye" />
           <EntitySet Name="Sepets" EntityType="Self.Sepet" />
+          <EntitySet Name="SepetUruns" EntityType="Self.SepetUrun" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Tedarikcis" EntityType="Self.Tedarikci" />
           <EntitySet Name="TedarikciBorcOdemes" EntityType="Self.TedarikciBorcOdeme" />
           <EntitySet Name="Uruns" EntityType="Self.Urun" />
-          <EntitySet Name="MusteriBorcOdemes" EntityType="Self.MusteriBorcOdeme" />
-          <EntitySet Name="SatisPesins" EntityType="Self.SatisPesin" />
-          <EntitySet Name="SatisVeresiyes" EntityType="Self.SatisVeresiye" />
-          <EntitySet Name="SepetUruns" EntityType="Self.SepetUrun" />
           <AssociationSet Name="FK_Irsaliye_Tedarikci" Association="Self.FK_Irsaliye_Tedarikci">
             <End Role="Tedarikci" EntitySet="Tedarikcis" />
             <End Role="Irsaliye" EntitySet="Irsaliyes" />
@@ -693,7 +665,7 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MarketManagementSystemModelStoreContainer" CdmEntityContainer="MarketManagementSystemEntities">
+        <EntityContainerMapping StorageEntityContainer="MarketManagementSystemModelStoreContainer" CdmEntityContainer="MarketManagementSystemEntities1">
           <EntitySetMapping Name="Irsaliyes">
             <EntityTypeMapping TypeName="MarketManagementSystemModel.Irsaliye">
               <MappingFragment StoreEntitySet="Irsaliye">
@@ -717,6 +689,16 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="MusteriBorcOdemes">
+            <EntityTypeMapping TypeName="MarketManagementSystemModel.MusteriBorcOdeme">
+              <MappingFragment StoreEntitySet="MusteriBorcOdeme">
+                <ScalarProperty Name="musteriBorcOdemeId" ColumnName="musteriBorcOdemeId" />
+                <ScalarProperty Name="musteriNo" ColumnName="musteriNo" />
+                <ScalarProperty Name="odenenMiktar" ColumnName="odenenMiktar" />
+                <ScalarProperty Name="tarih" ColumnName="tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Saticis">
             <EntityTypeMapping TypeName="MarketManagementSystemModel.Satici">
               <MappingFragment StoreEntitySet="Satici">
@@ -731,6 +713,26 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
               <MappingFragment StoreEntitySet="Satis">
                 <ScalarProperty Name="satisId" ColumnName="satisId" />
                 <ScalarProperty Name="tanim" ColumnName="tanim" />
+                <ScalarProperty Name="satisPesinId" ColumnName="satisPesinId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SatisPesins">
+            <EntityTypeMapping TypeName="MarketManagementSystemModel.SatisPesin">
+              <MappingFragment StoreEntitySet="SatisPesin">
+                <ScalarProperty Name="satisPesinId" ColumnName="satisPesinId" />
+                <ScalarProperty Name="satisId" ColumnName="satisId" />
+                <ScalarProperty Name="sepetId" ColumnName="sepetId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SatisVeresiyes">
+            <EntityTypeMapping TypeName="MarketManagementSystemModel.SatisVeresiye">
+              <MappingFragment StoreEntitySet="SatisVeresiye">
+                <ScalarProperty Name="satisVeresiyeId" ColumnName="satisVeresiyeId" />
+                <ScalarProperty Name="satisId" ColumnName="satisId" />
+                <ScalarProperty Name="musteriNo" ColumnName="musteriNo" />
+                <ScalarProperty Name="sepetId" ColumnName="sepetId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -741,6 +743,17 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
                 <ScalarProperty Name="satisId" ColumnName="satisId" />
                 <ScalarProperty Name="toplamTutar" ColumnName="toplamTutar" />
                 <ScalarProperty Name="tarih" ColumnName="tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SepetUruns">
+            <EntityTypeMapping TypeName="MarketManagementSystemModel.SepetUrun">
+              <MappingFragment StoreEntitySet="SepetUrun">
+                <ScalarProperty Name="sepetUrunId" ColumnName="sepetUrunId" />
+                <ScalarProperty Name="sepetId" ColumnName="sepetId" />
+                <ScalarProperty Name="urunBarkod" ColumnName="urunBarkod" />
+                <ScalarProperty Name="satisMiktar" ColumnName="satisMiktar" />
+                <ScalarProperty Name="urunAnlikFiyat" ColumnName="urunAnlikFiyat" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -782,42 +795,6 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
                 <ScalarProperty Name="urunAd" ColumnName="urunAd" />
                 <ScalarProperty Name="urunFiyat" ColumnName="urunFiyat" />
                 <ScalarProperty Name="urunStok" ColumnName="urunStok" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MusteriBorcOdemes">
-            <EntityTypeMapping TypeName="MarketManagementSystemModel.MusteriBorcOdeme">
-              <MappingFragment StoreEntitySet="MusteriBorcOdeme">
-                <ScalarProperty Name="musteriNo" ColumnName="musteriNo" />
-                <ScalarProperty Name="odenenMiktar" ColumnName="odenenMiktar" />
-                <ScalarProperty Name="tarih" ColumnName="tarih" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SatisPesins">
-            <EntityTypeMapping TypeName="MarketManagementSystemModel.SatisPesin">
-              <MappingFragment StoreEntitySet="SatisPesin">
-                <ScalarProperty Name="satisId" ColumnName="satisId" />
-                <ScalarProperty Name="sepetId" ColumnName="sepetId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SatisVeresiyes">
-            <EntityTypeMapping TypeName="MarketManagementSystemModel.SatisVeresiye">
-              <MappingFragment StoreEntitySet="SatisVeresiye">
-                <ScalarProperty Name="satisId" ColumnName="satisId" />
-                <ScalarProperty Name="musteriNo" ColumnName="musteriNo" />
-                <ScalarProperty Name="sepetId" ColumnName="sepetId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SepetUruns">
-            <EntityTypeMapping TypeName="MarketManagementSystemModel.SepetUrun">
-              <MappingFragment StoreEntitySet="SepetUrun">
-                <ScalarProperty Name="sepetId" ColumnName="sepetId" />
-                <ScalarProperty Name="urunBarkod" ColumnName="urunBarkod" />
-                <ScalarProperty Name="satisMiktar" ColumnName="satisMiktar" />
-                <ScalarProperty Name="urunAnlikFiyat" ColumnName="urunAnlikFiyat" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
