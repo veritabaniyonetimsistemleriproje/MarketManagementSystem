@@ -41,10 +41,12 @@
             this.TBUrunFiyat = new System.Windows.Forms.TextBox();
             this.TBUrunStok = new System.Windows.Forms.TextBox();
             this.TBUrunBarkod = new System.Windows.Forms.TextBox();
-            this.BtnUrunEkle = new System.Windows.Forms.Button();
-            this.BtnUrunSil = new System.Windows.Forms.Button();
-            this.BtnUrunGuncelle = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUrunler)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGVUrunler
@@ -59,11 +61,11 @@
             this.DGVUrunler.RowTemplate.Height = 24;
             this.DGVUrunler.Size = new System.Drawing.Size(688, 643);
             this.DGVUrunler.TabIndex = 1;
-            this.DGVUrunler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUrunler_CellContentClick);
+            this.DGVUrunler.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUrunler_CellEnter);
             // 
             // TBUrunAra
             // 
-            this.TBUrunAra.Location = new System.Drawing.Point(780, 43);
+            this.TBUrunAra.Location = new System.Drawing.Point(21, 64);
             this.TBUrunAra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBUrunAra.Name = "TBUrunAra";
             this.TBUrunAra.Size = new System.Drawing.Size(188, 26);
@@ -72,77 +74,86 @@
             // 
             // BtnStokEkle
             // 
-            this.BtnStokEkle.Location = new System.Drawing.Point(780, 572);
+            this.BtnStokEkle.BackColor = System.Drawing.Color.LawnGreen;
+            this.BtnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnStokEkle.Location = new System.Drawing.Point(726, 572);
             this.BtnStokEkle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnStokEkle.Name = "BtnStokEkle";
-            this.BtnStokEkle.Size = new System.Drawing.Size(219, 77);
+            this.BtnStokEkle.Size = new System.Drawing.Size(258, 77);
             this.BtnStokEkle.TabIndex = 3;
             this.BtnStokEkle.Text = "Stok Ekle";
-            this.BtnStokEkle.UseVisualStyleBackColor = true;
+            this.BtnStokEkle.UseVisualStyleBackColor = false;
+            this.BtnStokEkle.Click += new System.EventHandler(this.BtnStokEkle_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(776, 18);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(16, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ürün Ara";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(776, 158);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(17, 16);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 20);
+            this.label2.Size = new System.Drawing.Size(134, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ürün Bilgileri";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(776, 212);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(17, 70);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 20);
+            this.label3.Size = new System.Drawing.Size(37, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "Ad:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(776, 292);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(17, 150);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 20);
+            this.label4.Size = new System.Drawing.Size(100, 22);
             this.label4.TabIndex = 7;
             this.label4.Text = "Barkod No:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(776, 252);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(17, 110);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 20);
+            this.label5.Size = new System.Drawing.Size(54, 22);
             this.label5.TabIndex = 8;
             this.label5.Text = "Fiyat:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(776, 332);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(17, 190);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 20);
+            this.label6.Size = new System.Drawing.Size(51, 22);
             this.label6.TabIndex = 9;
             this.label6.Text = "Stok:";
             // 
             // TBUrunAd
             // 
-            this.TBUrunAd.Location = new System.Drawing.Point(892, 208);
+            this.TBUrunAd.Location = new System.Drawing.Point(133, 66);
             this.TBUrunAd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBUrunAd.Name = "TBUrunAd";
             this.TBUrunAd.Size = new System.Drawing.Size(104, 26);
@@ -150,7 +161,7 @@
             // 
             // TBUrunFiyat
             // 
-            this.TBUrunFiyat.Location = new System.Drawing.Point(892, 248);
+            this.TBUrunFiyat.Location = new System.Drawing.Point(133, 106);
             this.TBUrunFiyat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBUrunFiyat.Name = "TBUrunFiyat";
             this.TBUrunFiyat.Size = new System.Drawing.Size(104, 26);
@@ -158,7 +169,7 @@
             // 
             // TBUrunStok
             // 
-            this.TBUrunStok.Location = new System.Drawing.Point(892, 328);
+            this.TBUrunStok.Location = new System.Drawing.Point(133, 186);
             this.TBUrunStok.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBUrunStok.Name = "TBUrunStok";
             this.TBUrunStok.Size = new System.Drawing.Size(104, 26);
@@ -166,71 +177,62 @@
             // 
             // TBUrunBarkod
             // 
-            this.TBUrunBarkod.Location = new System.Drawing.Point(892, 288);
+            this.TBUrunBarkod.Location = new System.Drawing.Point(133, 146);
             this.TBUrunBarkod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBUrunBarkod.Name = "TBUrunBarkod";
             this.TBUrunBarkod.Size = new System.Drawing.Size(104, 26);
             this.TBUrunBarkod.TabIndex = 13;
             // 
-            // BtnUrunEkle
+            // panel1
             // 
-            this.BtnUrunEkle.Location = new System.Drawing.Point(752, 386);
-            this.BtnUrunEkle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnUrunEkle.Name = "BtnUrunEkle";
-            this.BtnUrunEkle.Size = new System.Drawing.Size(94, 35);
-            this.BtnUrunEkle.TabIndex = 14;
-            this.BtnUrunEkle.Text = "Ekle";
-            this.BtnUrunEkle.UseVisualStyleBackColor = true;
-            this.BtnUrunEkle.Click += new System.EventHandler(this.BtnUrunEkle_Click);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.TBUrunBarkod);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.TBUrunStok);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.TBUrunFiyat);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.TBUrunAd);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(726, 161);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(258, 228);
+            this.panel1.TabIndex = 14;
             // 
-            // BtnUrunSil
+            // panel2
             // 
-            this.BtnUrunSil.Location = new System.Drawing.Point(958, 386);
-            this.BtnUrunSil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnUrunSil.Name = "BtnUrunSil";
-            this.BtnUrunSil.Size = new System.Drawing.Size(94, 35);
-            this.BtnUrunSil.TabIndex = 15;
-            this.BtnUrunSil.Text = "Sil";
-            this.BtnUrunSil.UseVisualStyleBackColor = true;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.TBUrunAra);
+            this.panel2.Location = new System.Drawing.Point(726, 18);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(258, 111);
+            this.panel2.TabIndex = 15;
             // 
-            // BtnUrunGuncelle
+            // openFileDialog1
             // 
-            this.BtnUrunGuncelle.Location = new System.Drawing.Point(855, 386);
-            this.BtnUrunGuncelle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnUrunGuncelle.Name = "BtnUrunGuncelle";
-            this.BtnUrunGuncelle.Size = new System.Drawing.Size(94, 35);
-            this.BtnUrunGuncelle.TabIndex = 16;
-            this.BtnUrunGuncelle.Text = "Güncelle";
-            this.BtnUrunGuncelle.UseVisualStyleBackColor = true;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Urunler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 680);
-            this.Controls.Add(this.BtnUrunGuncelle);
-            this.Controls.Add(this.BtnUrunSil);
-            this.Controls.Add(this.BtnUrunEkle);
-            this.Controls.Add(this.TBUrunBarkod);
-            this.Controls.Add(this.TBUrunStok);
-            this.Controls.Add(this.TBUrunFiyat);
-            this.Controls.Add(this.TBUrunAd);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1004, 680);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnStokEkle);
-            this.Controls.Add(this.TBUrunAra);
             this.Controls.Add(this.DGVUrunler);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Urunler";
             this.Text = "Urunler";
             this.Load += new System.EventHandler(this.Urunler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVUrunler)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -249,8 +251,8 @@
         private System.Windows.Forms.TextBox TBUrunFiyat;
         private System.Windows.Forms.TextBox TBUrunStok;
         private System.Windows.Forms.TextBox TBUrunBarkod;
-        private System.Windows.Forms.Button BtnUrunEkle;
-        private System.Windows.Forms.Button BtnUrunSil;
-        private System.Windows.Forms.Button BtnUrunGuncelle;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
