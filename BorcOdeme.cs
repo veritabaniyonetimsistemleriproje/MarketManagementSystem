@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MarketManagementSystem
 {
@@ -16,6 +17,129 @@ namespace MarketManagementSystem
         public BorcOdeme()
         {
             InitializeComponent();
+        }
+
+        private void RBMusteriBorc_CheckedChanged(object sender, EventArgs e)
+        {
+            PanelMusteriBorc.Visible = true;
+            PanelTedarikciBorc.Visible = false;
+        }
+
+        private void RBTedarikciBorc_CheckedChanged(object sender, EventArgs e)
+        {
+            PanelTedarikciBorc.Visible = true;
+            PanelMusteriBorc.Visible = false;
+        }
+
+        private void BorcOdeme_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void BtnMusteriAra_Click(object sender, EventArgs e)
+        {
+            int mNo = Convert.ToInt32(TBMusteriNo.Text);
+            var sorgu = from sepeturun in db.SepetUruns
+                        join veresiye in db.SatisVeresiyes
+                        on sepeturun.sepetId equals veresiye.sepetId
+                        join sepet in db.Sepets
+                        on veresiye.sepetId equals sepet.sepetId
+                        join urun in db.Uruns
+                        on sepeturun.urunBarkod equals urun.urunBarkod
+                        where veresiye.musteriNo == mNo
+                        select new
+                        {
+                            MüsteriNo = veresiye.musteriNo,
+                            SepetID = sepet.sepetId,
+                            ÜrünAd = urun.urunAd,
+                            ÜrünFiyat = sepeturun.urunAnlikFiyat,
+                            Tarih = sepet.tarih,
+                        };
+            DGVMusteri_Borc.DataSource = sorgu.ToList();
+
+            var musteri = db.Musteris.Find(mNo);
+            label3.Text = "Müşteri Toplam Borç: " + musteri.borcMiktar.ToString();
+            label3.ForeColor = Color.Red;
+        }
+
+        private void BtnTedarikciAra_Click(object sender, EventArgs e)
+        {
+            int tNo = Convert.ToInt32(TBTedarikciNo.Text);
+            var sorgu = from tedarikci in db.Tedarikcis
+                        join irsaliye in db.Irsaliyes
+                        on tedarikci.tedarikciNo equals irsaliye.tedarikciNo
+                        join urun in db.Uruns
+                        on irsaliye.urunKod equals urun.urunKod
+                        select new
+                        {
+                            İrsaliyeNo = irsaliye.irsaliyeNo,
+                            Tedarikçi = tedarikci.tedarikciAd,
+                            ÜrünAd = urun.urunAd,
+                            Miktar = irsaliye.miktar,
+                            Fiyat = irsaliye.birimGirdiFiyat,
+                            Toplam = irsaliye.miktar * irsaliye.birimGirdiFiyat,
+                            Tarih = irsaliye.tarih
+                        };
+
+            DGVTedarikBorc.DataSource = sorgu.ToList();
+
+            var tedarik = db.Tedarikcis.Find(tNo);
+            label5.Text = "Tedarikçiye Toplam Borç: " + tedarik.tedarikciBorc.ToString();
+            label5.ForeColor = Color.Red;
+        }
+
+        private void BtnMusteriBorcOde_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var musteri = db.Musteris.Find(Convert.ToInt32(TBMusteriNo.Text));
+                musteri.borcMiktar -= Convert.ToDouble(TBMusteriTutar.Text);
+
+                MusteriBorcOdeme musteriBorcOdeme = new MusteriBorcOdeme();
+                musteriBorcOdeme.musteriNo = Convert.ToInt32(TBMusteriNo.Text);
+                musteriBorcOdeme.odenenMiktar = Convert.ToDouble(TBMusteriTutar.Text);
+                musteriBorcOdeme.tarih = DateTime.Now;
+                db.MusteriBorcOdemes.Add(musteriBorcOdeme);
+
+                db.SaveChanges();
+
+                label3.Text = "Müşteri Toplam Borç: " + musteri.borcMiktar.ToString();
+                label3.ForeColor = Color.Red;
+                MessageBox.Show("Ödeme Başarıyla Tamamlandı.");
+            }
+            catch
+            {
+                MessageBox.Show("Lütfen müşteri numarası ve ödenen miktarı doğru giriniz.");
+            }
+            
+
+        }
+
+        private void BtnTedarikciBorcOde_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var tedarikci = db.Tedarikcis.Find(Convert.ToInt32(TBTedarikciNo.Text));
+                tedarikci.tedarikciBorc -= Convert.ToDouble(TBTedarikciTutar.Text);
+
+                TedarikciBorcOdeme tedarikciBorcOdeme = new TedarikciBorcOdeme();
+                tedarikciBorcOdeme.saticiId = 1;
+                tedarikciBorcOdeme.tedarikciNo = Convert.ToInt32(TBTedarikciNo.Text);
+                tedarikciBorcOdeme.odenenMiktar = Convert.ToDouble(TBTedarikciTutar.Text);
+                tedarikciBorcOdeme.tarih = DateTime.Now;
+                db.TedarikciBorcOdemes.Add(tedarikciBorcOdeme);
+
+                db.SaveChanges();
+
+                label5.Text = "Tedarikçiye Toplam Borç: " + tedarikci.tedarikciBorc.ToString();
+                label5.ForeColor = Color.Red;
+                MessageBox.Show("Ödeme Başarıyla Tamamlandı.");
+            }
+            catch
+            {
+                MessageBox.Show("Lütfen tedarikçi numarası ve ödenen miktarı doğru giriniz.");
+            }
+            
         }
     }
 }

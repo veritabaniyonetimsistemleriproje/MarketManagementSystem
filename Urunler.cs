@@ -74,8 +74,9 @@ namespace MarketManagementSystem
                     db.SaveChanges();
                     MessageBox.Show("Ürün stoğa işlendi.");
                 }
-                catch (IOException)
+                catch 
                 {
+                    MessageBox.Show("Lütfen doğru txt dosyasını seçtiğinizden emin olunuz.");
                 }
             }
         }
