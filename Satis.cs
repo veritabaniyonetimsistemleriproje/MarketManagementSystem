@@ -192,5 +192,10 @@ namespace MarketManagementSystem
             
 
         }
+
+        private void TBBarkodNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
