@@ -17,11 +17,6 @@ namespace MarketManagementSystem
             InitializeComponent();
         }
         MarketManagementSystemEntities1 db = new MarketManagementSystemEntities1();
-
-        private void BtnTedarikciBorcOdeme_Click(object sender, EventArgs e)
-        {
-            label5.Visible = true; TBTedarikciOdemeMiktar.Visible = true; BtnTedarikciOnayla.Visible = true;
-        }
    
         private void TBTedarikciArama_TextChanged(object sender, EventArgs e)
         {
