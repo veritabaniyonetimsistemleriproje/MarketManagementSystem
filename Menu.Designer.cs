@@ -35,15 +35,16 @@
             this.BtnRaporlama = new System.Windows.Forms.Button();
             this.PanelButon = new System.Windows.Forms.Panel();
             this.PanelForm = new System.Windows.Forms.Panel();
+            this.BtnBorcOdeme = new System.Windows.Forms.Button();
             this.PanelButon.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnUrunler
             // 
-            this.BtnUrunler.Location = new System.Drawing.Point(28, 35);
-            this.BtnUrunler.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.BtnUrunler.Location = new System.Drawing.Point(25, 28);
+            this.BtnUrunler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnUrunler.Name = "BtnUrunler";
-            this.BtnUrunler.Size = new System.Drawing.Size(142, 69);
+            this.BtnUrunler.Size = new System.Drawing.Size(126, 55);
             this.BtnUrunler.TabIndex = 1;
             this.BtnUrunler.Text = "Ürünler";
             this.BtnUrunler.UseVisualStyleBackColor = true;
@@ -51,10 +52,10 @@
             // 
             // BtnSatis
             // 
-            this.BtnSatis.Location = new System.Drawing.Point(276, 35);
-            this.BtnSatis.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.BtnSatis.Location = new System.Drawing.Point(245, 28);
+            this.BtnSatis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnSatis.Name = "BtnSatis";
-            this.BtnSatis.Size = new System.Drawing.Size(142, 69);
+            this.BtnSatis.Size = new System.Drawing.Size(126, 55);
             this.BtnSatis.TabIndex = 2;
             this.BtnSatis.Text = "Satış";
             this.BtnSatis.UseVisualStyleBackColor = true;
@@ -62,10 +63,10 @@
             // 
             // BtnMusteri
             // 
-            this.BtnMusteri.Location = new System.Drawing.Point(542, 35);
-            this.BtnMusteri.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.BtnMusteri.Location = new System.Drawing.Point(482, 28);
+            this.BtnMusteri.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnMusteri.Name = "BtnMusteri";
-            this.BtnMusteri.Size = new System.Drawing.Size(142, 69);
+            this.BtnMusteri.Size = new System.Drawing.Size(126, 55);
             this.BtnMusteri.TabIndex = 3;
             this.BtnMusteri.Text = "Müşteriler";
             this.BtnMusteri.UseVisualStyleBackColor = true;
@@ -73,10 +74,10 @@
             // 
             // BtnTedarikci
             // 
-            this.BtnTedarikci.Location = new System.Drawing.Point(790, 35);
-            this.BtnTedarikci.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.BtnTedarikci.Location = new System.Drawing.Point(702, 28);
+            this.BtnTedarikci.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnTedarikci.Name = "BtnTedarikci";
-            this.BtnTedarikci.Size = new System.Drawing.Size(142, 69);
+            this.BtnTedarikci.Size = new System.Drawing.Size(126, 55);
             this.BtnTedarikci.TabIndex = 4;
             this.BtnTedarikci.Text = "Tedarikçi";
             this.BtnTedarikci.UseVisualStyleBackColor = true;
@@ -84,10 +85,10 @@
             // 
             // BtnRaporlama
             // 
-            this.BtnRaporlama.Location = new System.Drawing.Point(1046, 35);
-            this.BtnRaporlama.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.BtnRaporlama.Location = new System.Drawing.Point(930, 28);
+            this.BtnRaporlama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnRaporlama.Name = "BtnRaporlama";
-            this.BtnRaporlama.Size = new System.Drawing.Size(142, 69);
+            this.BtnRaporlama.Size = new System.Drawing.Size(126, 55);
             this.BtnRaporlama.TabIndex = 5;
             this.BtnRaporlama.Text = "Raporlama";
             this.BtnRaporlama.UseVisualStyleBackColor = true;
@@ -96,6 +97,7 @@
             // PanelButon
             // 
             this.PanelButon.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PanelButon.Controls.Add(this.BtnBorcOdeme);
             this.PanelButon.Controls.Add(this.BtnUrunler);
             this.PanelButon.Controls.Add(this.BtnRaporlama);
             this.PanelButon.Controls.Add(this.BtnSatis);
@@ -103,29 +105,40 @@
             this.PanelButon.Controls.Add(this.BtnMusteri);
             this.PanelButon.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelButon.Location = new System.Drawing.Point(0, 0);
-            this.PanelButon.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.PanelButon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelButon.Name = "PanelButon";
-            this.PanelButon.Size = new System.Drawing.Size(1444, 134);
+            this.PanelButon.Size = new System.Drawing.Size(1284, 107);
             this.PanelButon.TabIndex = 6;
             // 
             // PanelForm
             // 
             this.PanelForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelForm.Location = new System.Drawing.Point(0, 134);
-            this.PanelForm.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.PanelForm.Location = new System.Drawing.Point(0, 107);
+            this.PanelForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelForm.Name = "PanelForm";
-            this.PanelForm.Size = new System.Drawing.Size(1444, 724);
+            this.PanelForm.Size = new System.Drawing.Size(1284, 579);
             this.PanelForm.TabIndex = 7;
+            // 
+            // BtnBorcOdeme
+            // 
+            this.BtnBorcOdeme.Location = new System.Drawing.Point(1115, 28);
+            this.BtnBorcOdeme.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnBorcOdeme.Name = "BtnBorcOdeme";
+            this.BtnBorcOdeme.Size = new System.Drawing.Size(126, 55);
+            this.BtnBorcOdeme.TabIndex = 6;
+            this.BtnBorcOdeme.Text = "Borç Ödeme";
+            this.BtnBorcOdeme.UseVisualStyleBackColor = true;
+            this.BtnBorcOdeme.Click += new System.EventHandler(this.BtnBorcOdeme_Click);
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 858);
+            this.ClientSize = new System.Drawing.Size(1284, 686);
             this.Controls.Add(this.PanelForm);
             this.Controls.Add(this.PanelButon);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
@@ -143,5 +156,6 @@
         private System.Windows.Forms.Button BtnRaporlama;
         private System.Windows.Forms.Panel PanelButon;
         private System.Windows.Forms.Panel PanelForm;
+        private System.Windows.Forms.Button BtnBorcOdeme;
     }
 }

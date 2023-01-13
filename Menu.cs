@@ -59,5 +59,11 @@ namespace MarketManagementSystem
         {
 
         }
+
+        private void BtnBorcOdeme_Click(object sender, EventArgs e)
+        {
+            BorcOdeme borcOdemefrm = new BorcOdeme();
+            FormGetir(borcOdemefrm);
+        }
     }
 }

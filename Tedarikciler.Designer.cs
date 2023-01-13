@@ -61,22 +61,20 @@
             this.DGVTedarikciler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVTedarikciler.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DGVTedarikciler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVTedarikciler.Location = new System.Drawing.Point(15, 16);
-            this.DGVTedarikciler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DGVTedarikciler.Location = new System.Drawing.Point(13, 13);
             this.DGVTedarikciler.Name = "DGVTedarikciler";
             this.DGVTedarikciler.ReadOnly = true;
             this.DGVTedarikciler.RowHeadersWidth = 51;
             this.DGVTedarikciler.RowTemplate.Height = 24;
-            this.DGVTedarikciler.Size = new System.Drawing.Size(616, 660);
+            this.DGVTedarikciler.Size = new System.Drawing.Size(548, 528);
             this.DGVTedarikciler.TabIndex = 0;
             this.DGVTedarikciler.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVTedarikciler_CellEnter);
             // 
             // TBTedarikciArama
             // 
-            this.TBTedarikciArama.Location = new System.Drawing.Point(18, 48);
-            this.TBTedarikciArama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TBTedarikciArama.Location = new System.Drawing.Point(16, 38);
             this.TBTedarikciArama.Name = "TBTedarikciArama";
-            this.TBTedarikciArama.Size = new System.Drawing.Size(269, 26);
+            this.TBTedarikciArama.Size = new System.Drawing.Size(240, 22);
             this.TBTedarikciArama.TabIndex = 1;
             this.TBTedarikciArama.TextChanged += new System.EventHandler(this.TBTedarikciArama_TextChanged);
             // 
@@ -84,9 +82,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(14, 9);
+            this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 25);
+            this.label1.Size = new System.Drawing.Size(152, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tedarikçi Arama:";
             // 
@@ -94,9 +92,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(14, 29);
+            this.label2.Location = new System.Drawing.Point(12, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 25);
+            this.label2.Size = new System.Drawing.Size(157, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tedarikçi Bilgileri";
             // 
@@ -104,9 +102,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(14, 66);
+            this.label3.Location = new System.Drawing.Point(12, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 22);
+            this.label3.Size = new System.Drawing.Size(96, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tedarikçi No:";
             // 
@@ -114,36 +112,33 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(14, 109);
+            this.label4.Location = new System.Drawing.Point(12, 87);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 22);
+            this.label4.Size = new System.Drawing.Size(93, 18);
             this.label4.TabIndex = 5;
             this.label4.Text = "Tedarikçi Ad:";
             // 
             // TBTedarikciNo
             // 
-            this.TBTedarikciNo.Location = new System.Drawing.Point(174, 58);
-            this.TBTedarikciNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TBTedarikciNo.Location = new System.Drawing.Point(155, 46);
             this.TBTedarikciNo.Name = "TBTedarikciNo";
-            this.TBTedarikciNo.Size = new System.Drawing.Size(112, 26);
+            this.TBTedarikciNo.Size = new System.Drawing.Size(100, 22);
             this.TBTedarikciNo.TabIndex = 6;
             // 
             // TBTedarikciAd
             // 
-            this.TBTedarikciAd.Location = new System.Drawing.Point(174, 105);
-            this.TBTedarikciAd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TBTedarikciAd.Location = new System.Drawing.Point(155, 84);
             this.TBTedarikciAd.Name = "TBTedarikciAd";
-            this.TBTedarikciAd.Size = new System.Drawing.Size(112, 26);
+            this.TBTedarikciAd.Size = new System.Drawing.Size(100, 22);
             this.TBTedarikciAd.TabIndex = 7;
             // 
             // BtnTedarikciGuncelle
             // 
             this.BtnTedarikciGuncelle.BackColor = System.Drawing.Color.Yellow;
             this.BtnTedarikciGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnTedarikciGuncelle.Location = new System.Drawing.Point(18, 195);
-            this.BtnTedarikciGuncelle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnTedarikciGuncelle.Location = new System.Drawing.Point(16, 156);
             this.BtnTedarikciGuncelle.Name = "BtnTedarikciGuncelle";
-            this.BtnTedarikciGuncelle.Size = new System.Drawing.Size(125, 39);
+            this.BtnTedarikciGuncelle.Size = new System.Drawing.Size(111, 31);
             this.BtnTedarikciGuncelle.TabIndex = 8;
             this.BtnTedarikciGuncelle.Text = "Güncelle";
             this.BtnTedarikciGuncelle.UseVisualStyleBackColor = false;
@@ -153,10 +148,9 @@
             // 
             this.BtnTedarikciSil.BackColor = System.Drawing.Color.Red;
             this.BtnTedarikciSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnTedarikciSil.Location = new System.Drawing.Point(165, 195);
-            this.BtnTedarikciSil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnTedarikciSil.Location = new System.Drawing.Point(147, 156);
             this.BtnTedarikciSil.Name = "BtnTedarikciSil";
-            this.BtnTedarikciSil.Size = new System.Drawing.Size(121, 39);
+            this.BtnTedarikciSil.Size = new System.Drawing.Size(108, 31);
             this.BtnTedarikciSil.TabIndex = 9;
             this.BtnTedarikciSil.Text = "Sil";
             this.BtnTedarikciSil.UseVisualStyleBackColor = false;
@@ -164,12 +158,11 @@
             // 
             // BtnTedarikciBorcOdeme
             // 
-            this.BtnTedarikciBorcOdeme.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BtnTedarikciBorcOdeme.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnTedarikciBorcOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnTedarikciBorcOdeme.Location = new System.Drawing.Point(20, 17);
-            this.BtnTedarikciBorcOdeme.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnTedarikciBorcOdeme.Location = new System.Drawing.Point(18, 14);
             this.BtnTedarikciBorcOdeme.Name = "BtnTedarikciBorcOdeme";
-            this.BtnTedarikciBorcOdeme.Size = new System.Drawing.Size(267, 47);
+            this.BtnTedarikciBorcOdeme.Size = new System.Drawing.Size(237, 38);
             this.BtnTedarikciBorcOdeme.TabIndex = 10;
             this.BtnTedarikciBorcOdeme.Text = "Tedarikçi Borç Ödeme";
             this.BtnTedarikciBorcOdeme.UseVisualStyleBackColor = false;
@@ -179,19 +172,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(23, 79);
+            this.label5.Location = new System.Drawing.Point(20, 63);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 22);
+            this.label5.Size = new System.Drawing.Size(155, 18);
             this.label5.TabIndex = 11;
             this.label5.Text = "Ödeme Miktari Giriniz:";
             this.label5.Visible = false;
             // 
             // TBTedarikciOdemeMiktar
             // 
-            this.TBTedarikciOdemeMiktar.Location = new System.Drawing.Point(23, 117);
-            this.TBTedarikciOdemeMiktar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TBTedarikciOdemeMiktar.Location = new System.Drawing.Point(20, 94);
             this.TBTedarikciOdemeMiktar.Name = "TBTedarikciOdemeMiktar";
-            this.TBTedarikciOdemeMiktar.Size = new System.Drawing.Size(264, 26);
+            this.TBTedarikciOdemeMiktar.Size = new System.Drawing.Size(235, 22);
             this.TBTedarikciOdemeMiktar.TabIndex = 12;
             this.TBTedarikciOdemeMiktar.Visible = false;
             // 
@@ -199,10 +191,9 @@
             // 
             this.BtnTedarikciOnayla.BackColor = System.Drawing.Color.LawnGreen;
             this.BtnTedarikciOnayla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnTedarikciOnayla.Location = new System.Drawing.Point(20, 161);
-            this.BtnTedarikciOnayla.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnTedarikciOnayla.Location = new System.Drawing.Point(18, 129);
             this.BtnTedarikciOnayla.Name = "BtnTedarikciOnayla";
-            this.BtnTedarikciOnayla.Size = new System.Drawing.Size(267, 45);
+            this.BtnTedarikciOnayla.Size = new System.Drawing.Size(237, 36);
             this.BtnTedarikciOnayla.TabIndex = 13;
             this.BtnTedarikciOnayla.Text = "Onayla";
             this.BtnTedarikciOnayla.UseVisualStyleBackColor = false;
@@ -212,10 +203,9 @@
             // 
             this.BtnYeniTedarikci.BackColor = System.Drawing.Color.LawnGreen;
             this.BtnYeniTedarikci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnYeniTedarikci.Location = new System.Drawing.Point(19, 242);
-            this.BtnYeniTedarikci.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnYeniTedarikci.Location = new System.Drawing.Point(17, 194);
             this.BtnYeniTedarikci.Name = "BtnYeniTedarikci";
-            this.BtnYeniTedarikci.Size = new System.Drawing.Size(267, 38);
+            this.BtnYeniTedarikci.Size = new System.Drawing.Size(237, 30);
             this.BtnYeniTedarikci.TabIndex = 14;
             this.BtnYeniTedarikci.Text = "Tedarikçi Ekle";
             this.BtnYeniTedarikci.UseVisualStyleBackColor = false;
@@ -225,18 +215,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(18, 150);
+            this.label6.Location = new System.Drawing.Point(16, 120);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 22);
+            this.label6.Size = new System.Drawing.Size(123, 18);
             this.label6.TabIndex = 15;
             this.label6.Text = "Tedarikçiye Borç:";
             // 
             // TBTedarikciBorc
             // 
-            this.TBTedarikciBorc.Location = new System.Drawing.Point(174, 150);
-            this.TBTedarikciBorc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TBTedarikciBorc.Location = new System.Drawing.Point(155, 120);
             this.TBTedarikciBorc.Name = "TBTedarikciBorc";
-            this.TBTedarikciBorc.Size = new System.Drawing.Size(112, 26);
+            this.TBTedarikciBorc.Size = new System.Drawing.Size(100, 22);
             this.TBTedarikciBorc.TabIndex = 16;
             // 
             // panel1
@@ -247,9 +236,10 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.TBTedarikciOdemeMiktar);
             this.panel1.Controls.Add(this.BtnTedarikciOnayla);
-            this.panel1.Location = new System.Drawing.Point(637, 449);
+            this.panel1.Location = new System.Drawing.Point(566, 359);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 227);
+            this.panel1.Size = new System.Drawing.Size(270, 182);
             this.panel1.TabIndex = 17;
             // 
             // panel2
@@ -257,9 +247,10 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.TBTedarikciArama);
-            this.panel2.Location = new System.Drawing.Point(637, 16);
+            this.panel2.Location = new System.Drawing.Point(566, 13);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(304, 92);
+            this.panel2.Size = new System.Drawing.Size(270, 74);
             this.panel2.TabIndex = 18;
             // 
             // panel3
@@ -275,21 +266,21 @@
             this.panel3.Controls.Add(this.BtnYeniTedarikci);
             this.panel3.Controls.Add(this.BtnTedarikciGuncelle);
             this.panel3.Controls.Add(this.BtnTedarikciSil);
-            this.panel3.Location = new System.Drawing.Point(637, 114);
+            this.panel3.Location = new System.Drawing.Point(566, 91);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(304, 328);
+            this.panel3.Size = new System.Drawing.Size(270, 263);
             this.panel3.TabIndex = 19;
             // 
             // Tedarikciler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 688);
+            this.ClientSize = new System.Drawing.Size(897, 550);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DGVTedarikciler);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Tedarikciler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tedarikciler";
