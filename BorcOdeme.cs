@@ -170,6 +170,13 @@ namespace MarketManagementSystem
                     var sepetTutarGuncelle = db.Sepets.First(s => s.sepetId == sepetId);
                     sepetTutarGuncelle.toplamTutar -= toplamTutar;
 
+                    if(sepetTutarGuncelle.toplamTutar == 0)
+                    {
+                        SatisVeresiye satisVeresiye = db.SatisVeresiyes.FirstOrDefault(s => s.sepetId == sepetId);
+                        db.SatisVeresiyes.Remove(satisVeresiye);
+                        db.Sepets.Remove(sepetTutarGuncelle);
+                    }
+
                     var urunStokGuncelle = db.Uruns.First(s => s.urunBarkod == barkodNo);
                     urunStokGuncelle.urunStok += satismiktar;
 
