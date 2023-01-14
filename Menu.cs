@@ -37,8 +37,8 @@ namespace MarketManagementSystem
         private void BtnSatis_Click(object sender, EventArgs e)
         {
            
-            string Ad = Interaction.InputBox("Kullanıcı Adınızı girin:");
-            string sifre = Interaction.InputBox("Sifre girin:");
+            string Ad = Interaction.InputBox("Kullanıcı Adınızı Girin:", "Kullanıcı Adı");
+            string sifre = Interaction.InputBox("Şifre girin:", "Şifre");
             
             var query = db.Saticis.Where(x => x.kullaniciAdi == Ad && x.parola == sifre).FirstOrDefault();
             if (query != null)

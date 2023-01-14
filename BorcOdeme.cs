@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -154,32 +155,42 @@ namespace MarketManagementSystem
 
         private void BtnUrunSatisSil_Click(object sender, EventArgs e)
         {
-            int musteriNo = Convert.ToInt32(TBMusteriNo.Text);
-            foreach (DataGridViewRow item in this.DGVMusteri_Borc.SelectedRows)
+            string sifre = Interaction.InputBox("Şifre girin:", "Satış Silme");
+            if(sifre == "özelşifre")
             {
-                int sepetId = Convert.ToInt32(item.Cells[0].Value.ToString());
-                int barkodNo = Convert.ToInt32(item.Cells[1].Value.ToString());
-                double fiyat = Convert.ToDouble(item.Cells[3].Value.ToString());
-                int satismiktar = Convert.ToInt32(item.Cells[4].Value.ToString());
-                double toplamTutar = satismiktar * fiyat;
+                int musteriNo = Convert.ToInt32(TBMusteriNo.Text);
+                foreach (DataGridViewRow item in this.DGVMusteri_Borc.SelectedRows)
+                {
+                    int sepetId = Convert.ToInt32(item.Cells[0].Value.ToString());
+                    int barkodNo = Convert.ToInt32(item.Cells[1].Value.ToString());
+                    double fiyat = Convert.ToDouble(item.Cells[3].Value.ToString());
+                    int satismiktar = Convert.ToInt32(item.Cells[4].Value.ToString());
+                    double toplamTutar = satismiktar * fiyat;
 
-                var sepetTutarGuncelle = db.Sepets.First(s => s.sepetId == sepetId);
-                sepetTutarGuncelle.toplamTutar -= toplamTutar;
-                
-                var urunStokGuncelle = db.Uruns.First(s => s.urunBarkod == barkodNo);
-                urunStokGuncelle.urunStok += satismiktar;
+                    var sepetTutarGuncelle = db.Sepets.First(s => s.sepetId == sepetId);
+                    sepetTutarGuncelle.toplamTutar -= toplamTutar;
 
-                var musteriBorcGuncelle = db.Musteris.First(s => s.musteriNo == musteriNo);
-                musteriBorcGuncelle.borcMiktar -= toplamTutar;
+                    var urunStokGuncelle = db.Uruns.First(s => s.urunBarkod == barkodNo);
+                    urunStokGuncelle.urunStok += satismiktar;
 
-                SepetUrun urunsatis = db.SepetUruns.FirstOrDefault(s => s.sepetId == sepetId & s.urunBarkod == barkodNo);
-                db.SepetUruns.Remove(urunsatis);
+                    var musteriBorcGuncelle = db.Musteris.First(s => s.musteriNo == musteriNo);
+                    musteriBorcGuncelle.borcMiktar -= toplamTutar;
 
-                db.SaveChanges();
+                    SepetUrun urunsatis = db.SepetUruns.FirstOrDefault(s => s.sepetId == sepetId & s.urunBarkod == barkodNo);
+                    db.SepetUruns.Remove(urunsatis);
 
-                BtnMusteriAra_Click(sender, e);
+                    db.SaveChanges();
 
+                    BtnMusteriAra_Click(sender, e);
+                    MessageBox.Show("Ürün Satışı Başarıyla Silindi.");
+
+                }
             }
+            else
+            {
+                MessageBox.Show("Hatalı Şifre.");
+            }
+            
         }
     }
 }
