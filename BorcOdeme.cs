@@ -38,28 +38,38 @@ namespace MarketManagementSystem
 
         private void BtnMusteriAra_Click(object sender, EventArgs e)
         {
-            int mNo = Convert.ToInt32(TBMusteriNo.Text);
-            var sorgu = from sepeturun in db.SepetUruns
-                        join veresiye in db.SatisVeresiyes
-                        on sepeturun.sepetId equals veresiye.sepetId
-                        join sepet in db.Sepets
-                        on veresiye.sepetId equals sepet.sepetId
-                        join urun in db.Uruns
-                        on sepeturun.urunBarkod equals urun.urunBarkod
-                        where veresiye.musteriNo == mNo
-                        select new
-                        {
-                            MüsteriNo = veresiye.musteriNo,
-                            SepetID = sepet.sepetId,
-                            ÜrünAd = urun.urunAd,
-                            ÜrünFiyat = sepeturun.urunAnlikFiyat,
-                            Tarih = sepet.tarih,
-                        };
-            DGVMusteri_Borc.DataSource = sorgu.ToList();
+            try
+            {
+                int mNo = Convert.ToInt32(TBMusteriNo.Text);
+                var sorgu = from sepeturun in db.SepetUruns
+                            join veresiye in db.SatisVeresiyes
+                            on sepeturun.sepetId equals veresiye.sepetId
+                            join sepet in db.Sepets
+                            on veresiye.sepetId equals sepet.sepetId
+                            join urun in db.Uruns
+                            on sepeturun.urunBarkod equals urun.urunBarkod
+                            where veresiye.musteriNo == mNo
+                            select new
+                            {
 
-            var musteri = db.Musteris.Find(mNo);
-            label3.Text = "Müşteri Toplam Borç: " + musteri.borcMiktar.ToString();
-            label3.ForeColor = Color.Red;
+                                SepetID = sepet.sepetId,
+                                Barkod = urun.urunBarkod,
+                                Ad = urun.urunAd,
+                                Fiyat = sepeturun.urunAnlikFiyat,
+                                Miktar = sepeturun.satisMiktar,
+                                Tarih = sepet.tarih,
+                            };
+                DGVMusteri_Borc.DataSource = sorgu.ToList();
+
+                var musteri = db.Musteris.Find(mNo);
+                label3.Text = "Müşteri Toplam Borç: " + musteri.borcMiktar.ToString();
+                label3.ForeColor = Color.Red;
+            }
+            catch
+            {
+                MessageBox.Show("Böyle bir müşteri bulunmamaktadır.");
+            }
+            
         }
 
         private void BtnTedarikciAra_Click(object sender, EventArgs e)
@@ -78,7 +88,7 @@ namespace MarketManagementSystem
                             Miktar = irsaliye.miktar,
                             Fiyat = irsaliye.birimGirdiFiyat,
                             Toplam = irsaliye.miktar * irsaliye.birimGirdiFiyat,
-                            Tarih = irsaliye.tarih
+                            Tarih = irsaliye.tarih,                          
                         };
 
             DGVTedarikBorc.DataSource = sorgu.ToList();
@@ -140,6 +150,36 @@ namespace MarketManagementSystem
                 MessageBox.Show("Lütfen tedarikçi numarası ve ödenen miktarı doğru giriniz.");
             }
             
+        }
+
+        private void BtnUrunSatisSil_Click(object sender, EventArgs e)
+        {
+            int musteriNo = Convert.ToInt32(TBMusteriNo.Text);
+            foreach (DataGridViewRow item in this.DGVMusteri_Borc.SelectedRows)
+            {
+                int sepetId = Convert.ToInt32(item.Cells[0].Value.ToString());
+                int barkodNo = Convert.ToInt32(item.Cells[1].Value.ToString());
+                double fiyat = Convert.ToDouble(item.Cells[3].Value.ToString());
+                int satismiktar = Convert.ToInt32(item.Cells[4].Value.ToString());
+                double toplamTutar = satismiktar * fiyat;
+
+                var sepetTutarGuncelle = db.Sepets.First(s => s.sepetId == sepetId);
+                sepetTutarGuncelle.toplamTutar -= toplamTutar;
+                
+                var urunStokGuncelle = db.Uruns.First(s => s.urunBarkod == barkodNo);
+                urunStokGuncelle.urunStok += satismiktar;
+
+                var musteriBorcGuncelle = db.Musteris.First(s => s.musteriNo == musteriNo);
+                musteriBorcGuncelle.borcMiktar -= toplamTutar;
+
+                SepetUrun urunsatis = db.SepetUruns.FirstOrDefault(s => s.sepetId == sepetId & s.urunBarkod == barkodNo);
+                db.SepetUruns.Remove(urunsatis);
+
+                db.SaveChanges();
+
+                BtnMusteriAra_Click(sender, e);
+
+            }
         }
     }
 }

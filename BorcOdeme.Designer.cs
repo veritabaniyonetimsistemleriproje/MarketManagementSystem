@@ -37,6 +37,7 @@
             this.DGVMusteri_Borc = new System.Windows.Forms.DataGridView();
             this.DGVTedarikBorc = new System.Windows.Forms.DataGridView();
             this.PanelMusteriBorc = new System.Windows.Forms.Panel();
+            this.BtnUrunSatisSil = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TBMusteriTutar = new System.Windows.Forms.TextBox();
@@ -59,7 +60,7 @@
             this.BtnMusteriBorcOde.BackColor = System.Drawing.Color.LawnGreen;
             this.BtnMusteriBorcOde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnMusteriBorcOde.Location = new System.Drawing.Point(328, 307);
-            this.BtnMusteriBorcOde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnMusteriBorcOde.Margin = new System.Windows.Forms.Padding(2);
             this.BtnMusteriBorcOde.Name = "BtnMusteriBorcOde";
             this.BtnMusteriBorcOde.Size = new System.Drawing.Size(78, 47);
             this.BtnMusteriBorcOde.TabIndex = 0;
@@ -72,7 +73,7 @@
             this.BtnTedarikciBorcOde.BackColor = System.Drawing.Color.LawnGreen;
             this.BtnTedarikciBorcOde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnTedarikciBorcOde.Location = new System.Drawing.Point(334, 307);
-            this.BtnTedarikciBorcOde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnTedarikciBorcOde.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTedarikciBorcOde.Name = "BtnTedarikciBorcOde";
             this.BtnTedarikciBorcOde.Size = new System.Drawing.Size(77, 47);
             this.BtnTedarikciBorcOde.TabIndex = 1;
@@ -83,7 +84,7 @@
             // TBMusteriNo
             // 
             this.TBMusteriNo.Location = new System.Drawing.Point(8, 29);
-            this.TBMusteriNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBMusteriNo.Margin = new System.Windows.Forms.Padding(2);
             this.TBMusteriNo.Name = "TBMusteriNo";
             this.TBMusteriNo.Size = new System.Drawing.Size(105, 20);
             this.TBMusteriNo.TabIndex = 2;
@@ -91,7 +92,7 @@
             // TBTedarikciNo
             // 
             this.TBTedarikciNo.Location = new System.Drawing.Point(14, 30);
-            this.TBTedarikciNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBTedarikciNo.Margin = new System.Windows.Forms.Padding(2);
             this.TBTedarikciNo.Name = "TBTedarikciNo";
             this.TBTedarikciNo.Size = new System.Drawing.Size(105, 20);
             this.TBTedarikciNo.TabIndex = 3;
@@ -123,7 +124,7 @@
             this.DGVMusteri_Borc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGVMusteri_Borc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVMusteri_Borc.Location = new System.Drawing.Point(8, 80);
-            this.DGVMusteri_Borc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGVMusteri_Borc.Margin = new System.Windows.Forms.Padding(2);
             this.DGVMusteri_Borc.Name = "DGVMusteri_Borc";
             this.DGVMusteri_Borc.RowHeadersWidth = 51;
             this.DGVMusteri_Borc.RowTemplate.Height = 24;
@@ -135,7 +136,7 @@
             this.DGVTedarikBorc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGVTedarikBorc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVTedarikBorc.Location = new System.Drawing.Point(14, 80);
-            this.DGVTedarikBorc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGVTedarikBorc.Margin = new System.Windows.Forms.Padding(2);
             this.DGVTedarikBorc.Name = "DGVTedarikBorc";
             this.DGVTedarikBorc.RowHeadersWidth = 51;
             this.DGVTedarikBorc.RowTemplate.Height = 24;
@@ -145,6 +146,7 @@
             // PanelMusteriBorc
             // 
             this.PanelMusteriBorc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelMusteriBorc.Controls.Add(this.BtnUrunSatisSil);
             this.PanelMusteriBorc.Controls.Add(this.label4);
             this.PanelMusteriBorc.Controls.Add(this.label3);
             this.PanelMusteriBorc.Controls.Add(this.TBMusteriTutar);
@@ -154,11 +156,24 @@
             this.PanelMusteriBorc.Controls.Add(this.TBMusteriNo);
             this.PanelMusteriBorc.Controls.Add(this.label1);
             this.PanelMusteriBorc.Location = new System.Drawing.Point(2, 63);
-            this.PanelMusteriBorc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelMusteriBorc.Margin = new System.Windows.Forms.Padding(2);
             this.PanelMusteriBorc.Name = "PanelMusteriBorc";
             this.PanelMusteriBorc.Size = new System.Drawing.Size(428, 388);
             this.PanelMusteriBorc.TabIndex = 8;
             this.PanelMusteriBorc.Visible = false;
+            // 
+            // BtnUrunSatisSil
+            // 
+            this.BtnUrunSatisSil.BackColor = System.Drawing.Color.Red;
+            this.BtnUrunSatisSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnUrunSatisSil.Location = new System.Drawing.Point(216, 52);
+            this.BtnUrunSatisSil.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnUrunSatisSil.Name = "BtnUrunSatisSil";
+            this.BtnUrunSatisSil.Size = new System.Drawing.Size(197, 24);
+            this.BtnUrunSatisSil.TabIndex = 11;
+            this.BtnUrunSatisSil.Text = "Seçili Ürün Satışını Sil";
+            this.BtnUrunSatisSil.UseVisualStyleBackColor = false;
+            this.BtnUrunSatisSil.Click += new System.EventHandler(this.BtnUrunSatisSil_Click);
             // 
             // label4
             // 
@@ -185,7 +200,7 @@
             // TBMusteriTutar
             // 
             this.TBMusteriTutar.Location = new System.Drawing.Point(236, 323);
-            this.TBMusteriTutar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBMusteriTutar.Margin = new System.Windows.Forms.Padding(2);
             this.TBMusteriTutar.Name = "TBMusteriTutar";
             this.TBMusteriTutar.Size = new System.Drawing.Size(76, 20);
             this.TBMusteriTutar.TabIndex = 8;
@@ -195,8 +210,8 @@
             this.BtnMusteriAra.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnMusteriAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnMusteriAra.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMusteriAra.Location = new System.Drawing.Point(155, 29);
-            this.BtnMusteriAra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnMusteriAra.Location = new System.Drawing.Point(8, 52);
+            this.BtnMusteriAra.Margin = new System.Windows.Forms.Padding(2);
             this.BtnMusteriAra.Name = "BtnMusteriAra";
             this.BtnMusteriAra.Size = new System.Drawing.Size(102, 24);
             this.BtnMusteriAra.TabIndex = 7;
@@ -216,7 +231,7 @@
             this.PanelTedarikciBorc.Controls.Add(this.TBTedarikciNo);
             this.PanelTedarikciBorc.Controls.Add(this.label2);
             this.PanelTedarikciBorc.Location = new System.Drawing.Point(446, 63);
-            this.PanelTedarikciBorc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelTedarikciBorc.Margin = new System.Windows.Forms.Padding(2);
             this.PanelTedarikciBorc.Name = "PanelTedarikciBorc";
             this.PanelTedarikciBorc.Size = new System.Drawing.Size(428, 388);
             this.PanelTedarikciBorc.TabIndex = 9;
@@ -247,7 +262,7 @@
             // TBTedarikciTutar
             // 
             this.TBTedarikciTutar.Location = new System.Drawing.Point(226, 323);
-            this.TBTedarikciTutar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBTedarikciTutar.Margin = new System.Windows.Forms.Padding(2);
             this.TBTedarikciTutar.Name = "TBTedarikciTutar";
             this.TBTedarikciTutar.Size = new System.Drawing.Size(76, 20);
             this.TBTedarikciTutar.TabIndex = 9;
@@ -257,7 +272,7 @@
             this.BtnTedarikciAra.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnTedarikciAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnTedarikciAra.Location = new System.Drawing.Point(166, 29);
-            this.BtnTedarikciAra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnTedarikciAra.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTedarikciAra.Name = "BtnTedarikciAra";
             this.BtnTedarikciAra.Size = new System.Drawing.Size(107, 24);
             this.BtnTedarikciAra.TabIndex = 8;
@@ -270,7 +285,7 @@
             this.RBMusteriBorc.AutoSize = true;
             this.RBMusteriBorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.RBMusteriBorc.Location = new System.Drawing.Point(2, 22);
-            this.RBMusteriBorc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RBMusteriBorc.Margin = new System.Windows.Forms.Padding(2);
             this.RBMusteriBorc.Name = "RBMusteriBorc";
             this.RBMusteriBorc.Size = new System.Drawing.Size(173, 21);
             this.RBMusteriBorc.TabIndex = 10;
@@ -284,7 +299,7 @@
             this.RBTedarikciBorc.AutoSize = true;
             this.RBTedarikciBorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.RBTedarikciBorc.Location = new System.Drawing.Point(446, 22);
-            this.RBTedarikciBorc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RBTedarikciBorc.Margin = new System.Windows.Forms.Padding(2);
             this.RBTedarikciBorc.Name = "RBTedarikciBorc";
             this.RBTedarikciBorc.Size = new System.Drawing.Size(187, 21);
             this.RBTedarikciBorc.TabIndex = 11;
@@ -302,7 +317,7 @@
             this.Controls.Add(this.RBMusteriBorc);
             this.Controls.Add(this.PanelTedarikciBorc);
             this.Controls.Add(this.PanelMusteriBorc);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BorcOdeme";
             this.Text = "BorcOdeme";
             this.Load += new System.EventHandler(this.BorcOdeme_Load);
@@ -339,5 +354,6 @@
         private System.Windows.Forms.Button BtnTedarikciAra;
         private System.Windows.Forms.RadioButton RBMusteriBorc;
         private System.Windows.Forms.RadioButton RBTedarikciBorc;
+        private System.Windows.Forms.Button BtnUrunSatisSil;
     }
 }
