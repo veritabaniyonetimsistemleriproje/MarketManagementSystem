@@ -77,26 +77,48 @@ namespace MarketManagementSystem
             {
                 int barkodNo = Convert.ToInt32(DGVSepet.Rows[i].Cells[0].Value);
                 double anlikFiyat = Convert.ToDouble(DGVSepet.Rows[i].Cells[2].Value);
-                var query = (from s in db.SepetUruns
+                var sepeturun = (from s in db.SepetUruns       
                              where s.urunBarkod == barkodNo & s.sepetId == sptid
-                             select s);
-                var deneme = query.FirstOrDefault();
-                if(deneme != null)
+                             select s).FirstOrDefault();
+                var stok = (from s in db.Uruns
+                              where s.urunBarkod == barkodNo
+                              select s).FirstOrDefault();
+                if(sepeturun != null)
                 {
-                    deneme.satisMiktar += 1;
+                    sepeturun.satisMiktar += 1;
+                    stok.urunStok -= 1;    
                     db.SaveChanges();
                 }
-                else if(deneme == null)
+                else if(sepeturun == null)
                 {
                     sepettekiUrun.sepetId = sptid;
                     sepettekiUrun.urunBarkod = barkodNo;
                     sepettekiUrun.urunAnlikFiyat = anlikFiyat;
                     sepettekiUrun.satisMiktar = 1;
+                    stok.urunStok -= 1;
                     db.SepetUruns.Add(sepettekiUrun);
                     db.SaveChanges();
                 }             
             }
         }
+
+        public void stokBildiri(int sptid)
+        {
+            foreach (var item in db.SepetUruns)
+            {
+                if (item.sepetId == sptid)
+                {
+                    var stok = (from s in db.Uruns
+                                where s.urunBarkod == item.urunBarkod
+                                select s).FirstOrDefault();
+                    if (stok.urunStok < 20)
+                    {
+                        MessageBox.Show(stok.urunBarkod + " barkod numaralı" + stok.urunAd + " ürünü 20 adetten az kaldı.");
+                    }
+                }
+            }
+        }
+
         private void BtnOnay_Click(object sender, EventArgs e)
         {
             int bNo = Convert.ToInt32(TBBarkodNo.Text);
@@ -157,8 +179,6 @@ namespace MarketManagementSystem
                 db.SaveChanges();
                 DGVMusteriler.Refresh();
 
-
-
                 int sptid = spt.sepetId;
                 SatisVeresiye vrsySatis = new SatisVeresiye();
                 vrsySatis.musteriNo = Convert.ToInt32(TBMusteriID.Text);
@@ -166,7 +186,10 @@ namespace MarketManagementSystem
                 vrsySatis.satisId = 1;
                 db.SatisVeresiyes.Add(vrsySatis);
                 db.SaveChanges();
+
                 sepettekiUrunlereEkle(sptid);
+                stokBildiri(sptid);
+
                 MessageBox.Show("Veresiye satış başarıyla gerçekleşti.");
 
             }
@@ -180,7 +203,10 @@ namespace MarketManagementSystem
                 psnSatis.satisId = 2;
                 db.SatisPesins.Add(psnSatis);
                 db.SaveChanges();
+
                 sepettekiUrunlereEkle(sptid);
+                stokBildiri(sptid);
+
                 MessageBox.Show("Peşin satış başarıyla gerçekleşti.");
             }
             else
