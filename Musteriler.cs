@@ -20,7 +20,7 @@ namespace MarketManagementSystem
 
         public void TextBoxTemizle()
         {
-            TBMusteriId.Text = ""; TBMusteriBorc.Text = ""; TBMusteriAd.Text = ""; TBMusteriSoyad.Text = "";
+            TBMusteriId.Text = ""; TBMusteriAd.Text = ""; TBMusteriSoyad.Text = "";
         }
         private void Musteriler_Load(object sender, EventArgs e)
         {
@@ -28,9 +28,7 @@ namespace MarketManagementSystem
             DGVMusteriler.Columns[4].Visible = false; DGVMusteriler.Columns[5].Visible = false;
             DGVMusteriler.Columns[0].HeaderText = "Müşteri No";
             DGVMusteriler.Columns[1].HeaderText = "Ad";
-            DGVMusteriler.Columns[2].HeaderText = "Soyad";
-            DGVMusteriler.Columns[3].HeaderText = "Borç";
-            
+            DGVMusteriler.Columns[2].HeaderText = "Soyad";            
         }
 
         private void TBMusteriArama_TextChanged(object sender, EventArgs e)
@@ -44,8 +42,6 @@ namespace MarketManagementSystem
             TBMusteriId.Text = DGVMusteriler.CurrentRow.Cells[0].Value.ToString();
             TBMusteriAd.Text = DGVMusteriler.CurrentRow.Cells[1].Value.ToString();
             TBMusteriSoyad.Text = DGVMusteriler.CurrentRow.Cells[2].Value.ToString();
-            TBMusteriBorc.Text = DGVMusteriler.CurrentRow.Cells[3].Value.ToString();
-          
         }
 
         private void BtnYeniMusteri_Click(object sender, EventArgs e)
@@ -53,7 +49,7 @@ namespace MarketManagementSystem
             Musteri musteri = new Musteri();
             musteri.musteriAd = TBMusteriAd.Text;
             musteri.musteriSoyad = TBMusteriSoyad.Text;
-            musteri.borcMiktar = Convert.ToDouble(TBMusteriBorc.Text);
+            musteri.borcMiktar = 0;
             db.Musteris.Add(musteri);
             db.SaveChanges();
             MessageBox.Show("Müşteri başarı ile kayıt edildi.");
@@ -84,7 +80,6 @@ namespace MarketManagementSystem
             var x = db.Musteris.Find(id);
             x.musteriAd = TBMusteriAd.Text;
             x.musteriSoyad = TBMusteriSoyad.Text;
-            x.borcMiktar = Convert.ToDouble(TBMusteriBorc.Text);
             db.SaveChanges();
             DGVMusteriler.DataSource = db.Musteris.ToList();
             TextBoxTemizle();

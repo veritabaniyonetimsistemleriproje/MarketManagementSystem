@@ -30,21 +30,19 @@ namespace MarketManagementSystem
             DGVTedarikciler.Columns[3].Visible = false; DGVTedarikciler.Columns[4].Visible = false;
             DGVTedarikciler.Columns[0].HeaderText = "Tedarikci No";
             DGVTedarikciler.Columns[1].HeaderText = "Tedarikci Ad";
-            DGVTedarikciler.Columns[2].HeaderText = "Tedarikçi Borç";
         }
 
         private void DGVTedarikciler_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             TBTedarikciNo.Text = DGVTedarikciler.CurrentRow.Cells[0].Value.ToString();
-            TBTedarikciAd.Text = DGVTedarikciler.CurrentRow.Cells[1].Value.ToString();
-            TBTedarikciBorc.Text = DGVTedarikciler.CurrentRow.Cells[2].Value.ToString();
+            TBTedarikciAd.Text = DGVTedarikciler.CurrentRow.Cells[1].Value.ToString();           
         }
 
         private void BtnYeniTedarikci_Click(object sender, EventArgs e)
         {
             Tedarikci t = new Tedarikci();
             t.tedarikciAd = TBTedarikciAd.Text;
-            t.tedarikciBorc = Convert.ToDouble(TBTedarikciBorc.Text);
+            t.tedarikciBorc = 0;
             db.Tedarikcis.Add(t);
             db.SaveChanges();
             MessageBox.Show("Tedarikçi başarı ile eklenmiştir");
@@ -73,7 +71,6 @@ namespace MarketManagementSystem
             int id = Convert.ToInt32(TBTedarikciNo.Text);
             var x = db.Tedarikcis.Find(id);
             x.tedarikciAd = TBTedarikciAd.Text;
-            x.tedarikciBorc = Convert.ToDouble(TBTedarikciBorc.Text);
             db.SaveChanges();
             DGVTedarikciler.DataSource = db.Tedarikcis.ToList();
             MessageBox.Show("Tedarikçi bilgileri başarı ile güncellendi.");

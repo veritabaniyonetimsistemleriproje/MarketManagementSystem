@@ -72,10 +72,10 @@
     <Compile Include="Irsaliye.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="MarketKarZarar.cs">
+    <Compile Include="Raporlama Formları\MarketKarZarar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MarketKarZarar.Designer.cs">
+    <Compile Include="Raporlama Formları\MarketKarZarar.Designer.cs">
       <DependentUpon>MarketKarZarar.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
@@ -102,10 +102,10 @@
     <Compile Include="Musteri.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="MusteriBazliRapor.cs">
+    <Compile Include="Raporlama Formları\MusteriBazliRapor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MusteriBazliRapor.Designer.cs">
+    <Compile Include="Raporlama Formları\MusteriBazliRapor.Designer.cs">
       <DependentUpon>MusteriBazliRapor.cs</DependentUpon>
     </Compile>
     <Compile Include="MusteriBorcOdeme.cs">
@@ -152,10 +152,10 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="TarihArasiTrend.cs">
+    <Compile Include="Raporlama Formları\TarihArasiTrend.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TarihArasiTrend.Designer.cs">
+    <Compile Include="Raporlama Formları\TarihArasiTrend.Designer.cs">
       <DependentUpon>TarihArasiTrend.cs</DependentUpon>
     </Compile>
     <Compile Include="Tedarikci.cs">
@@ -170,19 +170,19 @@
     <Compile Include="Tedarikciler.Designer.cs">
       <DependentUpon>Tedarikciler.cs</DependentUpon>
     </Compile>
-    <Compile Include="TopluMusteriBorc.cs">
+    <Compile Include="Raporlama Formları\TopluMusteriBorc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TopluMusteriBorc.Designer.cs">
+    <Compile Include="Raporlama Formları\TopluMusteriBorc.Designer.cs">
       <DependentUpon>TopluMusteriBorc.cs</DependentUpon>
     </Compile>
     <Compile Include="Urun.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="UrunKarZarar.cs">
+    <Compile Include="Raporlama Formları\UrunKarZarar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UrunKarZarar.Designer.cs">
+    <Compile Include="Raporlama Formları\UrunKarZarar.Designer.cs">
       <DependentUpon>UrunKarZarar.cs</DependentUpon>
     </Compile>
     <Compile Include="Urunler.cs">
@@ -191,10 +191,10 @@
     <Compile Include="Urunler.Designer.cs">
       <DependentUpon>Urunler.cs</DependentUpon>
     </Compile>
-    <Compile Include="UrunListCoktanAza.cs">
+    <Compile Include="Raporlama Formları\UrunListCoktanAza.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UrunListCoktanAza.Designer.cs">
+    <Compile Include="Raporlama Formları\UrunListCoktanAza.Designer.cs">
       <DependentUpon>UrunListCoktanAza.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BorcOdeme.resx">

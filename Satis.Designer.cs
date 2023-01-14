@@ -75,7 +75,7 @@
             this.RBtnVeresiye.AutoSize = true;
             this.RBtnVeresiye.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.RBtnVeresiye.Location = new System.Drawing.Point(383, 154);
-            this.RBtnVeresiye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RBtnVeresiye.Margin = new System.Windows.Forms.Padding(2);
             this.RBtnVeresiye.Name = "RBtnVeresiye";
             this.RBtnVeresiye.Size = new System.Drawing.Size(71, 19);
             this.RBtnVeresiye.TabIndex = 4;
@@ -89,7 +89,7 @@
             this.RBtnPesin.AutoSize = true;
             this.RBtnPesin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.RBtnPesin.Location = new System.Drawing.Point(477, 154);
-            this.RBtnPesin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RBtnPesin.Margin = new System.Windows.Forms.Padding(2);
             this.RBtnPesin.Name = "RBtnPesin";
             this.RBtnPesin.Size = new System.Drawing.Size(56, 19);
             this.RBtnPesin.TabIndex = 5;
@@ -113,8 +113,9 @@
             // TBToplamTutar
             // 
             this.TBToplamTutar.Location = new System.Drawing.Point(675, 69);
-            this.TBToplamTutar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBToplamTutar.Margin = new System.Windows.Forms.Padding(2);
             this.TBToplamTutar.Name = "TBToplamTutar";
+            this.TBToplamTutar.ReadOnly = true;
             this.TBToplamTutar.Size = new System.Drawing.Size(105, 20);
             this.TBToplamTutar.TabIndex = 7;
             // 
@@ -135,7 +136,7 @@
             this.DGVMusteriler.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DGVMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVMusteriler.Location = new System.Drawing.Point(11, 38);
-            this.DGVMusteriler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGVMusteriler.Margin = new System.Windows.Forms.Padding(2);
             this.DGVMusteriler.Name = "DGVMusteriler";
             this.DGVMusteriler.RowHeadersWidth = 62;
             this.DGVMusteriler.RowTemplate.Height = 28;
@@ -146,8 +147,9 @@
             // TBMusteriID
             // 
             this.TBMusteriID.Location = new System.Drawing.Point(93, 9);
-            this.TBMusteriID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBMusteriID.Margin = new System.Windows.Forms.Padding(2);
             this.TBMusteriID.Name = "TBMusteriID";
+            this.TBMusteriID.ReadOnly = true;
             this.TBMusteriID.Size = new System.Drawing.Size(105, 20);
             this.TBMusteriID.TabIndex = 10;
             // 
@@ -158,7 +160,7 @@
             this.panel1.Controls.Add(this.DGVMusteriler);
             this.panel1.Controls.Add(this.TBMusteriID);
             this.panel1.Location = new System.Drawing.Point(384, 184);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(408, 253);
             this.panel1.TabIndex = 11;
@@ -188,7 +190,7 @@
             // TBBarkodNo
             // 
             this.TBBarkodNo.Location = new System.Drawing.Point(454, 41);
-            this.TBBarkodNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBBarkodNo.Margin = new System.Windows.Forms.Padding(2);
             this.TBBarkodNo.Name = "TBBarkodNo";
             this.TBBarkodNo.Size = new System.Drawing.Size(96, 20);
             this.TBBarkodNo.TabIndex = 13;

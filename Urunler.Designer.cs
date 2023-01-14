@@ -44,6 +44,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.BtnUrunGuncelle = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUrunler)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,21 +56,20 @@
             this.DGVUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVUrunler.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DGVUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVUrunler.Location = new System.Drawing.Point(14, 14);
-            this.DGVUrunler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DGVUrunler.Location = new System.Drawing.Point(10, 11);
+            this.DGVUrunler.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DGVUrunler.Name = "DGVUrunler";
             this.DGVUrunler.RowHeadersWidth = 51;
             this.DGVUrunler.RowTemplate.Height = 24;
-            this.DGVUrunler.Size = new System.Drawing.Size(612, 514);
+            this.DGVUrunler.Size = new System.Drawing.Size(459, 418);
             this.DGVUrunler.TabIndex = 1;
             this.DGVUrunler.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUrunler_CellEnter);
             // 
             // TBUrunAra
             // 
-            this.TBUrunAra.Location = new System.Drawing.Point(19, 51);
-            this.TBUrunAra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBUrunAra.Location = new System.Drawing.Point(14, 41);
             this.TBUrunAra.Name = "TBUrunAra";
-            this.TBUrunAra.Size = new System.Drawing.Size(168, 22);
+            this.TBUrunAra.Size = new System.Drawing.Size(127, 20);
             this.TBUrunAra.TabIndex = 2;
             this.TBUrunAra.TextChanged += new System.EventHandler(this.TBUrunAra_TextChanged);
             // 
@@ -76,10 +77,9 @@
             // 
             this.BtnStokEkle.BackColor = System.Drawing.Color.LawnGreen;
             this.BtnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnStokEkle.Location = new System.Drawing.Point(645, 458);
-            this.BtnStokEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnStokEkle.Location = new System.Drawing.Point(484, 372);
             this.BtnStokEkle.Name = "BtnStokEkle";
-            this.BtnStokEkle.Size = new System.Drawing.Size(229, 62);
+            this.BtnStokEkle.Size = new System.Drawing.Size(172, 50);
             this.BtnStokEkle.TabIndex = 3;
             this.BtnStokEkle.Text = "Stok Ekle";
             this.BtnStokEkle.UseVisualStyleBackColor = false;
@@ -89,10 +89,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(14, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(10, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ürün Ara";
             // 
@@ -100,10 +99,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(15, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(11, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 20);
+            this.label2.Size = new System.Drawing.Size(102, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ürün Bilgileri";
             // 
@@ -111,10 +109,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(15, 56);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(11, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 18);
+            this.label3.Size = new System.Drawing.Size(24, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "Ad:";
             // 
@@ -122,10 +119,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(15, 120);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(11, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 18);
+            this.label4.Size = new System.Drawing.Size(68, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "Barkod No:";
             // 
@@ -133,10 +129,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(15, 88);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(11, 124);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 18);
+            this.label5.Size = new System.Drawing.Size(35, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "Fiyat:";
             // 
@@ -144,43 +139,40 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(15, 152);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(11, 98);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 18);
+            this.label6.Size = new System.Drawing.Size(34, 15);
             this.label6.TabIndex = 9;
             this.label6.Text = "Stok:";
             // 
             // TBUrunAd
             // 
-            this.TBUrunAd.Location = new System.Drawing.Point(118, 53);
-            this.TBUrunAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBUrunAd.Location = new System.Drawing.Point(88, 69);
             this.TBUrunAd.Name = "TBUrunAd";
-            this.TBUrunAd.Size = new System.Drawing.Size(93, 22);
+            this.TBUrunAd.Size = new System.Drawing.Size(71, 20);
             this.TBUrunAd.TabIndex = 10;
             // 
             // TBUrunFiyat
             // 
-            this.TBUrunFiyat.Location = new System.Drawing.Point(118, 85);
-            this.TBUrunFiyat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBUrunFiyat.Location = new System.Drawing.Point(88, 121);
             this.TBUrunFiyat.Name = "TBUrunFiyat";
-            this.TBUrunFiyat.Size = new System.Drawing.Size(93, 22);
+            this.TBUrunFiyat.Size = new System.Drawing.Size(71, 20);
             this.TBUrunFiyat.TabIndex = 11;
             // 
             // TBUrunStok
             // 
-            this.TBUrunStok.Location = new System.Drawing.Point(118, 149);
-            this.TBUrunStok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBUrunStok.Location = new System.Drawing.Point(88, 95);
             this.TBUrunStok.Name = "TBUrunStok";
-            this.TBUrunStok.Size = new System.Drawing.Size(93, 22);
+            this.TBUrunStok.ReadOnly = true;
+            this.TBUrunStok.Size = new System.Drawing.Size(71, 20);
             this.TBUrunStok.TabIndex = 12;
             // 
             // TBUrunBarkod
             // 
-            this.TBUrunBarkod.Location = new System.Drawing.Point(118, 117);
-            this.TBUrunBarkod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBUrunBarkod.Location = new System.Drawing.Point(88, 41);
             this.TBUrunBarkod.Name = "TBUrunBarkod";
-            this.TBUrunBarkod.Size = new System.Drawing.Size(93, 22);
+            this.TBUrunBarkod.ReadOnly = true;
+            this.TBUrunBarkod.Size = new System.Drawing.Size(71, 20);
             this.TBUrunBarkod.TabIndex = 13;
             // 
             // panel1
@@ -189,16 +181,17 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.TBUrunBarkod);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.TBUrunStok);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.TBUrunFiyat);
+            this.panel1.Controls.Add(this.TBUrunStok);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.TBUrunAd);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(645, 129);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(484, 105);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 183);
+            this.panel1.Size = new System.Drawing.Size(173, 149);
             this.panel1.TabIndex = 14;
             // 
             // panel2
@@ -206,26 +199,48 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.TBUrunAra);
-            this.panel2.Location = new System.Drawing.Point(645, 14);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(484, 11);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 89);
+            this.panel2.Size = new System.Drawing.Size(173, 73);
             this.panel2.TabIndex = 15;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // BtnUrunGuncelle
+            // 
+            this.BtnUrunGuncelle.BackColor = System.Drawing.Color.LawnGreen;
+            this.BtnUrunGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnUrunGuncelle.Location = new System.Drawing.Point(484, 259);
+            this.BtnUrunGuncelle.Name = "BtnUrunGuncelle";
+            this.BtnUrunGuncelle.Size = new System.Drawing.Size(173, 49);
+            this.BtnUrunGuncelle.TabIndex = 16;
+            this.BtnUrunGuncelle.Text = "Ürün Bilgilerini Güncelle";
+            this.BtnUrunGuncelle.UseVisualStyleBackColor = false;
+            this.BtnUrunGuncelle.Click += new System.EventHandler(this.BtnUrunGuncelle_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(11, 124);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 15);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Fiyat:";
+            // 
             // Urunler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 544);
+            this.ClientSize = new System.Drawing.Size(669, 442);
+            this.Controls.Add(this.BtnUrunGuncelle);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnStokEkle);
             this.Controls.Add(this.DGVUrunler);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Urunler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Urunler";
@@ -257,5 +272,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button BtnUrunGuncelle;
     }
 }

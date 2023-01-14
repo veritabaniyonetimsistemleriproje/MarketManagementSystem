@@ -66,19 +66,18 @@ namespace MarketManagementSystem
                     {
                         var urun = db.Uruns.Find(urunID);
                         urun.urunStok += urunStok;
-                        urun.urunFiyat = urunFiyat;
-
                     }
                     else if (deneme == null)
                     {
                         int x = this.Left + (this.Width / 2);
                         int y = this.Top + (this.Height / 2);
-                        string IsimGirisi = Interaction.InputBox("Lütfen ürün ismini giriniz:", "Ürün İsmi", "Örn: Süt 1L", x, y);
+                        string isimGirisi = Interaction.InputBox("Bu ürün ilk defa ekleniyor. Lütfen ürün ismini giriniz:", "Ürün İsmi", "Örn: Süt 1L", x, y);
                         Urun urun = new Urun();
                         urun.urunKod = urunID;
                         urun.urunBarkod = urunBarkod;
-                        urun.urunAd = IsimGirisi;
-                        urun.urunFiyat = urunFiyat;
+                        urun.urunAd = isimGirisi;
+                        double fiyatGiris = Convert.ToDouble(Interaction.InputBox("Lütfen ürün satış fiyatını giriniz:", "Ürün Fiyat", "Örn: 100", x, y));
+                        urun.urunFiyat = fiyatGiris;
                         urun.urunStok = urunStok;
                         db.Uruns.Add(urun);
                     }
@@ -112,6 +111,13 @@ namespace MarketManagementSystem
             TBUrunAd.Text = DGVUrunler.CurrentRow.Cells[2].Value.ToString();
             TBUrunFiyat.Text = DGVUrunler.CurrentRow.Cells[3].Value.ToString();
             TBUrunStok.Text = DGVUrunler.CurrentRow.Cells[4].Value.ToString();
+        }
+
+        private void BtnUrunGuncelle_Click(object sender, EventArgs e)
+        {
+            var urun = db.Uruns.First(s => s.urunBarkod == Convert.ToInt32(TBUrunBarkod.Text));
+            urun.urunFiyat = Convert.ToDouble(TBUrunFiyat.Text);
+            urun.urunAd = TBUrunAd.Text;
         }
     }
 }

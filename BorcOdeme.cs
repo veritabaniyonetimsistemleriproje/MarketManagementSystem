@@ -52,7 +52,6 @@ namespace MarketManagementSystem
                             where veresiye.musteriNo == mNo
                             select new
                             {
-
                                 SepetID = sepet.sepetId,
                                 Barkod = urun.urunBarkod,
                                 Ad = urun.urunAd,
@@ -63,6 +62,8 @@ namespace MarketManagementSystem
                 DGVMusteri_Borc.DataSource = sorgu.ToList();
 
                 var musteri = db.Musteris.Find(mNo);
+                ad_soyad.Text = musteri.musteriAd + " " + musteri.musteriSoyad ;
+                ad_soyad.Visible = true;
                 label3.Text = "Müşteri Toplam Borç: " + musteri.borcMiktar.ToString();
                 label3.ForeColor = Color.Red;
             }
@@ -81,6 +82,7 @@ namespace MarketManagementSystem
                         on tedarikci.tedarikciNo equals irsaliye.tedarikciNo
                         join urun in db.Uruns
                         on irsaliye.urunKod equals urun.urunKod
+                        where tedarikci.tedarikciNo == tNo
                         select new
                         {
                             İrsaliyeNo = irsaliye.irsaliyeNo,
@@ -95,6 +97,8 @@ namespace MarketManagementSystem
             DGVTedarikBorc.DataSource = sorgu.ToList();
 
             var tedarik = db.Tedarikcis.Find(tNo);
+            tedarikci_ad.Text = tedarik.tedarikciAd;
+            tedarikci_ad.Visible = true;
             label5.Text = "Tedarikçiye Toplam Borç: " + tedarik.tedarikciBorc.ToString();
             label5.ForeColor = Color.Red;
         }

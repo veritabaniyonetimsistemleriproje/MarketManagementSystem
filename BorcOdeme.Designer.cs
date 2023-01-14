@@ -49,6 +49,8 @@
             this.BtnTedarikciAra = new System.Windows.Forms.Button();
             this.RBMusteriBorc = new System.Windows.Forms.RadioButton();
             this.RBTedarikciBorc = new System.Windows.Forms.RadioButton();
+            this.ad_soyad = new System.Windows.Forms.Label();
+            this.tedarikci_ad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMusteri_Borc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVTedarikBorc)).BeginInit();
             this.PanelMusteriBorc.SuspendLayout();
@@ -146,6 +148,7 @@
             // PanelMusteriBorc
             // 
             this.PanelMusteriBorc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelMusteriBorc.Controls.Add(this.ad_soyad);
             this.PanelMusteriBorc.Controls.Add(this.BtnUrunSatisSil);
             this.PanelMusteriBorc.Controls.Add(this.label4);
             this.PanelMusteriBorc.Controls.Add(this.label3);
@@ -190,7 +193,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(8, 319);
+            this.label3.Location = new System.Drawing.Point(8, 351);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 15);
@@ -199,10 +202,10 @@
             // 
             // TBMusteriTutar
             // 
-            this.TBMusteriTutar.Location = new System.Drawing.Point(236, 323);
+            this.TBMusteriTutar.Location = new System.Drawing.Point(236, 330);
             this.TBMusteriTutar.Margin = new System.Windows.Forms.Padding(2);
             this.TBMusteriTutar.Name = "TBMusteriTutar";
-            this.TBMusteriTutar.Size = new System.Drawing.Size(76, 20);
+            this.TBMusteriTutar.Size = new System.Drawing.Size(88, 20);
             this.TBMusteriTutar.TabIndex = 8;
             // 
             // BtnMusteriAra
@@ -222,6 +225,7 @@
             // PanelTedarikciBorc
             // 
             this.PanelTedarikciBorc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelTedarikciBorc.Controls.Add(this.tedarikci_ad);
             this.PanelTedarikciBorc.Controls.Add(this.label6);
             this.PanelTedarikciBorc.Controls.Add(this.label5);
             this.PanelTedarikciBorc.Controls.Add(this.TBTedarikciTutar);
@@ -252,7 +256,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(11, 319);
+            this.label5.Location = new System.Drawing.Point(11, 351);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 15);
@@ -308,6 +312,28 @@
             this.RBTedarikciBorc.UseVisualStyleBackColor = true;
             this.RBTedarikciBorc.CheckedChanged += new System.EventHandler(this.RBTedarikciBorc_CheckedChanged);
             // 
+            // ad_soyad
+            // 
+            this.ad_soyad.AutoSize = true;
+            this.ad_soyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ad_soyad.Location = new System.Drawing.Point(9, 330);
+            this.ad_soyad.Name = "ad_soyad";
+            this.ad_soyad.Size = new System.Drawing.Size(102, 15);
+            this.ad_soyad.TabIndex = 12;
+            this.ad_soyad.Text = "Müşteri Ad Soyad";
+            this.ad_soyad.Visible = false;
+            // 
+            // tedarikci_ad
+            // 
+            this.tedarikci_ad.AutoSize = true;
+            this.tedarikci_ad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tedarikci_ad.Location = new System.Drawing.Point(11, 330);
+            this.tedarikci_ad.Name = "tedarikci_ad";
+            this.tedarikci_ad.Size = new System.Drawing.Size(74, 15);
+            this.tedarikci_ad.TabIndex = 13;
+            this.tedarikci_ad.Text = "Tedarikçi Ad";
+            this.tedarikci_ad.Visible = false;
+            // 
             // BorcOdeme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,5 +381,7 @@
         private System.Windows.Forms.RadioButton RBMusteriBorc;
         private System.Windows.Forms.RadioButton RBTedarikciBorc;
         private System.Windows.Forms.Button BtnUrunSatisSil;
+        private System.Windows.Forms.Label ad_soyad;
+        private System.Windows.Forms.Label tedarikci_ad;
     }
 }
