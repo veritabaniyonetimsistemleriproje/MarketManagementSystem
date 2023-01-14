@@ -95,7 +95,9 @@ namespace MarketManagementSystem
                     irsaliye.tarih = DateTime.Now;
                     db.Irsaliyes.Add(irsaliye);
                     db.SaveChanges();
+                    DGVUrunler.DataSource = db.Uruns.ToList();
                     MessageBox.Show("Ürün stoğa işlendi.");
+
                 }
                 catch 
                 {
