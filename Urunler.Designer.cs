@@ -227,6 +227,7 @@
             this.Controls.Add(this.DGVUrunler);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Urunler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Urunler";
             this.Load += new System.EventHandler(this.Urunler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVUrunler)).EndInit();

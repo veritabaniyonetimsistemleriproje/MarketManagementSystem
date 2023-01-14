@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,9 +57,31 @@ namespace MarketManagementSystem
                     int tedarikciNo = Convert.ToInt32(text[4]);
 
 
-                    var urun = db.Uruns.Find(urunID);
-                    urun.urunStok += urunStok;
-                    urun.urunFiyat = urunFiyat;
+                    var query = (from s in db.Uruns
+                                 where s.urunKod == urunID
+                                 select s);
+                    var deneme = query.FirstOrDefault();
+
+                    if (deneme != null)
+                    {
+                        var urun = db.Uruns.Find(urunID);
+                        urun.urunStok += urunStok;
+                        urun.urunFiyat = urunFiyat;
+
+                    }
+                    else if (deneme == null)
+                    {
+                        int x = this.Left + (this.Width / 2);
+                        int y = this.Top + (this.Height / 2);
+                        string IsimGirisi = Interaction.InputBox("Lütfen ürün ismini giriniz:", "Ürün İsmi", "Örn: Süt 1L", x, y);
+                        Urun urun = new Urun();
+                        urun.urunKod = urunID;
+                        urun.urunBarkod = urunBarkod;
+                        urun.urunAd = IsimGirisi;
+                        urun.urunFiyat = urunFiyat;
+                        urun.urunStok = urunStok;
+                        db.Uruns.Add(urun);
+                    }
 
                     var tedarikci = db.Tedarikcis.Find(tedarikciNo);
                     tedarikci.tedarikciBorc += urunStok * urunFiyat;
