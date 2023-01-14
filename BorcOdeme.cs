@@ -62,10 +62,16 @@ namespace MarketManagementSystem
                 DGVMusteri_Borc.DataSource = sorgu.ToList();
 
                 var musteri = db.Musteris.Find(mNo);
-                ad_soyad.Text = musteri.musteriAd + " " + musteri.musteriSoyad ;
-                ad_soyad.Visible = true;
-                label3.Text = "Müşteri Toplam Borç: " + musteri.borcMiktar.ToString();
-                label3.ForeColor = Color.Red;
+                if(musteri == null)
+                {
+                    MessageBox.Show("Böyle bir müşteri bulunmamaktadır.");
+                }
+                else
+                {
+                    musteri_bilgi.Text = musteri.musteriAd + " " + musteri.musteriSoyad + " Toplam Borç: " + musteri.borcMiktar.ToString();
+                    musteri_bilgi.Visible = true; musteri_bilgi.ForeColor = Color.Red;
+                }
+                
             }
             catch
             {
@@ -76,31 +82,45 @@ namespace MarketManagementSystem
 
         private void BtnTedarikciAra_Click(object sender, EventArgs e)
         {
-            int tNo = Convert.ToInt32(TBTedarikciNo.Text);
-            var sorgu = from tedarikci in db.Tedarikcis
-                        join irsaliye in db.Irsaliyes
-                        on tedarikci.tedarikciNo equals irsaliye.tedarikciNo
-                        join urun in db.Uruns
-                        on irsaliye.urunKod equals urun.urunKod
-                        where tedarikci.tedarikciNo == tNo
-                        select new
-                        {
-                            İrsaliyeNo = irsaliye.irsaliyeNo,
-                            Tedarikçi = tedarikci.tedarikciAd,
-                            ÜrünAd = urun.urunAd,
-                            Miktar = irsaliye.miktar,
-                            Fiyat = irsaliye.birimGirdiFiyat,
-                            Toplam = irsaliye.miktar * irsaliye.birimGirdiFiyat,
-                            Tarih = irsaliye.tarih,                          
-                        };
+            try
+            {
+                int tNo = Convert.ToInt32(TBTedarikciNo.Text);
+                var sorgu = from tedarikci in db.Tedarikcis
+                            join irsaliye in db.Irsaliyes
+                            on tedarikci.tedarikciNo equals irsaliye.tedarikciNo
+                            join urun in db.Uruns
+                            on irsaliye.urunKod equals urun.urunKod
+                            where tedarikci.tedarikciNo == tNo
+                            select new
+                            {
+                                İrsaliyeNo = irsaliye.irsaliyeNo,
+                                Tedarikçi = tedarikci.tedarikciAd,
+                                ÜrünAd = urun.urunAd,
+                                Miktar = irsaliye.miktar,
+                                Fiyat = irsaliye.birimGirdiFiyat,
+                                Toplam = irsaliye.miktar * irsaliye.birimGirdiFiyat,
+                                Tarih = irsaliye.tarih,
+                            };
 
-            DGVTedarikBorc.DataSource = sorgu.ToList();
+                DGVTedarikBorc.DataSource = sorgu.ToList();
 
-            var tedarik = db.Tedarikcis.Find(tNo);
-            tedarikci_ad.Text = tedarik.tedarikciAd;
-            tedarikci_ad.Visible = true;
-            label5.Text = "Tedarikçiye Toplam Borç: " + tedarik.tedarikciBorc.ToString();
-            label5.ForeColor = Color.Red;
+                var tedarik = db.Tedarikcis.Find(tNo);
+                if (tedarik == null)
+                {
+                    MessageBox.Show("Böyle bir müşteri bulunmamaktadır.");
+                }
+                else
+                {
+                    tedarikci_bilgi.Text = tedarik.tedarikciAd + " Toplam Borç: " + tedarik.tedarikciBorc.ToString();
+                    tedarikci_bilgi.Visible = true; tedarikci_bilgi.ForeColor = Color.Red;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Böyle bir tedarikçi bulunmamaktadır.");
+            }
+            
+            
         }
 
         private void BtnMusteriBorcOde_Click(object sender, EventArgs e)
@@ -118,8 +138,7 @@ namespace MarketManagementSystem
 
                 db.SaveChanges();
 
-                label3.Text = "Müşteri Toplam Borç: " + musteri.borcMiktar.ToString();
-                label3.ForeColor = Color.Red;
+                musteri_bilgi.Text = musteri.musteriAd + " " + musteri.musteriSoyad + " Toplam Borç: " + musteri.borcMiktar.ToString();
                 MessageBox.Show("Ödeme Başarıyla Tamamlandı.");
             }
             catch
@@ -146,8 +165,7 @@ namespace MarketManagementSystem
 
                 db.SaveChanges();
 
-                label5.Text = "Tedarikçiye Toplam Borç: " + tedarikci.tedarikciBorc.ToString();
-                label5.ForeColor = Color.Red;
+                tedarikci_bilgi.Text = tedarikci.tedarikciAd + " Toplam Borç: " + tedarikci.tedarikciBorc.ToString();
                 MessageBox.Show("Ödeme Başarıyla Tamamlandı.");
             }
             catch

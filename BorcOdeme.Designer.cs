@@ -39,18 +39,16 @@
             this.PanelMusteriBorc = new System.Windows.Forms.Panel();
             this.BtnUrunSatisSil = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.TBMusteriTutar = new System.Windows.Forms.TextBox();
             this.BtnMusteriAra = new System.Windows.Forms.Button();
             this.PanelTedarikciBorc = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.TBTedarikciTutar = new System.Windows.Forms.TextBox();
             this.BtnTedarikciAra = new System.Windows.Forms.Button();
             this.RBMusteriBorc = new System.Windows.Forms.RadioButton();
             this.RBTedarikciBorc = new System.Windows.Forms.RadioButton();
-            this.ad_soyad = new System.Windows.Forms.Label();
-            this.tedarikci_ad = new System.Windows.Forms.Label();
+            this.musteri_bilgi = new System.Windows.Forms.Label();
+            this.tedarikci_bilgi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMusteri_Borc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVTedarikBorc)).BeginInit();
             this.PanelMusteriBorc.SuspendLayout();
@@ -148,10 +146,9 @@
             // PanelMusteriBorc
             // 
             this.PanelMusteriBorc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelMusteriBorc.Controls.Add(this.ad_soyad);
+            this.PanelMusteriBorc.Controls.Add(this.musteri_bilgi);
             this.PanelMusteriBorc.Controls.Add(this.BtnUrunSatisSil);
             this.PanelMusteriBorc.Controls.Add(this.label4);
-            this.PanelMusteriBorc.Controls.Add(this.label3);
             this.PanelMusteriBorc.Controls.Add(this.TBMusteriTutar);
             this.PanelMusteriBorc.Controls.Add(this.BtnMusteriAra);
             this.PanelMusteriBorc.Controls.Add(this.DGVMusteri_Borc);
@@ -189,17 +186,6 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Ödenecek tutar:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(8, 351);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 15);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Toplam Borç Miktarı:";
-            // 
             // TBMusteriTutar
             // 
             this.TBMusteriTutar.Location = new System.Drawing.Point(236, 330);
@@ -225,9 +211,8 @@
             // PanelTedarikciBorc
             // 
             this.PanelTedarikciBorc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelTedarikciBorc.Controls.Add(this.tedarikci_ad);
+            this.PanelTedarikciBorc.Controls.Add(this.tedarikci_bilgi);
             this.PanelTedarikciBorc.Controls.Add(this.label6);
-            this.PanelTedarikciBorc.Controls.Add(this.label5);
             this.PanelTedarikciBorc.Controls.Add(this.TBTedarikciTutar);
             this.PanelTedarikciBorc.Controls.Add(this.BtnTedarikciAra);
             this.PanelTedarikciBorc.Controls.Add(this.DGVTedarikBorc);
@@ -251,17 +236,6 @@
             this.label6.Size = new System.Drawing.Size(97, 15);
             this.label6.TabIndex = 11;
             this.label6.Text = "Ödenecek Tutar:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(11, 351);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 15);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Toplam Borç Miktarı:";
             // 
             // TBTedarikciTutar
             // 
@@ -312,27 +286,27 @@
             this.RBTedarikciBorc.UseVisualStyleBackColor = true;
             this.RBTedarikciBorc.CheckedChanged += new System.EventHandler(this.RBTedarikciBorc_CheckedChanged);
             // 
-            // ad_soyad
+            // musteri_bilgi
             // 
-            this.ad_soyad.AutoSize = true;
-            this.ad_soyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ad_soyad.Location = new System.Drawing.Point(9, 330);
-            this.ad_soyad.Name = "ad_soyad";
-            this.ad_soyad.Size = new System.Drawing.Size(102, 15);
-            this.ad_soyad.TabIndex = 12;
-            this.ad_soyad.Text = "Müşteri Ad Soyad";
-            this.ad_soyad.Visible = false;
+            this.musteri_bilgi.AutoSize = true;
+            this.musteri_bilgi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.musteri_bilgi.Location = new System.Drawing.Point(9, 330);
+            this.musteri_bilgi.Name = "musteri_bilgi";
+            this.musteri_bilgi.Size = new System.Drawing.Size(75, 15);
+            this.musteri_bilgi.TabIndex = 12;
+            this.musteri_bilgi.Text = "Müşteri Bilgi";
+            this.musteri_bilgi.Visible = false;
             // 
-            // tedarikci_ad
+            // tedarikci_bilgi
             // 
-            this.tedarikci_ad.AutoSize = true;
-            this.tedarikci_ad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tedarikci_ad.Location = new System.Drawing.Point(11, 330);
-            this.tedarikci_ad.Name = "tedarikci_ad";
-            this.tedarikci_ad.Size = new System.Drawing.Size(74, 15);
-            this.tedarikci_ad.TabIndex = 13;
-            this.tedarikci_ad.Text = "Tedarikçi Ad";
-            this.tedarikci_ad.Visible = false;
+            this.tedarikci_bilgi.AutoSize = true;
+            this.tedarikci_bilgi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tedarikci_bilgi.Location = new System.Drawing.Point(11, 330);
+            this.tedarikci_bilgi.Name = "tedarikci_bilgi";
+            this.tedarikci_bilgi.Size = new System.Drawing.Size(84, 15);
+            this.tedarikci_bilgi.TabIndex = 13;
+            this.tedarikci_bilgi.Text = "Tedarikçi Bilgi";
+            this.tedarikci_bilgi.Visible = false;
             // 
             // BorcOdeme
             // 
@@ -370,18 +344,16 @@
         private System.Windows.Forms.DataGridView DGVTedarikBorc;
         private System.Windows.Forms.Panel PanelMusteriBorc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TBMusteriTutar;
         private System.Windows.Forms.Button BtnMusteriAra;
         private System.Windows.Forms.Panel PanelTedarikciBorc;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TBTedarikciTutar;
         private System.Windows.Forms.Button BtnTedarikciAra;
         private System.Windows.Forms.RadioButton RBMusteriBorc;
         private System.Windows.Forms.RadioButton RBTedarikciBorc;
         private System.Windows.Forms.Button BtnUrunSatisSil;
-        private System.Windows.Forms.Label ad_soyad;
-        private System.Windows.Forms.Label tedarikci_ad;
+        private System.Windows.Forms.Label musteri_bilgi;
+        private System.Windows.Forms.Label tedarikci_bilgi;
     }
 }
