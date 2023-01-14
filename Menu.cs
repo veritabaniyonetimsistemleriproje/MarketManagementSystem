@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MarketManagementSystem
 {
     public partial class Menu : Form
     {
+        MarketManagementSystemEntities1 db = new MarketManagementSystemEntities1();
         public Menu()
         {
             InitializeComponent();
@@ -39,8 +36,21 @@ namespace MarketManagementSystem
 
         private void BtnSatis_Click(object sender, EventArgs e)
         {
-            Satis satisfrm = new Satis();
-            FormGetir(satisfrm);
+           
+            string Ad = Interaction.InputBox("Kullanıcı Adınızı girin:");
+            string sifre = Interaction.InputBox("Sifre girin:");
+            
+            var query = db.Saticis.Where(x => x.kullaniciAdi == Ad && x.parola == sifre).FirstOrDefault();
+            if (query != null)
+            {
+                Satis satisfrm = new Satis();
+                FormGetir(satisfrm);
+            }
+            else
+            {
+                MessageBox.Show("Giriş Başarısız.");
+            }
+
         }
 
         private void BtnMusteri_Click(object sender, EventArgs e)
