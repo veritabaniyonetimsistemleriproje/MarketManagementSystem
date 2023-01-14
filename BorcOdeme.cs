@@ -221,5 +221,40 @@ namespace MarketManagementSystem
             }
             
         }
+
+        private void BtnMusteriBorcList_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int mNo = Convert.ToInt32(TBMusteriNo.Text);
+                var sorgu = from musteris in db.Musteris
+                            join borc in db.MusteriBorcOdemes
+                            on musteris.musteriNo equals borc.musteriNo
+                            where musteris.musteriNo == mNo
+                            select new
+                            {
+                                AdSoyad = musteris.musteriAd + " " + musteris.musteriSoyad,
+                                OdenenMik = borc.odenenMiktar,
+                                Tarih = borc.tarih,
+                            };
+                DGVMusteri_Borc.DataSource = sorgu.ToList();
+
+                var musteri = db.Musteris.Find(mNo);
+                if (musteri == null)
+                {
+                    MessageBox.Show("Böyle bir müşteri bulunmamaktadır.");
+                }
+                else
+                {
+                    musteri_bilgi.Text = musteri.musteriAd + " " + musteri.musteriSoyad + " Toplam Borç: " + musteri.borcMiktar.ToString();
+                    musteri_bilgi.Visible = true; musteri_bilgi.ForeColor = Color.Red;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Böyle bir müşteri bulunmamaktadır.");
+            }
+
+        }
     }
 }
