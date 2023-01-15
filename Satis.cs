@@ -113,7 +113,7 @@ namespace MarketManagementSystem
                                 select s).FirstOrDefault();
                     if (stok.urunStok < 20)
                     {
-                        MessageBox.Show(stok.urunBarkod + " barkod numaralı" + stok.urunAd + " ürünü 20 adetten az kaldı.");
+                        MessageBox.Show(stok.urunBarkod + " barkod numaralı " + stok.urunAd + " ürünü 20 adetten az kaldı.");
                     }
                 }
             }

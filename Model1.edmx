@@ -49,7 +49,6 @@
           </Key>
           <Property Name="satisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tanim" Type="nvarchar" MaxLength="15" />
-          <Property Name="satisPesinId" Type="int" />
         </EntityType>
         <EntityType Name="SatisPesin">
           <Key>
@@ -377,7 +376,6 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
           </Key>
           <Property Name="satisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tanim" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Name="satisPesinId" Type="Int32" />
           <NavigationProperty Name="SatisPesins" Relationship="Self.FK_SatisPesin_Satis" FromRole="Satis" ToRole="SatisPesin" />
           <NavigationProperty Name="SatisVeresiyes" Relationship="Self.FK_SatisVeresiye_Satis" FromRole="Satis" ToRole="SatisVeresiye" />
           <NavigationProperty Name="Sepets" Relationship="Self.FK_Sepet_Satis" FromRole="Satis" ToRole="Sepet" />
@@ -713,7 +711,6 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
               <MappingFragment StoreEntitySet="Satis">
                 <ScalarProperty Name="satisId" ColumnName="satisId" />
                 <ScalarProperty Name="tanim" ColumnName="tanim" />
-                <ScalarProperty Name="satisPesinId" ColumnName="satisPesinId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
