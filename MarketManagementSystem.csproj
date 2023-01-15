@@ -221,6 +221,12 @@
     <EmbeddedResource Include="Raporlama Formları\TopluMusteriBorc.resx">
       <DependentUpon>TopluMusteriBorc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama Formları\UrunKarZarar.resx">
+      <DependentUpon>UrunKarZarar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama Formları\UrunListCoktanAza.resx">
+      <DependentUpon>UrunListCoktanAza.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Raporlama.resx">
       <DependentUpon>Raporlama.cs</DependentUpon>
     </EmbeddedResource>
