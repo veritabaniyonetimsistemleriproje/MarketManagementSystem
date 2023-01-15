@@ -16,7 +16,7 @@ namespace MarketManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UrunKarZarar());
+            Application.Run(new Giris());
         }
     }
 }
