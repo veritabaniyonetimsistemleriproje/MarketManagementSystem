@@ -37,19 +37,20 @@
             this.DGVMusteri_Borc = new System.Windows.Forms.DataGridView();
             this.DGVTedarikBorc = new System.Windows.Forms.DataGridView();
             this.PanelMusteriBorc = new System.Windows.Forms.Panel();
+            this.BtnMusteriBorcList = new System.Windows.Forms.Button();
             this.musteri_bilgi = new System.Windows.Forms.Label();
             this.BtnUrunSatisSil = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.TBMusteriTutar = new System.Windows.Forms.TextBox();
             this.BtnMusteriAra = new System.Windows.Forms.Button();
             this.PanelTedarikciBorc = new System.Windows.Forms.Panel();
+            this.BtnTedarikciBorcList = new System.Windows.Forms.Button();
             this.tedarikci_bilgi = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.TBTedarikciTutar = new System.Windows.Forms.TextBox();
             this.BtnTedarikciAra = new System.Windows.Forms.Button();
             this.RBMusteriBorc = new System.Windows.Forms.RadioButton();
             this.RBTedarikciBorc = new System.Windows.Forms.RadioButton();
-            this.BtnMusteriBorcList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMusteri_Borc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVTedarikBorc)).BeginInit();
             this.PanelMusteriBorc.SuspendLayout();
@@ -162,6 +163,20 @@
             this.PanelMusteriBorc.TabIndex = 8;
             this.PanelMusteriBorc.Visible = false;
             // 
+            // BtnMusteriBorcList
+            // 
+            this.BtnMusteriBorcList.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnMusteriBorcList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnMusteriBorcList.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnMusteriBorcList.Location = new System.Drawing.Point(292, 28);
+            this.BtnMusteriBorcList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnMusteriBorcList.Name = "BtnMusteriBorcList";
+            this.BtnMusteriBorcList.Size = new System.Drawing.Size(259, 30);
+            this.BtnMusteriBorcList.TabIndex = 13;
+            this.BtnMusteriBorcList.Text = "Müşteri Borç Ödemeleri";
+            this.BtnMusteriBorcList.UseVisualStyleBackColor = false;
+            this.BtnMusteriBorcList.Click += new System.EventHandler(this.BtnMusteriBorcList_Click);
+            // 
             // musteri_bilgi
             // 
             this.musteri_bilgi.AutoSize = true;
@@ -222,6 +237,7 @@
             // PanelTedarikciBorc
             // 
             this.PanelTedarikciBorc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelTedarikciBorc.Controls.Add(this.BtnTedarikciBorcList);
             this.PanelTedarikciBorc.Controls.Add(this.tedarikci_bilgi);
             this.PanelTedarikciBorc.Controls.Add(this.label6);
             this.PanelTedarikciBorc.Controls.Add(this.TBTedarikciTutar);
@@ -236,6 +252,20 @@
             this.PanelTedarikciBorc.Size = new System.Drawing.Size(570, 477);
             this.PanelTedarikciBorc.TabIndex = 9;
             this.PanelTedarikciBorc.Visible = false;
+            // 
+            // BtnTedarikciBorcList
+            // 
+            this.BtnTedarikciBorcList.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnTedarikciBorcList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnTedarikciBorcList.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnTedarikciBorcList.Location = new System.Drawing.Point(278, 28);
+            this.BtnTedarikciBorcList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnTedarikciBorcList.Name = "BtnTedarikciBorcList";
+            this.BtnTedarikciBorcList.Size = new System.Drawing.Size(259, 30);
+            this.BtnTedarikciBorcList.TabIndex = 14;
+            this.BtnTedarikciBorcList.Text = "Tedarikçi Borç Ödemeleri";
+            this.BtnTedarikciBorcList.UseVisualStyleBackColor = false;
+            this.BtnTedarikciBorcList.Click += new System.EventHandler(this.BtnTedarikciBorcList_Click);
             // 
             // tedarikci_bilgi
             // 
@@ -271,7 +301,7 @@
             // 
             this.BtnTedarikciAra.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnTedarikciAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnTedarikciAra.Location = new System.Drawing.Point(221, 36);
+            this.BtnTedarikciAra.Location = new System.Drawing.Point(19, 63);
             this.BtnTedarikciAra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTedarikciAra.Name = "BtnTedarikciAra";
             this.BtnTedarikciAra.Size = new System.Drawing.Size(143, 30);
@@ -307,20 +337,6 @@
             this.RBTedarikciBorc.Text = "Tedarikçi Borç Ödeme";
             this.RBTedarikciBorc.UseVisualStyleBackColor = true;
             this.RBTedarikciBorc.CheckedChanged += new System.EventHandler(this.RBTedarikciBorc_CheckedChanged);
-            // 
-            // BtnMusteriBorcList
-            // 
-            this.BtnMusteriBorcList.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnMusteriBorcList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnMusteriBorcList.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMusteriBorcList.Location = new System.Drawing.Point(292, 29);
-            this.BtnMusteriBorcList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnMusteriBorcList.Name = "BtnMusteriBorcList";
-            this.BtnMusteriBorcList.Size = new System.Drawing.Size(259, 30);
-            this.BtnMusteriBorcList.TabIndex = 13;
-            this.BtnMusteriBorcList.Text = "Müşteri Borç Ödemeleri";
-            this.BtnMusteriBorcList.UseVisualStyleBackColor = false;
-            this.BtnMusteriBorcList.Click += new System.EventHandler(this.BtnMusteriBorcList_Click);
             // 
             // BorcOdeme
             // 
@@ -370,5 +386,6 @@
         private System.Windows.Forms.Label musteri_bilgi;
         private System.Windows.Forms.Label tedarikci_bilgi;
         private System.Windows.Forms.Button BtnMusteriBorcList;
+        private System.Windows.Forms.Button BtnTedarikciBorcList;
     }
 }

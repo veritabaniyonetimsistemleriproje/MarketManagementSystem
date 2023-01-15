@@ -256,5 +256,40 @@ namespace MarketManagementSystem
             }
 
         }
+
+        private void BtnTedarikciBorcList_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                int tNo = Convert.ToInt32(TBTedarikciNo.Text);
+                var sorgu = from tedarikcis in db.Tedarikcis
+                            join borc in db.TedarikciBorcOdemes
+                            on tedarikcis.tedarikciNo equals borc.tedarikciNo
+                            where tedarikcis.tedarikciNo == tNo
+                            select new
+                            {
+                                Ad = tedarikcis.tedarikciAd, 
+                                OdenenMiktar = borc.odenenMiktar,
+                                Tarih = borc.tarih,
+                            };
+                DGVTedarikBorc.DataSource = sorgu.ToList();
+
+                var tedarikci = db.Tedarikcis.Find(tNo);
+                if (tedarikci == null)
+                {
+                    MessageBox.Show("Böyle bir tedarikçi bulunmamaktadır.");
+                }
+                else
+                {
+                    tedarikci_bilgi.Text = tedarikci.tedarikciAd + " " + tedarikci.tedarikciNo + " Toplam Borç: " + tedarikci.tedarikciBorc.ToString();
+                    tedarikci_bilgi.Visible = true; tedarikci_bilgi.ForeColor = Color.Red;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Böyle bir müşteri bulunmamaktadır.");
+            }
+        }
     }
 }
