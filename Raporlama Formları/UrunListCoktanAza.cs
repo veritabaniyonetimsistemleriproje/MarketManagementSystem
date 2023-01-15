@@ -24,33 +24,15 @@ namespace MarketManagementSystem
 
             try
             {
-
                 var sorgu = from sepetUrun in db.SepetUruns
                             group sepetUrun by sepetUrun.urunBarkod into s
                             select new
                             {
-                                barkod = s.Key,
-                                miktar = s.Sum(x => x.satisMiktar),
+                                Ad = db.Uruns.Where(x => x.urunBarkod == s.Key).Select(x => x.urunAd).FirstOrDefault(),
+                                Barkod = s.Key,
+                                ToplamSatış = s.Sum(x => x.satisMiktar),
                             };
-                var deneme = from urun in db.Uruns
-                             select new
-                             {
-
-                                 barkod = urun.urunBarkod,
-                                 ad = urun.urunAd,
-                             };
-
-                var q = from sor in sorgu
-                        from dene in deneme
-                        where sor.barkod == dene.barkod
-                        select new
-                        {
-                            Ad = dene.ad,
-                            Barkod = dene.barkod,
-                            ToplamSatış = sor.miktar,
-                        };
-                DGVListelemeUrun.DataSource = q.OrderByDescending(x => x.ToplamSatış).ToList();
-
+                DGVListelemeUrun.DataSource = sorgu.OrderByDescending(x => x.ToplamSatış).ToList();
             }
             catch
             {
