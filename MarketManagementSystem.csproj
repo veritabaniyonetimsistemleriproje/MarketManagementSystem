@@ -218,6 +218,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Raporlama Formları\UrunListCoktanAza.resx">
+      <DependentUpon>UrunListCoktanAza.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Raporlama.resx">
       <DependentUpon>Raporlama.cs</DependentUpon>
     </EmbeddedResource>
