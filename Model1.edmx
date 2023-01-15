@@ -21,7 +21,7 @@
           <Key>
             <PropertyRef Name="musteriNo" />
           </Key>
-          <Property Name="musteriNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="musteriNo" Type="int" Nullable="false" />
           <Property Name="musteriAd" Type="nvarchar" MaxLength="20" />
           <Property Name="musteriSoyad" Type="nvarchar" MaxLength="20" />
           <Property Name="borcMiktar" Type="float" />
@@ -107,9 +107,9 @@
         </EntityType>
         <EntityType Name="TedarikciBorcOdeme">
           <Key>
-            <PropertyRef Name="saticiId" />
-            <PropertyRef Name="tedarikciNo" />
+            <PropertyRef Name="borcOdemeID" />
           </Key>
+          <Property Name="borcOdemeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="saticiId" Type="int" Nullable="false" />
           <Property Name="tedarikciNo" Type="int" Nullable="false" />
           <Property Name="odenenMiktar" Type="float" />
@@ -345,7 +345,7 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
           <Key>
             <PropertyRef Name="musteriNo" />
           </Key>
-          <Property Name="musteriNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="musteriNo" Type="Int32" Nullable="false" />
           <Property Name="musteriAd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="musteriSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="borcMiktar" Type="Double" />
@@ -448,9 +448,9 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
         </EntityType>
         <EntityType Name="TedarikciBorcOdeme">
           <Key>
-            <PropertyRef Name="saticiId" />
-            <PropertyRef Name="tedarikciNo" />
+            <PropertyRef Name="borcOdemeID" />
           </Key>
+          <Property Name="borcOdemeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="saticiId" Type="Int32" Nullable="false" />
           <Property Name="tedarikciNo" Type="Int32" Nullable="false" />
           <Property Name="odenenMiktar" Type="Double" />
@@ -780,6 +780,7 @@ warning 6035: The relationship 'FK_SepetUrun_Urun' has columns that are not part
           <EntitySetMapping Name="TedarikciBorcOdemes">
             <EntityTypeMapping TypeName="MarketManagementSystemModel.TedarikciBorcOdeme">
               <MappingFragment StoreEntitySet="TedarikciBorcOdeme">
+                <ScalarProperty Name="borcOdemeID" ColumnName="borcOdemeID" />
                 <ScalarProperty Name="saticiId" ColumnName="saticiId" />
                 <ScalarProperty Name="tedarikciNo" ColumnName="tedarikciNo" />
                 <ScalarProperty Name="odenenMiktar" ColumnName="odenenMiktar" />

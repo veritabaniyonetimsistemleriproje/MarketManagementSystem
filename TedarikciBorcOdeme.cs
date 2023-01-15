@@ -14,6 +14,7 @@ namespace MarketManagementSystem
     
     public partial class TedarikciBorcOdeme
     {
+        public int borcOdemeID { get; set; }
         public int saticiId { get; set; }
         public int tedarikciNo { get; set; }
         public Nullable<double> odenenMiktar { get; set; }

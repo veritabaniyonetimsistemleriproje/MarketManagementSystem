@@ -107,7 +107,7 @@ namespace MarketManagementSystem
                 var tedarik = db.Tedarikcis.Find(tNo);
                 if (tedarik == null)
                 {
-                    MessageBox.Show("Böyle bir müşteri bulunmamaktadır.");
+                    MessageBox.Show("Böyle bir tedarikçi bulunmamaktadır.");
                 }
                 else
                 {
@@ -234,7 +234,7 @@ namespace MarketManagementSystem
                             select new
                             {
                                 AdSoyad = musteris.musteriAd + " " + musteris.musteriSoyad,
-                                OdenenMik = borc.odenenMiktar,
+                                OdenenMiktar = borc.odenenMiktar,
                                 Tarih = borc.tarih,
                             };
                 DGVMusteri_Borc.DataSource = sorgu.ToList();

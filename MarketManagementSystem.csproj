@@ -72,18 +72,6 @@
     <Compile Include="Irsaliye.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Raporlama Formları\MarketKarZarar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Raporlama Formları\MarketKarZarar.Designer.cs">
-      <DependentUpon>MarketKarZarar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -102,14 +90,26 @@
     <Compile Include="Musteri.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="MusteriBorcOdeme.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlama Formları\MarketKarZarar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlama Formları\MarketKarZarar.Designer.cs">
+      <DependentUpon>MarketKarZarar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Raporlama Formları\MusteriBazliRapor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Raporlama Formları\MusteriBazliRapor.Designer.cs">
       <DependentUpon>MusteriBazliRapor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MusteriBorcOdeme.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Musteriler.cs">
       <SubType>Form</SubType>
@@ -137,6 +137,12 @@
     <Compile Include="Satis.Designer.cs">
       <DependentUpon>Satis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Raporlama Formları\TarihArasiTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlama Formları\TarihArasiTrend.Designer.cs">
+      <DependentUpon>TarihArasiTrend.cs</DependentUpon>
+    </Compile>
     <Compile Include="SatisPesin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -151,12 +157,6 @@
     </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Raporlama Formları\TarihArasiTrend.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Raporlama Formları\TarihArasiTrend.Designer.cs">
-      <DependentUpon>TarihArasiTrend.cs</DependentUpon>
     </Compile>
     <Compile Include="Tedarikci.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -176,14 +176,14 @@
     <Compile Include="Raporlama Formları\TopluMusteriBorc.Designer.cs">
       <DependentUpon>TopluMusteriBorc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Urun.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Raporlama Formları\UrunKarZarar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Raporlama Formları\UrunKarZarar.Designer.cs">
       <DependentUpon>UrunKarZarar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urun.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Urunler.cs">
       <SubType>Form</SubType>
