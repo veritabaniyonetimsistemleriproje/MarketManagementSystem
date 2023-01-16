@@ -42,10 +42,10 @@
             this.TBUrunStok = new System.Windows.Forms.TextBox();
             this.TBUrunBarkod = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.BtnUrunGuncelle = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUrunler)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,8 +76,7 @@
             // BtnStokEkle
             // 
             this.BtnStokEkle.BackColor = System.Drawing.Color.LawnGreen;
-            this.BtnStokEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnStokEkle.Location = new System.Drawing.Point(484, 372);
             this.BtnStokEkle.Name = "BtnStokEkle";
             this.BtnStokEkle.Size = new System.Drawing.Size(172, 50);
@@ -190,20 +189,10 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(484, 105);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(173, 149);
             this.panel1.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(11, 124);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 15);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Fiyat:";
             // 
             // panel2
             // 
@@ -211,7 +200,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.TBUrunAra);
             this.panel2.Location = new System.Drawing.Point(484, 11);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(173, 73);
             this.panel2.TabIndex = 15;
@@ -223,8 +212,7 @@
             // BtnUrunGuncelle
             // 
             this.BtnUrunGuncelle.BackColor = System.Drawing.Color.LawnGreen;
-            this.BtnUrunGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUrunGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnUrunGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnUrunGuncelle.Location = new System.Drawing.Point(484, 259);
             this.BtnUrunGuncelle.Name = "BtnUrunGuncelle";
             this.BtnUrunGuncelle.Size = new System.Drawing.Size(173, 49);
@@ -232,6 +220,16 @@
             this.BtnUrunGuncelle.Text = "Ürün Bilgilerini Güncelle";
             this.BtnUrunGuncelle.UseVisualStyleBackColor = false;
             this.BtnUrunGuncelle.Click += new System.EventHandler(this.BtnUrunGuncelle_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(11, 124);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 15);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Fiyat:";
             // 
             // Urunler
             // 

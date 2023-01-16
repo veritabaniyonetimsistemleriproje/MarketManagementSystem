@@ -65,12 +65,11 @@
             // BtnYeniMusteri
             // 
             this.BtnYeniMusteri.BackColor = System.Drawing.Color.LawnGreen;
-            this.BtnYeniMusteri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnYeniMusteri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnYeniMusteri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnYeniMusteri.Location = new System.Drawing.Point(9, 152);
             this.BtnYeniMusteri.Margin = new System.Windows.Forms.Padding(2);
             this.BtnYeniMusteri.Name = "BtnYeniMusteri";
-            this.BtnYeniMusteri.Size = new System.Drawing.Size(166, 26);
+            this.BtnYeniMusteri.Size = new System.Drawing.Size(138, 26);
             this.BtnYeniMusteri.TabIndex = 1;
             this.BtnYeniMusteri.Text = "Müşteri Ekle";
             this.BtnYeniMusteri.UseVisualStyleBackColor = false;
@@ -81,7 +80,7 @@
             this.TBMusteriArama.Location = new System.Drawing.Point(14, 34);
             this.TBMusteriArama.Margin = new System.Windows.Forms.Padding(2);
             this.TBMusteriArama.Name = "TBMusteriArama";
-            this.TBMusteriArama.Size = new System.Drawing.Size(161, 20);
+            this.TBMusteriArama.Size = new System.Drawing.Size(133, 20);
             this.TBMusteriArama.TabIndex = 2;
             this.TBMusteriArama.TextChanged += new System.EventHandler(this.TBMusteriArama_TextChanged);
             // 
@@ -134,7 +133,7 @@
             this.TBMusteriAd.Location = new System.Drawing.Point(78, 60);
             this.TBMusteriAd.Margin = new System.Windows.Forms.Padding(2);
             this.TBMusteriAd.Name = "TBMusteriAd";
-            this.TBMusteriAd.Size = new System.Drawing.Size(97, 20);
+            this.TBMusteriAd.Size = new System.Drawing.Size(69, 20);
             this.TBMusteriAd.TabIndex = 9;
             // 
             // TBMusteriSoyad
@@ -142,18 +141,17 @@
             this.TBMusteriSoyad.Location = new System.Drawing.Point(78, 93);
             this.TBMusteriSoyad.Margin = new System.Windows.Forms.Padding(2);
             this.TBMusteriSoyad.Name = "TBMusteriSoyad";
-            this.TBMusteriSoyad.Size = new System.Drawing.Size(97, 20);
+            this.TBMusteriSoyad.Size = new System.Drawing.Size(69, 20);
             this.TBMusteriSoyad.TabIndex = 10;
             // 
             // BtnGuncelle
             // 
             this.BtnGuncelle.BackColor = System.Drawing.Color.Yellow;
-            this.BtnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnGuncelle.Location = new System.Drawing.Point(9, 122);
             this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(100, 25);
+            this.BtnGuncelle.Size = new System.Drawing.Size(65, 25);
             this.BtnGuncelle.TabIndex = 12;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = false;
@@ -162,12 +160,11 @@
             // BtnSil
             // 
             this.BtnSil.BackColor = System.Drawing.Color.Red;
-            this.BtnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnSil.Location = new System.Drawing.Point(113, 122);
+            this.BtnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnSil.Location = new System.Drawing.Point(79, 122);
             this.BtnSil.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(62, 26);
+            this.BtnSil.Size = new System.Drawing.Size(68, 24);
             this.BtnSil.TabIndex = 13;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = false;
@@ -179,7 +176,7 @@
             this.TBMusteriId.Margin = new System.Windows.Forms.Padding(2);
             this.TBMusteriId.Name = "TBMusteriId";
             this.TBMusteriId.ReadOnly = true;
-            this.TBMusteriId.Size = new System.Drawing.Size(97, 20);
+            this.TBMusteriId.Size = new System.Drawing.Size(69, 20);
             this.TBMusteriId.TabIndex = 19;
             // 
             // label7
@@ -209,7 +206,7 @@
             this.panel1.Location = new System.Drawing.Point(408, 94);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 189);
+            this.panel1.Size = new System.Drawing.Size(161, 189);
             this.panel1.TabIndex = 20;
             // 
             // panel2
@@ -220,14 +217,14 @@
             this.panel2.Location = new System.Drawing.Point(408, 10);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(191, 65);
+            this.panel2.Size = new System.Drawing.Size(161, 65);
             this.panel2.TabIndex = 21;
             // 
             // Musteriler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 432);
+            this.ClientSize = new System.Drawing.Size(574, 432);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DGVMusteriler);

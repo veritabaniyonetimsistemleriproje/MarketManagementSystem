@@ -218,10 +218,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    feature/musteriBazliRapor
-    <EmbeddedResource Include="Raporlama Formları\MusteriBazliRapor.resx">
-      <DependentUpon>MusteriBazliRapor.cs</DependentUpon>
-    master
+    <EmbeddedResource Include="Raporlama Formları\MarketKarZarar.resx">
+      <DependentUpon>MarketKarZarar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Raporlama Formları\TopluMusteriBorc.resx">
       <DependentUpon>TopluMusteriBorc.cs</DependentUpon>

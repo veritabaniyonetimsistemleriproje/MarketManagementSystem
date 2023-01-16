@@ -136,12 +136,11 @@
             // BtnTedarikciGuncelle
             // 
             this.BtnTedarikciGuncelle.BackColor = System.Drawing.Color.Yellow;
-            this.BtnTedarikciGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnTedarikciGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnTedarikciGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnTedarikciGuncelle.Location = new System.Drawing.Point(11, 95);
             this.BtnTedarikciGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTedarikciGuncelle.Name = "BtnTedarikciGuncelle";
-            this.BtnTedarikciGuncelle.Size = new System.Drawing.Size(94, 25);
+            this.BtnTedarikciGuncelle.Size = new System.Drawing.Size(83, 25);
             this.BtnTedarikciGuncelle.TabIndex = 8;
             this.BtnTedarikciGuncelle.Text = "Güncelle";
             this.BtnTedarikciGuncelle.UseVisualStyleBackColor = false;
@@ -150,8 +149,7 @@
             // BtnTedarikciSil
             // 
             this.BtnTedarikciSil.BackColor = System.Drawing.Color.Red;
-            this.BtnTedarikciSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnTedarikciSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnTedarikciSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnTedarikciSil.Location = new System.Drawing.Point(109, 95);
             this.BtnTedarikciSil.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTedarikciSil.Name = "BtnTedarikciSil";
@@ -164,8 +162,7 @@
             // BtnYeniTedarikci
             // 
             this.BtnYeniTedarikci.BackColor = System.Drawing.Color.LawnGreen;
-            this.BtnYeniTedarikci.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnYeniTedarikci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnYeniTedarikci.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnYeniTedarikci.Location = new System.Drawing.Point(12, 126);
             this.BtnYeniTedarikci.Margin = new System.Windows.Forms.Padding(2);
             this.BtnYeniTedarikci.Name = "BtnYeniTedarikci";
