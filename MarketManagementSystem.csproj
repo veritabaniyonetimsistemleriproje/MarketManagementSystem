@@ -218,6 +218,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Raporlama Formları\MusteriBazliRapor.resx">
+      <DependentUpon>MusteriBazliRapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Raporlama Formları\TopluMusteriBorc.resx">
       <DependentUpon>TopluMusteriBorc.cs</DependentUpon>
     </EmbeddedResource>
