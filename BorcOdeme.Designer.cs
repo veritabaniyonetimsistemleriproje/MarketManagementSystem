@@ -60,12 +60,11 @@
             // BtnMusteriBorcOde
             // 
             this.BtnMusteriBorcOde.BackColor = System.Drawing.Color.LawnGreen;
-            this.BtnMusteriBorcOde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMusteriBorcOde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnMusteriBorcOde.Location = new System.Drawing.Point(328, 307);
-            this.BtnMusteriBorcOde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnMusteriBorcOde.Location = new System.Drawing.Point(437, 378);
+            this.BtnMusteriBorcOde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnMusteriBorcOde.Name = "BtnMusteriBorcOde";
-            this.BtnMusteriBorcOde.Size = new System.Drawing.Size(78, 47);
+            this.BtnMusteriBorcOde.Size = new System.Drawing.Size(104, 58);
             this.BtnMusteriBorcOde.TabIndex = 0;
             this.BtnMusteriBorcOde.Text = "Ödemeyi Tamamla";
             this.BtnMusteriBorcOde.UseVisualStyleBackColor = false;
@@ -74,12 +73,11 @@
             // BtnTedarikciBorcOde
             // 
             this.BtnTedarikciBorcOde.BackColor = System.Drawing.Color.LawnGreen;
-            this.BtnTedarikciBorcOde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTedarikciBorcOde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnTedarikciBorcOde.Location = new System.Drawing.Point(334, 307);
-            this.BtnTedarikciBorcOde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnTedarikciBorcOde.Location = new System.Drawing.Point(445, 378);
+            this.BtnTedarikciBorcOde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTedarikciBorcOde.Name = "BtnTedarikciBorcOde";
-            this.BtnTedarikciBorcOde.Size = new System.Drawing.Size(77, 47);
+            this.BtnTedarikciBorcOde.Size = new System.Drawing.Size(103, 58);
             this.BtnTedarikciBorcOde.TabIndex = 1;
             this.BtnTedarikciBorcOde.Text = "Ödemeyi Tamamla";
             this.BtnTedarikciBorcOde.UseVisualStyleBackColor = false;
@@ -87,28 +85,27 @@
             // 
             // TBMusteriNo
             // 
-            this.TBMusteriNo.Location = new System.Drawing.Point(8, 29);
-            this.TBMusteriNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBMusteriNo.Location = new System.Drawing.Point(11, 36);
+            this.TBMusteriNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TBMusteriNo.Name = "TBMusteriNo";
-            this.TBMusteriNo.Size = new System.Drawing.Size(105, 20);
+            this.TBMusteriNo.Size = new System.Drawing.Size(139, 22);
             this.TBMusteriNo.TabIndex = 2;
             // 
             // TBTedarikciNo
             // 
-            this.TBTedarikciNo.Location = new System.Drawing.Point(14, 30);
-            this.TBTedarikciNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBTedarikciNo.Location = new System.Drawing.Point(19, 37);
+            this.TBTedarikciNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TBTedarikciNo.Name = "TBTedarikciNo";
-            this.TBTedarikciNo.Size = new System.Drawing.Size(105, 20);
+            this.TBTedarikciNo.Size = new System.Drawing.Size(139, 22);
             this.TBTedarikciNo.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(8, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(11, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 15);
+            this.label1.Size = new System.Drawing.Size(169, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Müşteri Numarası Yazın:";
             // 
@@ -116,10 +113,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(11, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(15, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 15);
+            this.label2.Size = new System.Drawing.Size(180, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Tedarikçi Numarası Yazın:";
             // 
@@ -127,24 +123,24 @@
             // 
             this.DGVMusteri_Borc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGVMusteri_Borc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVMusteri_Borc.Location = new System.Drawing.Point(8, 80);
-            this.DGVMusteri_Borc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGVMusteri_Borc.Location = new System.Drawing.Point(11, 98);
+            this.DGVMusteri_Borc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DGVMusteri_Borc.Name = "DGVMusteri_Borc";
             this.DGVMusteri_Borc.RowHeadersWidth = 51;
             this.DGVMusteri_Borc.RowTemplate.Height = 24;
-            this.DGVMusteri_Borc.Size = new System.Drawing.Size(405, 214);
+            this.DGVMusteri_Borc.Size = new System.Drawing.Size(540, 263);
             this.DGVMusteri_Borc.TabIndex = 6;
             // 
             // DGVTedarikBorc
             // 
             this.DGVTedarikBorc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGVTedarikBorc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVTedarikBorc.Location = new System.Drawing.Point(14, 80);
-            this.DGVTedarikBorc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGVTedarikBorc.Location = new System.Drawing.Point(19, 98);
+            this.DGVTedarikBorc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DGVTedarikBorc.Name = "DGVTedarikBorc";
             this.DGVTedarikBorc.RowHeadersWidth = 51;
             this.DGVTedarikBorc.RowTemplate.Height = 24;
-            this.DGVTedarikBorc.Size = new System.Drawing.Size(407, 214);
+            this.DGVTedarikBorc.Size = new System.Drawing.Size(543, 263);
             this.DGVTedarikBorc.TabIndex = 7;
             // 
             // PanelMusteriBorc
@@ -160,23 +156,22 @@
             this.PanelMusteriBorc.Controls.Add(this.BtnMusteriBorcOde);
             this.PanelMusteriBorc.Controls.Add(this.TBMusteriNo);
             this.PanelMusteriBorc.Controls.Add(this.label1);
-            this.PanelMusteriBorc.Location = new System.Drawing.Point(2, 63);
-            this.PanelMusteriBorc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelMusteriBorc.Location = new System.Drawing.Point(3, 78);
+            this.PanelMusteriBorc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelMusteriBorc.Name = "PanelMusteriBorc";
-            this.PanelMusteriBorc.Size = new System.Drawing.Size(428, 388);
+            this.PanelMusteriBorc.Size = new System.Drawing.Size(570, 477);
             this.PanelMusteriBorc.TabIndex = 8;
             this.PanelMusteriBorc.Visible = false;
             // 
             // BtnMusteriBorcList
             // 
             this.BtnMusteriBorcList.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnMusteriBorcList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMusteriBorcList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnMusteriBorcList.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMusteriBorcList.Location = new System.Drawing.Point(216, 23);
-            this.BtnMusteriBorcList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnMusteriBorcList.Location = new System.Drawing.Point(292, 28);
+            this.BtnMusteriBorcList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnMusteriBorcList.Name = "BtnMusteriBorcList";
-            this.BtnMusteriBorcList.Size = new System.Drawing.Size(197, 24);
+            this.BtnMusteriBorcList.Size = new System.Drawing.Size(259, 30);
             this.BtnMusteriBorcList.TabIndex = 13;
             this.BtnMusteriBorcList.Text = "Müşteri Borç Ödemeleri";
             this.BtnMusteriBorcList.UseVisualStyleBackColor = false;
@@ -186,9 +181,10 @@
             // 
             this.musteri_bilgi.AutoSize = true;
             this.musteri_bilgi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.musteri_bilgi.Location = new System.Drawing.Point(9, 330);
+            this.musteri_bilgi.Location = new System.Drawing.Point(12, 406);
+            this.musteri_bilgi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.musteri_bilgi.Name = "musteri_bilgi";
-            this.musteri_bilgi.Size = new System.Drawing.Size(75, 15);
+            this.musteri_bilgi.Size = new System.Drawing.Size(88, 18);
             this.musteri_bilgi.TabIndex = 12;
             this.musteri_bilgi.Text = "Müşteri Bilgi";
             this.musteri_bilgi.Visible = false;
@@ -196,12 +192,11 @@
             // BtnUrunSatisSil
             // 
             this.BtnUrunSatisSil.BackColor = System.Drawing.Color.Red;
-            this.BtnUrunSatisSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnUrunSatisSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnUrunSatisSil.Location = new System.Drawing.Point(216, 52);
-            this.BtnUrunSatisSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnUrunSatisSil.Location = new System.Drawing.Point(288, 64);
+            this.BtnUrunSatisSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnUrunSatisSil.Name = "BtnUrunSatisSil";
-            this.BtnUrunSatisSil.Size = new System.Drawing.Size(197, 24);
+            this.BtnUrunSatisSil.Size = new System.Drawing.Size(263, 30);
             this.BtnUrunSatisSil.TabIndex = 11;
             this.BtnUrunSatisSil.Text = "Seçili Ürün Satışını Sil";
             this.BtnUrunSatisSil.UseVisualStyleBackColor = false;
@@ -211,31 +206,29 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(216, 311);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(315, 378);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 15);
+            this.label4.Size = new System.Drawing.Size(113, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "Ödenecek tutar:";
             // 
             // TBMusteriTutar
             // 
-            this.TBMusteriTutar.Location = new System.Drawing.Point(216, 334);
-            this.TBMusteriTutar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBMusteriTutar.Location = new System.Drawing.Point(315, 406);
+            this.TBMusteriTutar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TBMusteriTutar.Name = "TBMusteriTutar";
-            this.TBMusteriTutar.Size = new System.Drawing.Size(88, 20);
+            this.TBMusteriTutar.Size = new System.Drawing.Size(116, 22);
             this.TBMusteriTutar.TabIndex = 8;
             // 
             // BtnMusteriAra
             // 
             this.BtnMusteriAra.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnMusteriAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMusteriAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnMusteriAra.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnMusteriAra.Location = new System.Drawing.Point(8, 52);
-            this.BtnMusteriAra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnMusteriAra.Location = new System.Drawing.Point(11, 64);
+            this.BtnMusteriAra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnMusteriAra.Name = "BtnMusteriAra";
-            this.BtnMusteriAra.Size = new System.Drawing.Size(102, 24);
+            this.BtnMusteriAra.Size = new System.Drawing.Size(136, 30);
             this.BtnMusteriAra.TabIndex = 7;
             this.BtnMusteriAra.Text = "Müşteri Ara";
             this.BtnMusteriAra.UseVisualStyleBackColor = false;
@@ -253,23 +246,22 @@
             this.PanelTedarikciBorc.Controls.Add(this.BtnTedarikciBorcOde);
             this.PanelTedarikciBorc.Controls.Add(this.TBTedarikciNo);
             this.PanelTedarikciBorc.Controls.Add(this.label2);
-            this.PanelTedarikciBorc.Location = new System.Drawing.Point(446, 63);
-            this.PanelTedarikciBorc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelTedarikciBorc.Location = new System.Drawing.Point(595, 78);
+            this.PanelTedarikciBorc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelTedarikciBorc.Name = "PanelTedarikciBorc";
-            this.PanelTedarikciBorc.Size = new System.Drawing.Size(428, 388);
+            this.PanelTedarikciBorc.Size = new System.Drawing.Size(570, 477);
             this.PanelTedarikciBorc.TabIndex = 9;
             this.PanelTedarikciBorc.Visible = false;
             // 
             // BtnTedarikciBorcList
             // 
             this.BtnTedarikciBorcList.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnTedarikciBorcList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTedarikciBorcList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnTedarikciBorcList.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnTedarikciBorcList.Location = new System.Drawing.Point(227, 30);
-            this.BtnTedarikciBorcList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnTedarikciBorcList.Location = new System.Drawing.Point(278, 28);
+            this.BtnTedarikciBorcList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTedarikciBorcList.Name = "BtnTedarikciBorcList";
-            this.BtnTedarikciBorcList.Size = new System.Drawing.Size(194, 24);
+            this.BtnTedarikciBorcList.Size = new System.Drawing.Size(259, 30);
             this.BtnTedarikciBorcList.TabIndex = 14;
             this.BtnTedarikciBorcList.Text = "Tedarikçi Borç Ödemeleri";
             this.BtnTedarikciBorcList.UseVisualStyleBackColor = false;
@@ -279,9 +271,10 @@
             // 
             this.tedarikci_bilgi.AutoSize = true;
             this.tedarikci_bilgi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tedarikci_bilgi.Location = new System.Drawing.Point(11, 330);
+            this.tedarikci_bilgi.Location = new System.Drawing.Point(15, 406);
+            this.tedarikci_bilgi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tedarikci_bilgi.Name = "tedarikci_bilgi";
-            this.tedarikci_bilgi.Size = new System.Drawing.Size(84, 15);
+            this.tedarikci_bilgi.Size = new System.Drawing.Size(99, 18);
             this.tedarikci_bilgi.TabIndex = 13;
             this.tedarikci_bilgi.Text = "Tedarikçi Bilgi";
             this.tedarikci_bilgi.Visible = false;
@@ -290,30 +283,28 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(224, 311);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(299, 378);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 15);
+            this.label6.Size = new System.Drawing.Size(118, 18);
             this.label6.TabIndex = 11;
             this.label6.Text = "Ödenecek Tutar:";
             // 
             // TBTedarikciTutar
             // 
-            this.TBTedarikciTutar.Location = new System.Drawing.Point(227, 334);
-            this.TBTedarikciTutar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBTedarikciTutar.Location = new System.Drawing.Point(301, 398);
+            this.TBTedarikciTutar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TBTedarikciTutar.Name = "TBTedarikciTutar";
-            this.TBTedarikciTutar.Size = new System.Drawing.Size(94, 20);
+            this.TBTedarikciTutar.Size = new System.Drawing.Size(100, 22);
             this.TBTedarikciTutar.TabIndex = 9;
             // 
             // BtnTedarikciAra
             // 
             this.BtnTedarikciAra.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnTedarikciAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTedarikciAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnTedarikciAra.Location = new System.Drawing.Point(14, 52);
-            this.BtnTedarikciAra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnTedarikciAra.Location = new System.Drawing.Point(19, 63);
+            this.BtnTedarikciAra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTedarikciAra.Name = "BtnTedarikciAra";
-            this.BtnTedarikciAra.Size = new System.Drawing.Size(105, 23);
+            this.BtnTedarikciAra.Size = new System.Drawing.Size(143, 30);
             this.BtnTedarikciAra.TabIndex = 8;
             this.BtnTedarikciAra.Text = "Tedarikçi Ara";
             this.BtnTedarikciAra.UseVisualStyleBackColor = false;
@@ -323,10 +314,10 @@
             // 
             this.RBMusteriBorc.AutoSize = true;
             this.RBMusteriBorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.RBMusteriBorc.Location = new System.Drawing.Point(2, 22);
-            this.RBMusteriBorc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RBMusteriBorc.Location = new System.Drawing.Point(3, 27);
+            this.RBMusteriBorc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RBMusteriBorc.Name = "RBMusteriBorc";
-            this.RBMusteriBorc.Size = new System.Drawing.Size(173, 21);
+            this.RBMusteriBorc.Size = new System.Drawing.Size(204, 24);
             this.RBMusteriBorc.TabIndex = 10;
             this.RBMusteriBorc.TabStop = true;
             this.RBMusteriBorc.Text = "Müşteri Borç Ödeme";
@@ -337,10 +328,10 @@
             // 
             this.RBTedarikciBorc.AutoSize = true;
             this.RBTedarikciBorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.RBTedarikciBorc.Location = new System.Drawing.Point(446, 22);
-            this.RBTedarikciBorc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RBTedarikciBorc.Location = new System.Drawing.Point(595, 27);
+            this.RBTedarikciBorc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RBTedarikciBorc.Name = "RBTedarikciBorc";
-            this.RBTedarikciBorc.Size = new System.Drawing.Size(187, 21);
+            this.RBTedarikciBorc.Size = new System.Drawing.Size(218, 24);
             this.RBTedarikciBorc.TabIndex = 11;
             this.RBTedarikciBorc.TabStop = true;
             this.RBTedarikciBorc.Text = "Tedarikçi Borç Ödeme";
@@ -349,14 +340,14 @@
             // 
             // BorcOdeme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 452);
+            this.ClientSize = new System.Drawing.Size(1168, 556);
             this.Controls.Add(this.RBTedarikciBorc);
             this.Controls.Add(this.RBMusteriBorc);
             this.Controls.Add(this.PanelTedarikciBorc);
             this.Controls.Add(this.PanelMusteriBorc);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BorcOdeme";
             this.Text = "BorcOdeme";
             this.Load += new System.EventHandler(this.BorcOdeme_Load);

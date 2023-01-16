@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -68,8 +67,7 @@ namespace MarketManagementSystem
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            label1.Parent = pictureBox1;
-            label1.BackColor = Color.Transparent;
+
         }
 
         private void BtnBorcOdeme_Click(object sender, EventArgs e)
