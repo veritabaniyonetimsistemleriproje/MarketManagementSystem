@@ -84,5 +84,6 @@ namespace MarketManagementSystem
             DGVMusteriler.DataSource = db.Musteris.ToList();
             TextBoxTemizle();
         }
+
     }
 }

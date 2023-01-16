@@ -39,9 +39,10 @@
             // BtnKarZararUrun
             // 
             this.BtnKarZararUrun.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnKarZararUrun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnKarZararUrun.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnKarZararUrun.Location = new System.Drawing.Point(10, 13);
-            this.BtnKarZararUrun.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnKarZararUrun.Margin = new System.Windows.Forms.Padding(4);
             this.BtnKarZararUrun.Name = "BtnKarZararUrun";
             this.BtnKarZararUrun.Size = new System.Drawing.Size(217, 116);
             this.BtnKarZararUrun.TabIndex = 0;
@@ -52,9 +53,10 @@
             // BtnTopluMusBorc
             // 
             this.BtnTopluMusBorc.BackColor = System.Drawing.Color.LawnGreen;
+            this.BtnTopluMusBorc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTopluMusBorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnTopluMusBorc.Location = new System.Drawing.Point(330, 13);
-            this.BtnTopluMusBorc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnTopluMusBorc.Margin = new System.Windows.Forms.Padding(4);
             this.BtnTopluMusBorc.Name = "BtnTopluMusBorc";
             this.BtnTopluMusBorc.Size = new System.Drawing.Size(217, 116);
             this.BtnTopluMusBorc.TabIndex = 1;
@@ -65,9 +67,10 @@
             // BtnMusBazlıRapor
             // 
             this.BtnMusBazlıRapor.BackColor = System.Drawing.Color.LawnGreen;
+            this.BtnMusBazlıRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMusBazlıRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnMusBazlıRapor.Location = new System.Drawing.Point(657, 13);
-            this.BtnMusBazlıRapor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnMusBazlıRapor.Margin = new System.Windows.Forms.Padding(4);
             this.BtnMusBazlıRapor.Name = "BtnMusBazlıRapor";
             this.BtnMusBazlıRapor.Size = new System.Drawing.Size(217, 116);
             this.BtnMusBazlıRapor.TabIndex = 2;
@@ -78,9 +81,10 @@
             // BtnKarZarar
             // 
             this.BtnKarZarar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnKarZarar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnKarZarar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnKarZarar.Location = new System.Drawing.Point(10, 242);
-            this.BtnKarZarar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnKarZarar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnKarZarar.Name = "BtnKarZarar";
             this.BtnKarZarar.Size = new System.Drawing.Size(217, 113);
             this.BtnKarZarar.TabIndex = 3;
@@ -91,9 +95,10 @@
             // BtnSatısTrendi
             // 
             this.BtnSatısTrendi.BackColor = System.Drawing.Color.Yellow;
+            this.BtnSatısTrendi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSatısTrendi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnSatısTrendi.Location = new System.Drawing.Point(330, 242);
-            this.BtnSatısTrendi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSatısTrendi.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSatısTrendi.Name = "BtnSatısTrendi";
             this.BtnSatısTrendi.Size = new System.Drawing.Size(217, 113);
             this.BtnSatısTrendi.TabIndex = 4;
@@ -104,9 +109,10 @@
             // BtnCokSatandanAza
             // 
             this.BtnCokSatandanAza.BackColor = System.Drawing.Color.Yellow;
+            this.BtnCokSatandanAza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCokSatandanAza.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnCokSatandanAza.Location = new System.Drawing.Point(657, 242);
-            this.BtnCokSatandanAza.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnCokSatandanAza.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCokSatandanAza.Name = "BtnCokSatandanAza";
             this.BtnCokSatandanAza.Size = new System.Drawing.Size(217, 113);
             this.BtnCokSatandanAza.TabIndex = 5;
@@ -116,7 +122,7 @@
             // 
             // Raporlama
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 394);
             this.Controls.Add(this.BtnCokSatandanAza);
@@ -126,7 +132,7 @@
             this.Controls.Add(this.BtnTopluMusBorc);
             this.Controls.Add(this.BtnKarZararUrun);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Raporlama";
             this.Text = "Raporlama";
             this.ResumeLayout(false);

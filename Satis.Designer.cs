@@ -101,10 +101,11 @@
             // BtnSatisOnayla
             // 
             this.BtnSatisOnayla.BackColor = System.Drawing.Color.LawnGreen;
-            this.BtnSatisOnayla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnSatisOnayla.Location = new System.Drawing.Point(675, 94);
+            this.BtnSatisOnayla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSatisOnayla.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnSatisOnayla.Location = new System.Drawing.Point(642, 85);
             this.BtnSatisOnayla.Name = "BtnSatisOnayla";
-            this.BtnSatisOnayla.Size = new System.Drawing.Size(105, 30);
+            this.BtnSatisOnayla.Size = new System.Drawing.Size(150, 53);
             this.BtnSatisOnayla.TabIndex = 6;
             this.BtnSatisOnayla.Text = "Satışı Onayla";
             this.BtnSatisOnayla.UseVisualStyleBackColor = false;
@@ -112,18 +113,18 @@
             // 
             // TBToplamTutar
             // 
-            this.TBToplamTutar.Location = new System.Drawing.Point(675, 69);
+            this.TBToplamTutar.Location = new System.Drawing.Point(642, 60);
             this.TBToplamTutar.Margin = new System.Windows.Forms.Padding(2);
             this.TBToplamTutar.Name = "TBToplamTutar";
             this.TBToplamTutar.ReadOnly = true;
-            this.TBToplamTutar.Size = new System.Drawing.Size(105, 20);
+            this.TBToplamTutar.Size = new System.Drawing.Size(150, 20);
             this.TBToplamTutar.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(672, 47);
+            this.label2.Location = new System.Drawing.Point(639, 43);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 15);
@@ -199,10 +200,11 @@
             // BtnOnay
             // 
             this.BtnOnay.BackColor = System.Drawing.Color.LawnGreen;
-            this.BtnOnay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnOnay.Location = new System.Drawing.Point(387, 63);
+            this.BtnOnay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOnay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnOnay.Location = new System.Drawing.Point(387, 69);
             this.BtnOnay.Name = "BtnOnay";
-            this.BtnOnay.Size = new System.Drawing.Size(162, 29);
+            this.BtnOnay.Size = new System.Drawing.Size(215, 29);
             this.BtnOnay.TabIndex = 14;
             this.BtnOnay.Text = "Sepete Ekle";
             this.BtnOnay.UseVisualStyleBackColor = false;
@@ -211,10 +213,11 @@
             // TBUrunSil
             // 
             this.TBUrunSil.BackColor = System.Drawing.Color.Red;
-            this.TBUrunSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TBUrunSil.Location = new System.Drawing.Point(387, 98);
+            this.TBUrunSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TBUrunSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TBUrunSil.Location = new System.Drawing.Point(387, 109);
             this.TBUrunSil.Name = "TBUrunSil";
-            this.TBUrunSil.Size = new System.Drawing.Size(162, 29);
+            this.TBUrunSil.Size = new System.Drawing.Size(215, 29);
             this.TBUrunSil.TabIndex = 15;
             this.TBUrunSil.Text = "Seçili Ürünü Sepetten Sil";
             this.TBUrunSil.UseVisualStyleBackColor = false;
