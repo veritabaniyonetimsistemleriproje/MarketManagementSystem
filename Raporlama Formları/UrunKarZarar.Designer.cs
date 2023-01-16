@@ -47,7 +47,8 @@
             this.ClientSize = new System.Drawing.Size(579, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UrunKarZarar";
-            this.Text = "UrunKarZarar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ürün Kar Zarar";
             this.Load += new System.EventHandler(this.UrunKarZarar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
