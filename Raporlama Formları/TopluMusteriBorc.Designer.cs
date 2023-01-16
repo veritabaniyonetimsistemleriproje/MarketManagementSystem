@@ -44,9 +44,11 @@
             // BtnExcel
             // 
             this.BtnExcel.BackColor = System.Drawing.Color.LawnGreen;
-            this.BtnExcel.Location = new System.Drawing.Point(326, 395);
+            this.BtnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnExcel.Location = new System.Drawing.Point(13, 395);
             this.BtnExcel.Name = "BtnExcel";
-            this.BtnExcel.Size = new System.Drawing.Size(119, 43);
+            this.BtnExcel.Size = new System.Drawing.Size(432, 43);
             this.BtnExcel.TabIndex = 1;
             this.BtnExcel.Text = "Excel\'e Aktar";
             this.BtnExcel.UseVisualStyleBackColor = false;
@@ -60,7 +62,8 @@
             this.Controls.Add(this.BtnExcel);
             this.Controls.Add(this.dataGridView1);
             this.Name = "TopluMusteriBorc";
-            this.Text = "TopluMusteriBorc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Toplu Müşteri Borçları";
             this.Load += new System.EventHandler(this.TopluMusteriBorc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

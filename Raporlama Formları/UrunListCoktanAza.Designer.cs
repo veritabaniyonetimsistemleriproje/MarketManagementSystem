@@ -34,22 +34,26 @@
             // 
             // DGVListelemeUrun
             // 
+            this.DGVListelemeUrun.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVListelemeUrun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVListelemeUrun.Location = new System.Drawing.Point(13, 13);
+            this.DGVListelemeUrun.Location = new System.Drawing.Point(10, 11);
+            this.DGVListelemeUrun.Margin = new System.Windows.Forms.Padding(2);
             this.DGVListelemeUrun.Name = "DGVListelemeUrun";
             this.DGVListelemeUrun.RowHeadersWidth = 51;
             this.DGVListelemeUrun.RowTemplate.Height = 24;
-            this.DGVListelemeUrun.Size = new System.Drawing.Size(775, 425);
+            this.DGVListelemeUrun.Size = new System.Drawing.Size(384, 345);
             this.DGVListelemeUrun.TabIndex = 0;
             // 
             // UrunListCoktanAza
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(406, 366);
             this.Controls.Add(this.DGVListelemeUrun);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UrunListCoktanAza";
-            this.Text = "UrunListCoktanAza";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Çoktan Aza Satılan Ürün Raporu";
             this.Load += new System.EventHandler(this.UrunListCoktanAza_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVListelemeUrun)).EndInit();
             this.ResumeLayout(false);

@@ -23,6 +23,7 @@ namespace MarketManagementSystem
         private void TopluMusteriBorc_Load(object sender, EventArgs e)
         {
             dt.Columns.Clear();
+            dt.Rows.Clear();
             dt.Columns.Add("Ad Soyad");
             dt.Columns.Add("Toplam Satış");
             dt.Columns.Add("Toplam Ödenen");
