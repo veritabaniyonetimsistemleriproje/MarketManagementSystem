@@ -33,7 +33,7 @@ namespace MarketManagementSystem
 
                 var sorgu = db.SepetUruns.Where(x => x.urunBarkod == item.urunBarkod).Sum(x => x.urunAnlikFiyat * x.satisMiktar);
                 var deneme = db.Irsaliyes.Where(x => x.urunBarkod == item.urunBarkod).Sum(x => (double?)(x.birimGirdiFiyat * x.miktar)) ?? 0;
-                             
+                         
                 if (sorgu.HasValue)
                 {
                     dr["Ürün Barkod"] = item.urunBarkod;

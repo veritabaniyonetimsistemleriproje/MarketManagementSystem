@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,7 +29,8 @@ namespace MarketManagementSystem
             DGVMusteriler.Columns[4].Visible = false; DGVMusteriler.Columns[5].Visible = false;
             DGVMusteriler.Columns[0].HeaderText = "Müşteri No";
             DGVMusteriler.Columns[1].HeaderText = "Ad";
-            DGVMusteriler.Columns[2].HeaderText = "Soyad";            
+            DGVMusteriler.Columns[2].HeaderText = "Soyad";
+            DGVMusteriler.Columns[3].HeaderText = "Borç Miktar";
         }
 
         private void TBMusteriArama_TextChanged(object sender, EventArgs e)
@@ -46,15 +48,32 @@ namespace MarketManagementSystem
 
         private void BtnYeniMusteri_Click(object sender, EventArgs e)
         {
-            Musteri musteri = new Musteri();
-            musteri.musteriAd = TBMusteriAd.Text;
-            musteri.musteriSoyad = TBMusteriSoyad.Text;
-            musteri.borcMiktar = 0;
-            db.Musteris.Add(musteri);
-            db.SaveChanges();
-            MessageBox.Show("Müşteri başarı ile kayıt edildi.");
-            DGVMusteriler.DataSource = db.Musteris.ToList();
-            TextBoxTemizle();
+            try
+            {
+                int mNo = Convert.ToInt32(TBMusteriId.Text);              
+                var query = db.Musteris.Find(mNo);
+                if (query != null)
+                {
+                    MessageBox.Show("Böyle bir müşteri zaten bulunmaktadır.");
+                }
+                else
+                {
+                    Musteri musteri = new Musteri();
+                    musteri.musteriNo = mNo;
+                    musteri.musteriAd = TBMusteriAd.Text;
+                    musteri.musteriSoyad = TBMusteriSoyad.Text;
+                    musteri.borcMiktar = 0;
+                    db.Musteris.Add(musteri);
+                    db.SaveChanges();
+                    MessageBox.Show("Müşteri başarı ile kayıt edildi.");
+                    DGVMusteriler.DataSource = db.Musteris.ToList();
+                    TextBoxTemizle();
+                }   
+            }
+            catch
+            {
+                MessageBox.Show("Müşteri numarasını kontrol ediniz.");
+            }
         }
 
         private void BtnSil_Click(object sender, EventArgs e)

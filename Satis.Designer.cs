@@ -58,7 +58,7 @@
             this.DGVSepet.RowHeadersWidth = 62;
             this.DGVSepet.Size = new System.Drawing.Size(350, 395);
             this.DGVSepet.TabIndex = 0;
-            this.DGVSepet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVSepet_CellContentClick);
+          
             // 
             // label1
             // 

@@ -121,9 +121,9 @@ namespace MarketManagementSystem
 
         private void BtnOnay_Click(object sender, EventArgs e)
         {
-            int bNo = Convert.ToInt32(TBBarkodNo.Text);
             try
             {
+                int bNo = Convert.ToInt32(TBBarkodNo.Text);
                 var query = (from s in db.Uruns
                             where s.urunBarkod == bNo
                             select s).First();
@@ -141,11 +141,6 @@ namespace MarketManagementSystem
                 MessageBox.Show("Böyle bir ürün bulunmamaktadır.");
             };
             tutarHesapla();
-
-        }
-
-        private void DGVSepet_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
 

@@ -115,9 +115,12 @@ namespace MarketManagementSystem
 
         private void BtnUrunGuncelle_Click(object sender, EventArgs e)
         {
-            var urun = db.Uruns.First(s => s.urunBarkod == Convert.ToInt32(TBUrunBarkod.Text));
+            double barkod = Convert.ToInt32(TBUrunBarkod.Text);
+            var urun = db.Uruns.First(s => s.urunBarkod == barkod);
             urun.urunFiyat = Convert.ToDouble(TBUrunFiyat.Text);
             urun.urunAd = TBUrunAd.Text;
+            db.SaveChanges();
+            DGVUrunler.DataSource = db.Uruns.ToList();
         }
     }
 }
