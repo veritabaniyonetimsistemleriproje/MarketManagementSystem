@@ -48,9 +48,13 @@ namespace MarketManagementSystem
                             {
                                 ÜrünAd = db.Uruns.Where(x => x.urunBarkod == s.Key).Select(x => x.urunAd).FirstOrDefault(),
                                 ToplamSatış = s.Sum(x => x.satisMiktar),
-                                ToplamMiktar = s.Sum(x => x.satisMiktar * x.urunAnlikFiyat),
+                                ToplamTutar= s.Sum(x => x.satisMiktar * x.urunAnlikFiyat),
                             };
-                DGVMusteriRapor.DataSource = query.ToList();
+                
+                DGVMusteriRapor.DataSource = query.OrderByDescending(x => x.ToplamSatış).ToList();
+                DGVMusteriRapor.Columns[0].HeaderText = "Ürün Adı";
+                DGVMusteriRapor.Columns[1].HeaderText = "Toplam Satış";
+                DGVMusteriRapor.Columns[2].HeaderText = "Toplam Tutar";
                 musteriLabel.Text = musteri.musteriAd + " " + musteri.musteriSoyad + " Satış Raporu";
             }
             catch
